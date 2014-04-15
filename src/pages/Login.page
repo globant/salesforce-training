@@ -1,0 +1,6 @@
+<apex:page >
+<!-- Begin Default Content REMOVE THIS -->
+<h1>Login page</h1>
+Please, enter your credentials for accessing Survey4Discounts.
+<!-- End Default Content REMOVE THIS -->
+</apex:page>
