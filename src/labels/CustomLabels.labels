@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>GMI_BackTo</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Back To used in Google Maps</shortDescription>
+        <value>Back to</value>
+    </labels>
+    <labels>
+        <fullName>GMI_GenerateKey</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please generate a Google maps API key used in Google Maps</shortDescription>
+        <value>Please generate a Google maps API key</value>
+    </labels>
+    <labels>
+        <fullName>GMI_GoogleLanguageCode</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Google Maps Language Code</shortDescription>
+        <value>en</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalAddressFound</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Location displayed using address used in Google Maps</shortDescription>
+        <value>Location displayed using address</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalAddressNotFound</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Address not found by Google used in Google Maps</shortDescription>
+        <value>Address not found by Google</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalShowMap</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Show in Google used in Google Maps</shortDescription>
+        <value>Show in Google</value>
+    </labels>
+    <labels>
+        <fullName>GMI_UpdateComponent</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please update the GoogleMapsInternational component used in Google Maps</shortDescription>
+        <value>Please update the GoogleMapsInternational component with a new key which can be generated from</value>
+    </labels>
+    <labels>
+        <fullName>GMI_WebsiteNeeded</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The website URL needed is used in Google Maps</shortDescription>
+        <value>The website URL needed is</value>
+    </labels>
+    <labels>
+        <fullName>GMI_googleMapURL</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Google Maps URL</shortDescription>
+        <value>http://maps.google.com</value>
+    </labels>
+</CustomLabels>

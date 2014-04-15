@@ -1,0 +1,76 @@
+<apex:page contentType="text/javascript" showheader="false" >
+
+var j$ = jQuery.noConflict();
+    sforce.connection.sessionId = '{!$API.Session_ID}';
+    
+
+function commentalizer(){
+    
+        j$('.feeditem .feeditemfooter:not(:contains("*"))').each( function(){
+            var feed_item_id = j$(this).closest('.feeditem').find('.cxfeeditemid').html();
+            
+            j$(this).append('<span class="cxfeeditemlikedot feeditemseparatingdot chatter_charades"> . </span>' +
+             '<a href="javascript:void(0)" onclick="superComment(\''+feed_item_id+'\');" class="ccLink">*</a>');
+             
+        }); 
+}
+
+function superComment(feedItemID){
+    j$('.myCurrentStatus').html(feedItemID);
+    j$('.feeditem:contains("'+feedItemID+'") .feeditemcontent .feeditemextras .feedcommentarrow').css('display', 'block');
+    var parentID = window.parent.location;
+    //j$('.feeditem:contains("'+feedItemID+'") .feeditemcontent .feeditemextras .cxnewcomment').html('<iframe src="/apex/postComment?op=' + feedItemID + '&p=' + parentID +'" width="100%" height="72" scrollbars="none"/>');
+    
+    var innerValue = '';
+    innerValue += '<select style="margin-top:45px;" id="userList-'+feedItemID+'">'; 
+    
+    var myUsers = sforce.apex.execute("chatterCharadesGlobal", "getGoodUsers", {});
+    var len = myUsers.length;
+    for(myu in myUsers)
+    {
+        if(myUsers[myu].toString().indexOf(";") == -1)
+        {
+        innerValue+= '<option  value="' + myUsers[myu].toString().substring(0,18) + '">'+myUsers[myu].toString().substring(19)+'</option>';
+        }  
+    } 
+     
+    innerValue += '</select>';
+    j$('.feeditem:contains("'+feedItemID+'") .feeditemcontent .feeditemextras .cxnewcomment .feeditemcomment').css('height','75px');
+    j$('.feeditem:contains("'+feedItemID+'") .feeditemcontent .feeditemextras .cxnewcomment .feeditemcomment .feeditemcommentphotocontainer').html(innerValue);
+    
+    var fullarea = '<textarea id="textarea-'+feedItemID+'" class="foobar cxnewcommenttext  chatterMentionsEnabled chatterHashtagsEnabled" tabindex="0" role="textbox" title="Write a comment..." enabled=""></textarea>';
+    fullarea += '<div class="cxvalidationmessage newcommenterrorcontainer" style="display:none"></div>';
+    fullarea += '<input class="btn cxnewcommentaction newcommentbutton " type="button" value="Comment" title="Comment" onclick="" id="btn-'+feedItemID+'"/>';
+    
+    j$('.feeditem:contains("'+feedItemID+'") .feeditemcontent .feeditemextras .cxnewcomment .feeditemcomment .feeditemcommentnew').html( fullarea);
+    j$('#btn-'+feedItemID).click(function(){
+        var upost = j$('#userList-'+feedItemID).val();
+        var ubody = j$('#textarea-'+feedItemID).val();
+        sforce.apex.execute("chatterCharadesGlobal", "postComment", {poster:upost, op:feedItemID, body:ubody});
+        window.location.reload();
+    });
+    
+    j$('.feeditem:contains("'+feedItemID+'") .feeditemcontent .feeditemextras .cxnewcomment').css('display', 'block');
+    
+    
+}
+
+
+    // add assassin link to new feed items after ajax call; "show more"
+j$('.showmorefeeditemscontainer a').live ( 'click', function(){
+    
+  j$.ajax({
+    complete: function(){
+      commentalizer();  
+    }
+  });
+  
+});
+    
+    j$(document).ready(function(){
+        
+        commentalizer();
+        
+        });
+
+</apex:page>
