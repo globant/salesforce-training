@@ -18,32 +18,15 @@
     </types>
     <types>
         <members>*</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>*</members>
         <name>CustomSite</name>
     </types>
     <types>
         <members>*</members>
         <name>CustomTab</name>
-    </types>
-    <types>
-        <members>AdoptionDashboardsAppExchange</members>
-        <members>AdoptionDashboardsAppExchange/x1AdoptionUsage</members>
-        <members>AdoptionDashboardsAppExchange/x2AdoptionDataQuality</members>
-        <members>AdoptionDashboardsAppExchange/x3AdoptionBusinessPerformance</members>
-        <members>AppexchangeServiceSupportDashboards</members>
-        <members>AppexchangeServiceSupportDashboards/AppExchangeSalesforceServiceSupportCustomerInformation</members>
-        <members>AppexchangeServiceSupportDashboards/AppExchangeSalesforceServiceSupportExecutiveOverview</members>
-        <members>AppexchangeServiceSupportDashboards/AppExchangeSalesforceServiceSupportKPIs</members>
-        <members>AppexchangeServiceSupportDashboards/AppExchangeSalesforceServiceSupportRepAgentPerformance</members>
-        <members>CampaignDashboard</members>
-        <members>CampaignDashboard/CampaignMetricsDashboard</members>
-        <members>CompanyDashboards</members>
-        <members>CompanyDashboards/AdoptionDashboard</members>
-        <members>CompanyDashboards/CompanyPerformanceDashboard</members>
-        <members>SalesDashboards</members>
-        <members>SalesDashboards/SalesKPIDashboard</members>
-        <members>Sales_history_advanced_dashboard</members>
-        <members>Sales_history_advanced_dashboard/Sales_history_advanced_dashboard</members>
-        <name>Dashboard</name>
     </types>
     <types>
         <members>*</members>
@@ -56,6 +39,10 @@
     <types>
         <members>*</members>
         <name>Role</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
     </types>
     <types>
         <members>*</members>
