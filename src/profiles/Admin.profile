@@ -9,10 +9,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>HelloController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>OrgCustomizerController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -167,10 +163,6 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>Google_Maps_International_Setup</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>Hello</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>

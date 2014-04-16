@@ -5,42 +5,23 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>*</members>
-        <name>CustomLabels</name>
+        <members>GoogleMapsInternationalAccount</members>
+        <members>GoogleMapsInternationalContact</members>
+        <members>GoogleMapsInternationalEmbeddedAccount</members>
+        <members>GoogleMapsInternationalEmbeddedContact</members>
+        <members>Google_Maps_International_Setup</members>
+        <members>Login</members>
+        <members>OrgCustomizerV4</members>
+        <members>Shop</members>
+        <members>chatterAssassin</members>
+        <members>chatterCharades</members>
+        <members>jsChatterCharades</members>
+        <members>perfectionStandard</members>
+        <name>ApexPage</name>
     </types>
     <types>
         <members>*</members>
-        <members>Account</members>
-        <members>AccountContactRole</members>
-        <members>Activity</members>
-        <members>Asset</members>
-        <members>Campaign</members>
-        <members>CampaignMember</members>
-        <members>Case</members>
-        <members>CaseContactRole</members>
-        <members>Contact</members>
-        <members>ContentVersion</members>
-        <members>Contract</members>
-        <members>ContractContactRole</members>
-        <members>Event</members>
-        <members>Idea</members>
-        <members>Lead</members>
-        <members>Opportunity</members>
-        <members>OpportunityCompetitor</members>
-        <members>OpportunityContactRole</members>
-        <members>OpportunityLineItem</members>
-        <members>PartnerRole</members>
-        <members>Pricebook2</members>
-        <members>Product2</members>
-        <members>Quote</members>
-        <members>QuoteLineItem</members>
-        <members>Site</members>
-        <members>SiteChangelist</members>
-        <members>SocialPersona</members>
-        <members>Solution</members>
-        <members>Task</members>
-        <members>User</members>
-        <name>CustomObject</name>
+        <name>CustomLabels</name>
     </types>
     <types>
         <members>*</members>
@@ -53,6 +34,27 @@
     <types>
         <members>*</members>
         <name>CustomTab</name>
+    </types>
+    <types>
+        <members>AdoptionDashboardsAppExchange</members>
+        <members>AdoptionDashboardsAppExchange/x1AdoptionUsage</members>
+        <members>AdoptionDashboardsAppExchange/x2AdoptionDataQuality</members>
+        <members>AdoptionDashboardsAppExchange/x3AdoptionBusinessPerformance</members>
+        <members>AppexchangeServiceSupportDashboards</members>
+        <members>AppexchangeServiceSupportDashboards/AppExchangeSalesforceServiceSupportCustomerInformation</members>
+        <members>AppexchangeServiceSupportDashboards/AppExchangeSalesforceServiceSupportExecutiveOverview</members>
+        <members>AppexchangeServiceSupportDashboards/AppExchangeSalesforceServiceSupportKPIs</members>
+        <members>AppexchangeServiceSupportDashboards/AppExchangeSalesforceServiceSupportRepAgentPerformance</members>
+        <members>CampaignDashboard</members>
+        <members>CampaignDashboard/CampaignMetricsDashboard</members>
+        <members>CompanyDashboards</members>
+        <members>CompanyDashboards/AdoptionDashboard</members>
+        <members>CompanyDashboards/CompanyPerformanceDashboard</members>
+        <members>SalesDashboards</members>
+        <members>SalesDashboards/SalesKPIDashboard</members>
+        <members>Sales_history_advanced_dashboard</members>
+        <members>Sales_history_advanced_dashboard/Sales_history_advanced_dashboard</members>
+        <name>Dashboard</name>
     </types>
     <types>
         <members>*</members>
@@ -206,8 +208,36 @@
         <name>Role</name>
     </types>
     <types>
+        <members>GoogleMapsInternational</members>
+        <members>OrgCustHomeImage</members>
         <members>bootstrap</members>
         <name>StaticResource</name>
+    </types>
+    <types>
+        <members>Account</members>
+        <members>Asset</members>
+        <members>Campaign</members>
+        <members>CampaignMember</members>
+        <members>Case</members>
+        <members>Contact</members>
+        <members>Contract</members>
+        <members>Event</members>
+        <members>Idea</members>
+        <members>Lead</members>
+        <members>Opportunity</members>
+        <members>OpportunityLineItem</members>
+        <members>Organization</members>
+        <members>Product2</members>
+        <members>Quote</members>
+        <members>QuoteLineItem</members>
+        <members>Shop__c</members>
+        <members>Site</members>
+        <members>SocialPersona</members>
+        <members>Solution</members>
+        <members>Task</members>
+        <members>User</members>
+        <members>UserLicense</members>
+        <name>Workflow</name>
     </types>
     <version>29.0</version>
 </Package>
