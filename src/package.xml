@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
-        <members>*</members>
+        <members>ChatterAssassin</members>
+        <members>Customer</members>
+        <members>OrgCustomizerController</members>
+        <members>Test_ChatterAssassin</members>
+        <members>chatterCharades</members>
+        <members>chatterCharadesGlobal</members>
+        <members>orgTest</members>
+        <members>perfectionStandard</members>
+        <members>testPDW</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -20,19 +28,18 @@
         <name>ApexPage</name>
     </types>
     <types>
-        <members>*</members>
+        <members>CustomLabels</members>
         <name>CustomLabels</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Shop__c</members>
         <name>CustomObject</name>
     </types>
     <types>
-        <members>*</members>
-        <name>CustomSite</name>
-    </types>
-    <types>
-        <members>*</members>
+        <members>Chatter_Assassin</members>
+        <members>International_Mapping_Setup</members>
+        <members>Perfect_Date_Wizard</members>
+        <members>Shop__c</members>
         <name>CustomTab</name>
     </types>
     <types>
@@ -57,8 +64,59 @@
         <name>Dashboard</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Account-Account Layout</members>
+        <members>Asset-Asset Layout</members>
+        <members>Campaign-Campaign Layout</members>
+        <members>CampaignMember-Campaign Member Page Layout</members>
+        <members>Case-Case Layout</members>
+        <members>CaseClose-Close Case Layout</members>
+        <members>CaseInteraction-Case Feed Layout</members>
+        <members>Contact-Contact Layout</members>
+        <members>Contract-Contract Layout</members>
+        <members>Event-Event Layout</members>
+        <members>Global-Global Layout</members>
+        <members>Idea-Idea Layout</members>
+        <members>Lead-Lead Layout</members>
+        <members>Opportunity-Opportunity Layout</members>
+        <members>OpportunityLineItem-Opportunity Product Layout</members>
+        <members>Pricebook2-Price Book Layout</members>
+        <members>Product2-Product Layout</members>
+        <members>Quote-Quote Layout</members>
+        <members>QuoteLineItem-Quote Line Item Layout</members>
+        <members>Shop__c-Shop Layout</members>
+        <members>SocialPersona-Social Persona Layout</members>
+        <members>Solution-Solution Layout</members>
+        <members>Task-Task Layout</members>
+        <members>User-User Layout</members>
         <name>Layout</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <members>Authenticated Website</members>
+        <members>Chatter External User</members>
+        <members>Chatter Free User</members>
+        <members>Chatter Moderator User</members>
+        <members>Chatter Only User</members>
+        <members>Content Only User</members>
+        <members>ContractManager</members>
+        <members>Customer Community Login User</members>
+        <members>Customer Community User</members>
+        <members>Customer Portal Manager Custom</members>
+        <members>Customer Portal Manager Standard</members>
+        <members>Force%2Ecom - App Subscription User</members>
+        <members>Guest</members>
+        <members>Guest License User</members>
+        <members>High Volume Customer Portal User</members>
+        <members>Knowledge Only User</members>
+        <members>MarketingProfile</members>
+        <members>Partner Community Login User</members>
+        <members>Partner Community User</members>
+        <members>ReadOnly</members>
+        <members>Siteforce Only User</members>
+        <members>SolutionManager</members>
+        <members>Standard</members>
+        <members>StandardAul</members>
+        <name>Profile</name>
     </types>
     <types>
         <members>AppExchangeServiceSupportDB</members>
@@ -169,7 +227,6 @@
         <members>Sales_history_advanced_reports/Sales_history_monthly_comparison</members>
         <members>Sales_history_advanced_reports/Sales_history_win_rate</members>
         <members>Sales_history_advanced_reports/Sales_history_won_opps_vs_value</members>
-        <members>unfiled$public</members>
         <members>unfiled$public/SampleReportActiveUsers</members>
         <members>unfiled$public/SampleReportCasesStatusbyRep</members>
         <members>unfiled$public/SampleReportClosedSales</members>
@@ -204,7 +261,8 @@
         <name>Report</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Customer</members>
+        <members>Shopadmin</members>
         <name>Role</name>
     </types>
     <types>
