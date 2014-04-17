@@ -1,0 +1,65 @@
+<apex:page controller="CustomUserController">
+
+<script type="text/javascript">
+    
+    function comparePasswords(password1, password2)
+    {
+        var originalPassword = document.getElementById(password1).value;
+        var confirmedPassword = document.getElementById(password2).value;
+
+        if(originalPassword != confirmedPassword ){
+            alert('Passwords must match');
+            return false;
+        }
+       
+        alert('Passwords matched!!');
+        return true;
+    }
+</script>
+
+<h1>User information</h1>
+<apex:form >
+    <apex:pageBlock id="thePageBlock">
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel >First Name</apex:outputLabel>
+                <apex:inputField value="{!customUser.First_Name__c}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel >Last Name</apex:outputLabel>
+                <apex:inputField value="{!customUser.Last_Name__c}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel >User</apex:outputLabel>
+                <apex:inputField value="{!customUser.Username__c}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel >Email</apex:outputLabel>
+                <apex:inputField value="{!customUser.Email__c}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection id="thePageBlockSectionPassword" >
+            <apex:pageBlockSectionItem id="thePageBlockSectionItemPassword" >
+                <apex:outputLabel >Password</apex:outputLabel>
+                <apex:inputField id="originalPassword" value="{!customUser.Password__c}"/>
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection id="thePageBlockSectionConfirmPassword">
+            <apex:pageBlockSectionItem id="thePageBlockSectionItemConfirmPassword">
+                <apex:outputLabel >Confirm</apex:outputLabel>
+                <apex:inputText id="confirmPassword" />
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:commandButton action="{!save}" value="Save" onclick="return comparePasswords('{!$Component.thePageBlock.thePageBlockSectionPassword.thePageBlockSectionItemPassword.originalPassword}','{!$Component.thePageBlock.thePageBlockSectionConfirmPassword.thePageBlockSectionItemConfirmPassword.confirmPassword}')"/>
+        <apex:pageMessages ></apex:pageMessages>        
+    </apex:pageBlock>
+
+
+</apex:form>
+</apex:page>
