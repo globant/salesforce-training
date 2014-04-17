@@ -106,6 +106,17 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>Password__c</fullName>
+        <defaultValue>&quot;&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Password</label>
+        <length>40</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>ProfileId</fullName>
         <type>Lookup</type>
     </fields>

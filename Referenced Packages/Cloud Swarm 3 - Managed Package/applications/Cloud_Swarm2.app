@@ -15,4 +15,5 @@
     <tab>Case_Swarm_Rule__c</tab>
     <tab>Feed_Post_Swarm_Rule__c</tab>
     <tab>Feed_Post_Swarm_Rule_Wizard</tab>
+    <tab>CustomUser__c</tab>
 </CustomApplication>

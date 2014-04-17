@@ -7,4 +7,5 @@
     <tab>standard-Account</tab>
     <tab>standard-Contact</tab>
     <tab>GeoCode</tab>
+    <tab>CustomUser__c</tab>
 </CustomApplication>
