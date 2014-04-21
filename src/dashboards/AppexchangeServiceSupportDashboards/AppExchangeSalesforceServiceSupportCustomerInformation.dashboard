@@ -10,6 +10,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component shows the top 10 customers based on the number of open cases they have at this time. The results are also color coded so that accounts with more than 10 open cases are highlighted in red and 5-10 open cases are in yellow. Max values is 10.</footer>
             <header>New Cases Opened by Account MTD</header>
             <indicatorBreakpoint1>5.0</indicatorBreakpoint1>
@@ -44,6 +46,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component will show you how many cases are open for each account at this time.  Edit this dashboard component to set Indicator Color breakpoints for visual warnings on high case volumes. Max values returned has been set to 10.</footer>
             <header>All Open Cases</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
@@ -56,6 +60,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>Total of closed cases by account for the current FY</footer>
             <header>Total closed cases</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
@@ -92,6 +98,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component shows how many cases required escalation.  A high volume of escalations could indicate a need from some pro-active communications from support management.  Set the breakpoint indicator colors for the DB component for added visibility.</footer>
             <header>Escalated Case by Account</header>
             <indicatorBreakpoint1>4.0</indicatorBreakpoint1>
@@ -107,6 +115,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component shows how many cases required escalation.  A high volume of escalations could indicate a need from some pro-active communications from support management.  Set the breakpoint indicator colors for the DB component for added visibility.</footer>
             <header>Escalated Case by Account</header>
             <indicatorBreakpoint1>4.0</indicatorBreakpoint1>
@@ -164,6 +174,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component shows which customers have open HIGH priority cases.  It is color coded so that any customer with more than 3 open HIGH priority cases will be shown in red. Max values returned has been set to 10.</footer>
             <header>Accounts to Watch</header>
             <indicatorBreakpoint2>3.0</indicatorBreakpoint2>
@@ -178,6 +190,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component will show you how many high priority cases have been opened this month by each account.  A high volume of open cases could be a good reason to have support managment proactively reach out to a customer. Max values returned set to 10.</footer>
             <header>High Priority Cases opened MTD</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
@@ -190,6 +204,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component will show you how many high priority cases have been opened this year by each account.  A high volume of open cases could be a good reason to have support managment proactively reach out to. Max values returned has been set to 10.</footer>
             <header>High Priority Cases opened YTD</header>
             <indicatorHighColor>#54C254</indicatorHighColor>

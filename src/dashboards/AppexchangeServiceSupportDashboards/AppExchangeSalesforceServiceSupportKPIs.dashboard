@@ -67,6 +67,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component will show you how many of solutions you have in the different stages of the publishing process.</footer>
             <indicatorHighColor>#54C254</indicatorHighColor>
             <indicatorLowColor>#C25454</indicatorLowColor>
@@ -180,6 +182,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component will show you how many open cases there are in each stage of your case handling process.</footer>
             <header>Open Cases by Stage</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
@@ -192,6 +196,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component shows you how many cases are in each of your queue&apos;s.  This will quickly call to attention any queue&apos;s that might need additional management.</footer>
             <header>Open cases by Queue</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
@@ -204,6 +210,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component shows how many open cases there for each level of priority.</footer>
             <header>Open Cases by Priority</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
@@ -216,6 +224,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component shows how many cases are open by Reason.</footer>
             <header>Open Cases by Reason</header>
             <indicatorHighColor>#54C254</indicatorHighColor>

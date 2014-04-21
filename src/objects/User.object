@@ -78,6 +78,10 @@
         <unique>false</unique>
     </fields>
     <fields>
+        <fullName>ManagerId</fullName>
+        <type>Hierarchy</type>
+    </fields>
+    <fields>
         <fullName>ORGCUSTOM4_DB__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>

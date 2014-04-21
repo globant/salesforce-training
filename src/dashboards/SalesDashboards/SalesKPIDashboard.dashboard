@@ -44,6 +44,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>No activity last 30 days</footer>
             <header>Neglected Opportunities</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
@@ -142,6 +144,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>Closing this FY, by value</footer>
             <header>Top 10 Partner Opportunities</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
@@ -209,6 +213,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>&gt;400K  + &lt; 90 days</footer>
             <header>Key Opportunities (Pipeline)</header>
             <indicatorBreakpoint1>300000.0</indicatorBreakpoint1>
@@ -261,6 +267,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <header>Lead Source</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
             <indicatorLowColor>#C25454</indicatorLowColor>

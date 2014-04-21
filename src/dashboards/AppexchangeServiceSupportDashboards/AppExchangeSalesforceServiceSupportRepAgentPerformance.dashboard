@@ -10,6 +10,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component will show you how many open cases each rep has in stacked ranked order.</footer>
             <header>Current Workload</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
@@ -161,6 +163,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This is the average of the duration of all cases per rep for the current Fiscal Quarter</footer>
             <header>Average Handle Time</header>
             <indicatorHighColor>#54C254</indicatorHighColor>

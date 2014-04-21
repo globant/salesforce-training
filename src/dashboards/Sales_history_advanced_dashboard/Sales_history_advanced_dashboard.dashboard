@@ -68,6 +68,8 @@
                 <showTotal>false</showTotal>
             </dashboardTableColumn>
             <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This year</footer>
             <header>Sales summary</header>
             <indicatorBreakpoint1>100000.0</indicatorBreakpoint1>

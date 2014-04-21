@@ -55,6 +55,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>Learning who is logging in every week is a basic level of measurement. It can also motivate others to log in more frequently if made public.</footer>
             <header>Login Leader Board</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
@@ -68,6 +70,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>Which role has not logged in for the last 7 days? Change by username and quickly learn which who is not complying.</footer>
             <header>Login Wall of Shame</header>
             <indicatorHighColor>#54C254</indicatorHighColor>

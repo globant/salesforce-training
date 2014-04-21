@@ -45,6 +45,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component shows the top 10 customers based on the number of open cases they have at this time. The results are also color coded so that accounts with more than 10 open cases are highlighted in red and 5-10 open cases are in yellow. Max values is 10.</footer>
             <header>New Cases Opened by Account MTD</header>
             <indicatorBreakpoint1>10.0</indicatorBreakpoint1>
@@ -63,6 +65,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This component will show you how many open cases each rep has in stacked ranked order.</footer>
             <header>Current Workload</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
@@ -118,6 +122,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>Shows you who has any open high priority cases that might need immediate attention</footer>
             <header>High priority Cases</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
@@ -131,6 +137,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <header>Open Case Counts</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
             <indicatorLowColor>#C25454</indicatorLowColor>
@@ -142,6 +150,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <header>Unassigned</header>
             <indicatorHighColor>#54C254</indicatorHighColor>
             <indicatorLowColor>#C25454</indicatorLowColor>

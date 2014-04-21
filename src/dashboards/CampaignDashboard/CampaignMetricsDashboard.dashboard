@@ -117,6 +117,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <indicatorBreakpoint1>10000.0</indicatorBreakpoint1>
             <indicatorBreakpoint2>50000.0</indicatorBreakpoint2>
             <indicatorHighColor>#54C254</indicatorHighColor>
@@ -130,6 +132,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>Lists the % of leads converted into opportunities by each salesforce user</footer>
             <indicatorBreakpoint1>0.1</indicatorBreakpoint1>
             <indicatorBreakpoint2>1.0</indicatorBreakpoint2>
@@ -162,6 +166,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This list how many leads became opportunities per month</footer>
             <indicatorBreakpoint1>5.0</indicatorBreakpoint1>
             <indicatorBreakpoint2>10.0</indicatorBreakpoint2>
@@ -216,6 +222,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>This list the top ten closed wonopportunities generated from all campaigns</footer>
             <indicatorBreakpoint1>10000.0</indicatorBreakpoint1>
             <indicatorBreakpoint2>50000.0</indicatorBreakpoint2>

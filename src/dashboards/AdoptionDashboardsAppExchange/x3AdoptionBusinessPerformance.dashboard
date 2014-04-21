@@ -111,6 +111,8 @@
         <components>
             <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
             <componentType>Table</componentType>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
             <footer>Will assist in giving insight in overall performance and adoption across the company.</footer>
             <header>Win Ratio</header>
             <indicatorBreakpoint1>50.0</indicatorBreakpoint1>
