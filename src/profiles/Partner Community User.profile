@@ -376,6 +376,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CustomUser__c.Role__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CustomUser__c.Username__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -766,6 +771,10 @@
         <apexPage>perfectionStandard</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
+    <tabVisibilities>
+        <tab>CustomRole__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
     <tabVisibilities>
         <tab>CustomUser__c</tab>
         <visibility>DefaultOn</visibility>
