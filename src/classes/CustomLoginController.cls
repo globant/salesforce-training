@@ -23,7 +23,7 @@ global with sharing class CustomLoginController {
 				String md5Coded = EncodingUtil.convertToHex(Crypto.generateDigest('MD5', Blob.valueOf(inputString)));
 
                         
-                        return new PageReference( '/Login'); 
+                        return new PageReference( '/apex/Dashboard');  
            
     	           }catch(Exception e)
     	           {

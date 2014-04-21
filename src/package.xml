@@ -159,11 +159,6 @@
         <name>CustomLabels</name>
     </types>
     <types>
-        <members>Category__c</members>
-        <members>CustomRole__c</members>
-        <members>CustomUser__c</members>
-        <members>Shop__c</members>
-        <members>Subcategory__c</members>
         <members>User</members>
         <name>CustomObject</name>
     </types>
@@ -226,45 +221,6 @@
         <members>Task-Task Layout</members>
         <members>User-User Layout</members>
         <name>Layout</name>
-    </types>
-    <types>
-        <members>Account.AllAccounts</members>
-        <members>Account.MyAccounts</members>
-        <members>Account.NewThisWeek</members>
-        <members>Activity.MyActivities</members>
-        <members>Activity.MyDelegatedActivities</members>
-        <members>Activity.MyTeamsActivities</members>
-        <members>Activity.TodaysTasks</members>
-        <members>Activity.UpcomingEvents</members>
-        <members>Asset.AllAssets</members>
-        <members>Campaign.AllActiveCampaigns</members>
-        <members>Campaign.MyActiveCampaigns</members>
-        <members>Case.AllOpenCases</members>
-        <members>Case.MyCases</members>
-        <members>Case.MyOpenCases</members>
-        <members>Contact.AllContacts</members>
-        <members>Contact.BirthdaysThisMonth</members>
-        <members>Contact.NewThisWeek</members>
-        <members>Contract.AllActivatedContracts</members>
-        <members>Contract.AllContracts</members>
-        <members>Contract.AllDraftContracts</members>
-        <members>Contract.AllInApprovalContracts</members>
-        <members>Contract.MyActivatedContracts</members>
-        <members>Contract.MyDraftContracts</members>
-        <members>Contract.MyInApprovalContracts</members>
-        <members>Lead.AllOpenLeads</members>
-        <members>Lead.MyUnreadLeads</members>
-        <members>Lead.TodaysLeads</members>
-        <members>Opportunity.AllOpportunities</members>
-        <members>Opportunity.ClosingNextMonth</members>
-        <members>Opportunity.ClosingThisMonth</members>
-        <members>Opportunity.MyOpportunities</members>
-        <members>Opportunity.NewThisWeek</members>
-        <members>Opportunity.Won</members>
-        <members>Product2.AllProducts</members>
-        <members>Solution.AllReviewedSolutions</members>
-        <members>Solution.AllUnreviewedSolutions</members>
-        <name>ListView</name>
     </types>
     <types>
         <members>*</members>
@@ -422,36 +378,6 @@
         <members>OrgCustHomeImage</members>
         <members>bootstrap</members>
         <name>StaticResource</name>
-    </types>
-    <types>
-        <members>Account.AltavistaNews</members>
-        <members>Account.FN__Map_Accounts</members>
-        <members>Account.GMI_Show_Map_Button_Account</members>
-        <members>Account.GMI_Show_Map_Link_Account</members>
-        <members>Account.GoogleMaps</members>
-        <members>Account.GoogleNews</members>
-        <members>Account.GoogleSearch</members>
-        <members>Account.HooversProfile</members>
-        <members>Account.YahooMaps</members>
-        <members>Campaign.ViewAllCampaignMembers</members>
-        <members>Campaign.ViewCampaignInfluenceReport</members>
-        <members>Contact.FN__Map_Contacts</members>
-        <members>Contact.GMI_Show_Map_Button_Contact</members>
-        <members>Contact.GMI_Show_Map_Link_Contact</members>
-        <members>Contact.GoogleMaps</members>
-        <members>Contact.GoogleSearch</members>
-        <members>Contact.SendGmail</members>
-        <members>Contact.YahooMaps</members>
-        <members>Contact.YahooWeather</members>
-        <members>Lead.AltavistaNews</members>
-        <members>Lead.FN__Map_Leads</members>
-        <members>Lead.GoogleMaps</members>
-        <members>Lead.GoogleNews</members>
-        <members>Lead.GoogleSearch</members>
-        <members>Lead.HooversProfile</members>
-        <members>Lead.SendGmail</members>
-        <members>Lead.YahooMaps</members>
-        <name>WebLink</name>
     </types>
     <types>
         <members>*</members>
