@@ -51,6 +51,11 @@
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
     <label>Category</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Category Name</label>
         <type>Text</type>
