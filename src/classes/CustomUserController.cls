@@ -1,8 +1,12 @@
 public class CustomUserController {
 
     public PageReference save() {
+    
+        String inputString = customUser.Password__c;
+        String md5Coded = EncodingUtil.convertToHex(Crypto.generateDigest('MD5', Blob.valueOf(inputString)));
+        customUser.Password__c = md5Coded ;
         Insert customUser;
-        return null;
+        return new PageReference( '/apex/CustomLogin'); 
     }
     
     

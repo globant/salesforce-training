@@ -10,6 +10,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CustomLoginController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CustomUserController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -705,6 +709,10 @@
         <object>Subcategory__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <pageAccesses>
+        <apexPage>CustomLogin</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
     <pageAccesses>
         <apexPage>GoogleMapsInternationalAccount</apexPage>
         <enabled>true</enabled>
