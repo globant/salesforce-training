@@ -2,7 +2,7 @@ public class CustomUserController {
 
     public PageReference save() {
         Insert customUser;
-        return null;
+        return new PageReference( '/apex/CustomLogin'); 
     }
     
     
