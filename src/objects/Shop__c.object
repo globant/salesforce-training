@@ -51,6 +51,30 @@
     <enableHistory>false</enableHistory>
     <enableReports>true</enableReports>
     <fields>
+        <fullName>Category__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <referenceTo>Category__c</referenceTo>
+        <relationshipLabel>Shops</relationshipLabel>
+        <relationshipName>Shops</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Custom_User_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User Owner</label>
+        <referenceTo>CustomUser__c</referenceTo>
+        <relationshipLabel>Shops</relationshipLabel>
+        <relationshipName>Shops</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Description__c</fullName>
         <externalId>false</externalId>
         <label>Description</label>
@@ -86,11 +110,12 @@
         <type>Url</type>
     </fields>
     <fields>
-        <fullName>User_Owner__c</fullName>
+        <fullName>Subcategory__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
-        <label>User Owner</label>
-        <referenceTo>User</referenceTo>
+        <label>Subcategory</label>
+        <referenceTo>Subcategory__c</referenceTo>
+        <relationshipLabel>Shops</relationshipLabel>
         <relationshipName>Shops</relationshipName>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -109,4 +134,11 @@
     <pluralLabel>Shops</pluralLabel>
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Category_and_Subcategory_Rule</fullName>
+        <active>true</active>
+        <errorConditionFormula>Category__r.Name  &lt;&gt;   Subcategory__r.Category_Subcategory__r.Name</errorConditionFormula>
+        <errorDisplayField>Subcategory__c</errorDisplayField>
+        <errorMessage>Categoria y Subcategoria no coinciden</errorMessage>
+    </validationRules>
 </CustomObject>
