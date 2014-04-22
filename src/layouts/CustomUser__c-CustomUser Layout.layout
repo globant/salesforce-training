@@ -73,6 +73,10 @@
         <fields>NAME</fields>
         <relatedList>Shop__c.Custom_User_Owner__c</relatedList>
     </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>SurveyAnswer__c.CustomUser__c</relatedList>
+    </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>
