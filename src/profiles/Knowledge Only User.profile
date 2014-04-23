@@ -748,6 +748,10 @@
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>Dashboard</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>GoogleMapsInternationalAccount</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -781,10 +785,6 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>Shop</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>User</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
