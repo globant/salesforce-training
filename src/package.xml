@@ -159,7 +159,12 @@
         <name>CustomLabels</name>
     </types>
     <types>
-        <members>*</members>
+        <members>Category__c</members>
+        <members>CustomRole__c</members>
+        <members>CustomUser__c</members>
+        <members>Shop__c</members>
+        <members>Subcategory__c</members>
+        <members>User</members>
         <name>CustomObject</name>
     </types>
     <types>
