@@ -112,6 +112,11 @@
         <type>Lookup</type>
     </fields>
     <label>SurveyAnswer</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>SurveyAnswer Number</label>
         <type>Text</type>

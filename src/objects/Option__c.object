@@ -74,6 +74,11 @@
         <unique>false</unique>
     </fields>
     <label>Option</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Option Number</label>
         <type>Text</type>

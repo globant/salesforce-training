@@ -96,6 +96,11 @@
         <type>Picklist</type>
     </fields>
     <label>Question</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Question Number</label>
         <type>Text</type>
