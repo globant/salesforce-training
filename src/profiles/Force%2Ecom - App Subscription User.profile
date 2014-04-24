@@ -789,6 +789,10 @@
         <layout>Survey__c-Survey Layout</layout>
     </layoutAssignments>
     <pageAccesses>
+        <apexPage>CompleteSurvey</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>CustomLogin</apexPage>
         <enabled>false</enabled>
     </pageAccesses>

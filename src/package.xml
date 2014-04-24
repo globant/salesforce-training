@@ -16,21 +16,7 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>CustomLogin</members>
-        <members>Dashboard</members>
-        <members>GoogleMapsInternationalAccount</members>
-        <members>GoogleMapsInternationalContact</members>
-        <members>GoogleMapsInternationalEmbeddedAccount</members>
-        <members>GoogleMapsInternationalEmbeddedContact</members>
-        <members>Google_Maps_International_Setup</members>
-        <members>Login</members>
-        <members>OrgCustomizerV4</members>
-        <members>Register</members>
-        <members>Shop</members>
-        <members>chatterAssassin</members>
-        <members>chatterCharades</members>
-        <members>jsChatterCharades</members>
-        <members>perfectionStandard</members>
+        <members>*</members>
         <name>ApexPage</name>
     </types>
     <types>

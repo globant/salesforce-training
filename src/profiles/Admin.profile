@@ -879,6 +879,10 @@
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <pageAccesses>
+        <apexPage>CompleteSurvey</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>CustomLogin</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
