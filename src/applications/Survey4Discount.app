@@ -10,4 +10,5 @@
     <tab>Survey__c</tab>
     <tab>Question__c</tab>
     <tab>Option__c</tab>
+    <tab>SurveyAnswer__c</tab>
 </CustomApplication>

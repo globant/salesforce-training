@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>ChatterAssassin</members>
@@ -207,6 +207,10 @@
         <name>CustomObject</name>
     </types>
     <types>
+        <members>*</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
         <members>AdoptionDashboardsAppExchange</members>
         <members>AdoptionDashboardsAppExchange/x1AdoptionUsage</members>
         <members>AdoptionDashboardsAppExchange/x2AdoptionDataQuality</members>
@@ -226,6 +230,19 @@
         <members>Sales_history_advanced_dashboard</members>
         <members>Sales_history_advanced_dashboard/Sales_history_advanced_dashboard</members>
         <name>Dashboard</name>
+    </types>
+    <types>
+        <members>Answer__c-Answer Layout</members>
+        <members>Category__c-Category Layout</members>
+        <members>CustomRole__c-CustomRole Layout</members>
+        <members>CustomUser__c-CustomUser Layout</members>
+        <members>Option__c-Option Layout</members>
+        <members>Question__c-Question Layout</members>
+        <members>Shop__c-Shop Layout</members>
+        <members>Subcategory__c-Subcategory Layout</members>
+        <members>SurveyAnswer__c-SurveyAnswer Layout</members>
+        <members>Survey__c-Survey Layout</members>
+        <name>Layout</name>
     </types>
     <types>
         <members>Account.AllAccounts</members>
@@ -513,23 +530,6 @@
         <members>User</members>
         <members>UserLicense</members>
         <name>Workflow</name>
-    </types>
-    <types>
-        <members>Answer__c-Answer Layout</members>
-        <members>Category__c-Category Layout</members>
-        <members>CustomRole__c-CustomRole Layout</members>
-        <members>CustomUser__c-CustomUser Layout</members>
-        <members>Option__c-Option Layout</members>
-        <members>Question__c-Question Layout</members>
-        <members>Shop__c-Shop Layout</members>
-        <members>Survey__c-Survey Layout</members>
-        <members>Subcategory__c-Subcategory Layout</members>
-        <members>SurveyAnswer__c-SurveyAnswer Layout</members>
-        <name>Layout</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>CustomTab</name>
     </types>
     <version>29.0</version>
 </Package>
