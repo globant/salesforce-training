@@ -10,6 +10,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CompleteSurveyController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CustomLoginController</apexClass>
         <enabled>false</enabled>
     </classAccesses>

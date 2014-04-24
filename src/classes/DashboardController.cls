@@ -16,7 +16,10 @@ global with sharing class DashboardController {
            				ApexPages.addMessage(msg);
     	}
 		
-       return new PageReference( '/apex/Dashboard'); 
+		Pagereference completesurvey = Page.CompleteSurvey;
+		completesurvey.getParameters().put('code',code);
+		completesurvey.setRedirect(true);	
+       	return completesurvey; 
     }   
     
 }
