@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>ChatterAssassin</members>
         <members>CustomLoginController</members>
         <members>CustomUserController</members>
         <members>Customer</members>
+        <members>DashboardController</members>
         <members>OrgCustomizerController</members>
         <members>Test_ChatterAssassin</members>
         <members>chatterCharades</members>
@@ -206,17 +207,6 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>Category__c</members>
-        <members>Chatter_Assassin</members>
-        <members>CustomRole__c</members>
-        <members>CustomUser__c</members>
-        <members>International_Mapping_Setup</members>
-        <members>Perfect_Date_Wizard</members>
-        <members>Shop__c</members>
-        <members>Subcategory__c</members>
-        <name>CustomTab</name>
-    </types>
-    <types>
         <members>AdoptionDashboardsAppExchange</members>
         <members>AdoptionDashboardsAppExchange/x1AdoptionUsage</members>
         <members>AdoptionDashboardsAppExchange/x2AdoptionDataQuality</members>
@@ -236,37 +226,6 @@
         <members>Sales_history_advanced_dashboard</members>
         <members>Sales_history_advanced_dashboard/Sales_history_advanced_dashboard</members>
         <name>Dashboard</name>
-    </types>
-    <types>
-        <members>Account-Account Layout</members>
-        <members>Asset-Asset Layout</members>
-        <members>Campaign-Campaign Layout</members>
-        <members>CampaignMember-Campaign Member Page Layout</members>
-        <members>Case-Case Layout</members>
-        <members>CaseClose-Close Case Layout</members>
-        <members>CaseInteraction-Case Feed Layout</members>
-        <members>Category__c-Category Layout</members>
-        <members>Contact-Contact Layout</members>
-        <members>Contract-Contract Layout</members>
-        <members>CustomRole__c-CustomRole Layout</members>
-        <members>CustomUser__c-CustomUser Layout</members>
-        <members>Event-Event Layout</members>
-        <members>Global-Global Layout</members>
-        <members>Idea-Idea Layout</members>
-        <members>Lead-Lead Layout</members>
-        <members>Opportunity-Opportunity Layout</members>
-        <members>OpportunityLineItem-Opportunity Product Layout</members>
-        <members>Pricebook2-Price Book Layout</members>
-        <members>Product2-Product Layout</members>
-        <members>Quote-Quote Layout</members>
-        <members>QuoteLineItem-Quote Line Item Layout</members>
-        <members>Shop__c-Shop Layout</members>
-        <members>SocialPersona-Social Persona Layout</members>
-        <members>Solution-Solution Layout</members>
-        <members>Subcategory__c-Subcategory Layout</members>
-        <members>Task-Task Layout</members>
-        <members>User-User Layout</members>
-        <name>Layout</name>
     </types>
     <types>
         <members>Account.AllAccounts</members>
@@ -554,6 +513,23 @@
         <members>User</members>
         <members>UserLicense</members>
         <name>Workflow</name>
+    </types>
+    <types>
+        <members>Answer__c-Answer Layout</members>
+        <members>Category__c-Category Layout</members>
+        <members>CustomRole__c-CustomRole Layout</members>
+        <members>CustomUser__c-CustomUser Layout</members>
+        <members>Option__c-Option Layout</members>
+        <members>Question__c-Question Layout</members>
+        <members>Shop__c-Shop Layout</members>
+        <members>Survey__c-Survey Layout</members>
+        <members>Subcategory__c-Subcategory Layout</members>
+        <members>SurveyAnswer__c-SurveyAnswer Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>CustomTab</name>
     </types>
     <version>29.0</version>
 </Package>
