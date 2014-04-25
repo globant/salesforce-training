@@ -7,6 +7,19 @@ global class SurveyController {
     public List<Option__c> listOfOptionsForCurrentQuestion {get; set;}
     public List<String> questionTypes {get; set;}
     
+    public Map<String, List<Option__c>> questionsAndOptions;
+    
+     public Shop__c shop {
+     get {
+            if (shop == null)
+            {
+                shop = new Shop__c();
+            }
+            return shop;
+            }
+        set{}
+    }
+    
     public Survey__c newSurvey {
      get {
             if (newSurvey == null)
@@ -47,6 +60,7 @@ global class SurveyController {
         displayCreateNewOptionForm = false;
         listOfQuestions = new List<Question__c>();
         listOfOptionsForCurrentQuestion  = new List<Option__c>();
+        questionsAndOptions = new Map<String,List<Option__c>>();
     }
     
     public List<SelectOption> getItems(){
@@ -97,8 +111,10 @@ global class SurveyController {
                     appendedQuestion.Text__c = newQuestion.Text__c;
                     appendedQuestion.Type__c = selectedQuestionType;
                     appendedQuestion.Survey__c = newSurvey.Id;
-                    //appendedQuestion.Options__c = listOfOptionsForCurrentQuestion;
                     listOfQuestions.Add(appendedQuestion);
+                    questionsAndOptions.put(appendedQuestion.Text__c, listOfOptionsForCurrentQuestion);
+                    // ¿No debería crearse una nueva lista con la copia de los elementos de listOfOptionsForCurrentQuestion?
+                    listOfOptionsForCurrentQuestion = new List<Option__c>();
                 }
                 else
                 {
@@ -148,8 +164,46 @@ global class SurveyController {
         return null;    
     }
     
+    
     public PageReference saveSurvey(){
+        Shop__c aShop;
+        aShop = [select Id from Shop__c WHERE Name= 'Sotishop' LIMIT 1];
+        newSurvey.Shop__c = aShop.Id;
         Insert newSurvey;
+        Option__c optionToBeInserted;
+        for(Question__c currentQuestion : listOfQuestions)
+        {
+            currentQuestion.Survey__c = newSurvey.Id;
+            Insert currentQuestion;
+            for(Option__c currentOption : questionsAndOptions.get(currentQuestion.Text__c))    
+            {
+                optionToBeInserted = new Option__c();
+                optionToBeInserted.Text__c = currentOption.Text__c;
+                optionToBeInserted.Question__c = currentQuestion.Id;
+                Insert optionToBeInserted;
+            }
+        }
+        return null;
+    }
+        
+    public PageReference saveSurveyOld(){
+        Shop__c aShop;
+        aShop = [select Id from Shop__c WHERE Name= 'Sotishop' LIMIT 1];
+        newSurvey.Shop__c = aShop.Id;
+        Insert newSurvey;
+        Option__c optionToBeInserted;
+        for(Question__c currentQuestion : listOfQuestions)
+        {
+            currentQuestion.Survey__c = newSurvey.Id;
+            Insert currentQuestion;
+            for(Option__c currentOption : listOfOptionsForCurrentQuestion)    
+            {
+                optionToBeInserted = new Option__c();
+                optionToBeInserted.Text__c = currentOption.Text__c;
+                optionToBeInserted.Question__c = currentQuestion.Id;
+                Insert optionToBeInserted;
+            }
+        }
         return null;
     }
     

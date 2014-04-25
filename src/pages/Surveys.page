@@ -91,7 +91,7 @@
              <apex:repeat value="{!listOfQuestions}" var="question">
                  
                 Question #<apex:outputText value="{!questionNumber}" />:
-                <apex:outputText value="{!question.Text__c}" /> - Type: <apex:outputText value="{!question.Type__c}" /> <br/>
+                <apex:outputText value="{!question.Text__c}" /> - Type: <apex:outputText value="{!question.Type__c}"/> - Survey ID: <apex:outputText value="{!question.Survey__c}"/> <br/>
                 <apex:variable var="questionNumber" value="{!questionNumber+1}"/>
              </apex:repeat>
          </apex:form>
