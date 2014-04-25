@@ -18,8 +18,9 @@ global with sharing class DashboardController {
 		
 		Pagereference completesurvey = Page.CompleteSurvey;
 		completesurvey.getParameters().put('code',code);
-		completesurvey.setRedirect(true);	
-       	return completesurvey; 
+		completesurvey.setRedirect(true);
+		return completesurvey; 
     }   
+    
     
 }
