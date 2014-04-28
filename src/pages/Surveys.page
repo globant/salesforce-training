@@ -36,8 +36,14 @@
                 <apex:outputpanel id="panelCreateNewSurvey">
                     <div id="divPanelCreateNewSurvey" style="display:{!if(displayCreateNewSurveyForm ,"block","none")}; width:60%; margin-left:5%; margin-top:2%; border-radius: 5px; background: ghostwhite; border-color:gray;border-width: thin;border-style: solid;">
                         <p><b>New Survey</b></p>
-                        <p>Survey Name:</p>
-                        <p>Survey Description:</p>
+                        <div style="width: 50%; margin-top: 5px;">
+                            <apex:outputLabel styleClass="col-lg-5 control-label">Survey Name</apex:outputLabel>
+                            <apex:inputField value="{!newSurvey.Title__c}" styleClass="form-control" />
+                        </div>
+                        <div style="width: 50%; margin-top: 5px;">
+                            <apex:outputLabel styleClass="col-lg-5 control-label">Survey Description</apex:outputLabel>
+                            <apex:inputField value="{!newSurvey.Description__c}" styleClass="form-control" />
+                        </div>
                         <div>
                             <apex:commandButton action="{!addQuestion}" rerender="panelCreateNewQuestion" styleClass="btn btn-success" value="Create new question" style="background-color: green;"/>
                         </div>
@@ -88,11 +94,16 @@
              </fieldset>
              
              <apex:variable var="questionNumber" value="{!1}" /> 
-             <apex:repeat value="{!listOfQuestions}" var="question">
-                 
-                Question #<apex:outputText value="{!questionNumber}" />:
-                <apex:outputText value="{!question.Text__c}" /> - Type: <apex:outputText value="{!question.Type__c}"/> - Survey ID: <apex:outputText value="{!question.Survey__c}"/> <br/>
+           <apex:repeat value="{!listOfQuestions}" var="question">
+                <br/> 
+                Question #<apex:outputText value="{!questionNumber}" />:<br/>
+                <apex:outputText value="{!question.Text__c}" style="font-weight:bold;"/><br/>
                 <apex:variable var="questionNumber" value="{!questionNumber+1}"/>
+                <apex:repeat value="{!questionsAndOptions[question.Text__c]}" var="currentOption">
+                <apex:outputText value="{!IF(question.Type__c=='Radio', '<input type=radio name=test>', '<input type=checkbox>')}" escape="false"/>
+                <apex:outputText value="{!currentOption.Text__c}"></apex:outputText>
+                <apex:outputText value="{!IF(question.Type__c=='Radio','</input>','</input>')}" escape="false"/><br/>
+                </apex:repeat>
              </apex:repeat>
          </apex:form>
     </div>     
