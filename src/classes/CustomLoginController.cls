@@ -1,8 +1,30 @@
 global with sharing class CustomLoginController {
     global String username{get;set;}
     global String password{get;set;}
-    global CustomLoginController () {}
-        
+    global Boolean showErrorMessage{get;set;}
+    global Boolean showMessage{get;set;}
+    global CustomLoginController () 
+    {
+    	String label = ApexPages.currentPage().getParameters().get('mid');
+    	if(label != null)
+    	{
+    		if(label == '1')
+    		{
+    			Message = System.Label.Success1;
+    			showErrorMessage = false;
+    		}else
+    		{
+    			Message = System.Label.Error1;
+    			showErrorMessage = true;
+    		}
+    		
+    		showMessage = true; 
+    	}else{
+    	
+    	showMessage = false; 
+    	}
+    }
+    global String Message{get;set;}    
      
     global PageReference forwardToCustomAuthPage() {
        return new PageReference( '/Login'); 
@@ -21,8 +43,7 @@ global with sharing class CustomLoginController {
                      
                      String inputString = password;
 				String md5Coded = EncodingUtil.convertToHex(Crypto.generateDigest('MD5', Blob.valueOf(inputString)));
-
-                        
+                     
                         return new PageReference( '/apex/Dashboard');  
            
     	           }catch(Exception e)
