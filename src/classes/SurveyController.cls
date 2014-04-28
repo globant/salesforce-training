@@ -7,7 +7,7 @@ global class SurveyController {
     public List<Option__c> listOfOptionsForCurrentQuestion {get; set;}
     public List<String> questionTypes {get; set;}
     
-    public Map<String, List<Option__c>> questionsAndOptions;
+    public Map<String, List<Option__c>> questionsAndOptions {get; set;}
     
      public Shop__c shop {
      get {
