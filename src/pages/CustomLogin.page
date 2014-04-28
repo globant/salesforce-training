@@ -11,18 +11,29 @@
      <apex:stylesheet value="{!URLFOR($Resource.Alertify, 'Alertify/css/alertify.bootstrap.css')}"/>
      <apex:stylesheet value="{!URLFOR($Resource.Alertify, 'Alertify/css/alertify.core.css')}"/>
      <apex:stylesheet value="{!URLFOR($Resource.Alertify, 'Alertify/css/alertify.default.css')}"/>
-    
-   <apex:outputPanel rendered="true">
+    <apex:outputPanel rendered="{!showMessage}">
+   <apex:outputPanel rendered="{!showErrorMessage}">
    <script>
    $(function() {
- //alertify.success("Success notification");
- //alertify.error("Error notification");
-}); 
+   var message = $("#alertMessage").attr('value');
+    alertify.error(message); 
+	}); 
    </script>
    </apex:outputPanel>
- 
+ <apex:outputPanel rendered="{!NOT(showErrorMessage)}">
+   <script>
+   $(function() {
+     var message = $("#alertMessage").attr('value'); 
+     alertify.success(message);  
+ 	
+	}); 
+   </script>
+   </apex:outputPanel>
+    </apex:outputPanel>
 <div>
     <apex:form styleClass="form-horizontal">
+    <apex:outputLabel value="{!Message}" style="display:none" />
+   <div value="{!Message}" id="alertMessage"></div>
      <fieldset>
      <div id="legend">
           <legend>Survey 4 discount - Login</legend>
