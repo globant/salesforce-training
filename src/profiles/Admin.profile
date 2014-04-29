@@ -14,6 +14,14 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CompletedSurveyController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CustomController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CustomLoginController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -34,7 +42,15 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>SurveyController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>Test_ChatterAssassin</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>VoucherController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -1006,6 +1022,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>Shop</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>Surveys</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
