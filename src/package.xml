@@ -1,21 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
-        <members>ChatterAssassin</members>
-        <members>CompleteSurveyController</members>
-        <members>CustomLoginController</members>
-        <members>CustomUserController</members>
-        <members>Customer</members>
-        <members>DashboardController</members>
-        <members>OrgCustomizerController</members>
-        <members>Test_ChatterAssassin</members>
-        <members>chatterCharades</members>
-        <members>chatterCharadesGlobal</members>
-        <members>orgTest</members>
-        <members>perfectionStandard</members>
-        <members>testPDW</members>
-        <name>ApexClass</name>
-    </types>
     <types>
         <members>*</members>
         <name>ApexPage</name>
@@ -536,6 +520,10 @@
         <members>User</members>
         <members>UserLicense</members>
         <name>Workflow</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>ApexClass</name>
     </types>
     <version>29.0</version>
 </Package>

@@ -64,6 +64,17 @@
         <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
+        <fullName>Survey__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Question__r.Survey__r.Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Survey</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Text__c</fullName>
         <externalId>false</externalId>
         <label>Text</label>
@@ -84,6 +95,10 @@
         <type>Text</type>
     </nameField>
     <pluralLabel>Options</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>Question__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Text__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Survey__c</customTabListAdditionalFields>
+    </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

@@ -97,11 +97,20 @@
         <unique>false</unique>
     </fields>
     <label>Answer</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
         <label>Answer Number</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>Answers</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>Question__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Option__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Text__c</customTabListAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

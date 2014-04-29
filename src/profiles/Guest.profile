@@ -524,6 +524,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Option__c.Survey__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Option__c.Text__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -866,6 +871,10 @@
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>CompletedSurvey</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>CustomLogin</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -907,6 +916,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>Shop</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>Voucher</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>

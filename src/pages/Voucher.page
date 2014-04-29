@@ -1,0 +1,9 @@
+<apex:page controller="VoucherController" renderAs="pdf" >
+  <div id="legend">
+      <legend>Survey4Discount - Complete Survey</legend>
+  </div>
+  <h1>Congratulations</h1>
+  This is your new voucher: {!code}
+  
+  <p>Print this page to use your voucher.</p>
+</apex:page>
