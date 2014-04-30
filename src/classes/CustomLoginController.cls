@@ -42,17 +42,22 @@ global with sharing class CustomLoginController {
                         WHERE Username__c = :username and Password__c = :md5Coded];
                          
                         //when found login
-                        //Site.login(username, password, null);
+                         //Site.login(username, password, null);
 				try{
-				SessionData__c sessionData = SessionData__c.getInstance('CustomUserName');
-				Database.delete(sessionData.Id);
+					
+					
+					SessionData__c sessionData = SessionData__c.getInstance('CustomUserName');
+					System.debug(sessionData.Id);
+					if(sessionData != null)
+					{
+						Database.delete(sessionData.Id);
+					}					
 					Database.Saveresult sessionResult2 = Database.insert(new SessionData__c(CustomUserName__c = username, Name='CustomUserName'));
 					
 				}catch(Exception ex)
 				{
-				Message = 'Hola!';
-				showMessage = true;
-           				return new PageReference( '/apex/CustomLogin');     
+					System.debug(ex.getMessage() + 'exmessage');
+					return new PageReference( '/apex/CustomLogin');     
 				}
                      
                         return new PageReference( '/apex/Dashboard');  

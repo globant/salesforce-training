@@ -1,4 +1,4 @@
-public with sharing class CreateSurveyController {
+public with sharing class CreateSurveyController extends CustomController {
 
     public PageReference changeType() {
         return null;
@@ -27,7 +27,21 @@ public with sharing class CreateSurveyController {
     {
         QuestionsInSurvey = new List<Question>();   
         OptionsListAux = new List<Option>(); 
-        currentQuestionType = 'Text';   
+        currentQuestionType = 'Text';  
+        
+        if(user!=null){
+         List<Shop__c> userShop = [SELECT Category__c, Id
+        FROM Shop__c 
+        WHERE Custom_User_Owner__c = :user.Id];
+                
+        if(userShop != null)
+	        {
+	        	 survey.Shop__c = userShop[0].Id;
+	        }
+        }
+        
+       
+         
     }
     
     public PageReference AddQuestion()
