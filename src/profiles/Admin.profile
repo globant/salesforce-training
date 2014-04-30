@@ -18,6 +18,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CreateSurveyController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CustomController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -981,6 +985,10 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>CreateSurvey</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>CustomLogin</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
@@ -1058,6 +1066,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Chatter_Assassin</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Coupon__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>

@@ -18,6 +18,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CreateSurveyController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CustomController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -888,6 +892,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>CompletedSurvey</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>CreateSurvey</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>

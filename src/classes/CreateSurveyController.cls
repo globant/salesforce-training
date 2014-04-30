@@ -7,6 +7,7 @@ public with sharing class CreateSurveyController extends CustomController {
 
     public Survey__c survey {get; set;}
     public List<Question> QuestionsInSurvey {get; set;}
+    public Shop__c shop {get; set;}
     
     public String currentQuestionText {get; set;}
     public Integer CurrentQuestionNumber {get; set;}    
@@ -25,20 +26,20 @@ public with sharing class CreateSurveyController extends CustomController {
     
     public CreateSurveyController()
     {
-        QuestionsInSurvey = new List<Question>();   
+    	survey = new Survey__c();
+    	QuestionsInSurvey = new List<Question>();   
         OptionsListAux = new List<Option>(); 
         currentQuestionType = 'Text';  
-        
+               
         if(user!=null){
-         List<Shop__c> userShop = [SELECT Category__c, Id
-        FROM Shop__c 
-        WHERE Custom_User_Owner__c = :user.Id];
-                
-        if(userShop != null)
-	        {
-	        	 survey.Shop__c = userShop[0].Id;
-	        }
-        }
+         	List<Shop__c> userShop = [SELECT Category__c, Id, Name
+	        FROM Shop__c 
+	        WHERE Custom_User_Owner__c = :user.Id];
+	        if(userShop.size() > 0)
+		     {
+		        	 shop = userShop.get(0);
+		     }
+	   	}
         
        
          
@@ -69,6 +70,8 @@ public with sharing class CreateSurveyController extends CustomController {
     
     public PageReference AddSurvey()
     {
+    	
+    	survey.Shop__c = shop.Id;
         Insert survey;
         for(Question q: QuestionsInSurvey){
         Question__c newQuestion = new Question__c();

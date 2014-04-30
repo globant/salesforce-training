@@ -45,14 +45,14 @@ global with sharing class CustomLoginController {
                          //Site.login(username, password, null);
 				try{
 					
-					
+				Database.Saveresult sessionResult2 = Database.insert(new SessionData__c(CustomUserName__c = username, Name='CustomUserName'));
 					SessionData__c sessionData = SessionData__c.getInstance('CustomUserName');
 					System.debug(sessionData.Id);
 					if(sessionData != null)
 					{
 						Database.delete(sessionData.Id);
 					}					
-					Database.Saveresult sessionResult2 = Database.insert(new SessionData__c(CustomUserName__c = username, Name='CustomUserName'));
+					Database.insert(new SessionData__c(CustomUserName__c = username, Name='CustomUserName'));
 					
 				}catch(Exception ex)
 				{

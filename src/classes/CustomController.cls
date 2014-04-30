@@ -8,7 +8,7 @@ global abstract with sharing class CustomController {
   global CustomController () 
   {    
     SessionData__c username = SessionData__c.getInstance('CustomUserName');
-    
+    System.debug('username' + username);
     try
     {
       user = [SELECT Name,Password__c, Username__c
