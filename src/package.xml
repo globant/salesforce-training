@@ -8,6 +8,7 @@
         <members>Customer</members>
         <members>DashboardController</members>
         <members>OrgCustomizerController</members>
+        <members>SurveyController</members>
         <members>Test_ChatterAssassin</members>
         <members>chatterCharades</members>
         <members>chatterCharadesGlobal</members>
