@@ -105,8 +105,9 @@
         <label>All</label>
     </listViews>
     <nameField>
+        <displayFormat>C-{0000}</displayFormat>
         <label>Coupon Number</label>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Coupons</pluralLabel>
     <searchLayouts/>

@@ -8,6 +8,7 @@
         <members>Customer</members>
         <members>DashboardController</members>
         <members>OrgCustomizerController</members>
+        <members>SurveyController</members>
         <members>Test_ChatterAssassin</members>
         <members>chatterCharades</members>
         <members>chatterCharadesGlobal</members>
@@ -183,6 +184,7 @@
     <types>
         <members>Answer__c</members>
         <members>Category__c</members>
+        <members>Coupon__c</members>
         <members>CustomRole__c</members>
         <members>CustomUser__c</members>
         <members>Option__c</members>
