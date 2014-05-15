@@ -103,8 +103,9 @@
         <label>All</label>
     </listViews>
     <nameField>
+        <displayFormat>A-{00000}</displayFormat>
         <label>Answer Number</label>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Answers</pluralLabel>
     <searchLayouts>

@@ -22,7 +22,7 @@
         <div class="alert alert-success">
             <p><strong>Name: </strong><apex:inputText value=" {!survey.Title__c}" id="surveyTitle"/></p>
             <p><strong>Description: </strong><apex:inputText value=" {!survey.Description__c}" id="surveyDescription"/></p>
-            <p><strong>Shop: {!survey.Shop__r.Name}</strong></p>
+            <p><strong>Shop: {!shop.Name}</strong></p>
         </div>
         
         <div class="alert alert-success">

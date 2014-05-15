@@ -118,8 +118,9 @@
         <label>All</label>
     </listViews>
     <nameField>
-        <label>SurveyAnswer Number</label>
-        <type>Text</type>
+        <displayFormat>SA-{00000}</displayFormat>
+        <label>Survey Answer Number</label>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>SurveyAnswers</pluralLabel>
     <searchLayouts/>

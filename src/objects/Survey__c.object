@@ -99,8 +99,9 @@
         <label>All</label>
     </listViews>
     <nameField>
+        <displayFormat>S-{00000}</displayFormat>
         <label>Survey Number</label>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Surveys</pluralLabel>
     <searchLayouts/>

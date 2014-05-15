@@ -119,8 +119,9 @@
         <label>All</label>
     </listViews>
     <nameField>
-        <label>CustomUser Name</label>
-        <type>Text</type>
+        <displayFormat>U-{00000}</displayFormat>
+        <label>User Number</label>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>CustomUsers</pluralLabel>
     <searchLayouts>

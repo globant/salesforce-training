@@ -51,66 +51,65 @@
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
     <fields>
-        <fullName>Survey__c</fullName>
+        <fullName>Available__c</fullName>
+        <defaultValue>true</defaultValue>
         <externalId>false</externalId>
-        <label>Survey</label>
-        <referenceTo>Survey__c</referenceTo>
-        <relationshipLabel>Questions</relationshipLabel>
-        <relationshipName>Questions</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <label>Available</label>
         <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+        <type>Checkbox</type>
     </fields>
     <fields>
-        <fullName>Text__c</fullName>
+        <fullName>Code__c</fullName>
         <externalId>false</externalId>
-        <label>Text</label>
-        <length>200</length>
+        <label>Code</label>
+        <length>40</length>
         <required>false</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Type__c</fullName>
+        <fullName>DateUsed__c</fullName>
         <externalId>false</externalId>
-        <label>Type</label>
-        <picklist>
-            <picklistValues>
-                <fullName>Text</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Radio</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Checkbox</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <label>DateUsed</label>
+        <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>Picklist</type>
+        <type>DateTime</type>
     </fields>
-    <label>Question</label>
+    <fields>
+        <fullName>Discount__c</fullName>
+        <externalId>false</externalId>
+        <label>Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>SurveyAnswer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>SurveyAnswer</label>
+        <referenceTo>SurveyAnswer__c</referenceTo>
+        <relationshipLabel>Coupons</relationshipLabel>
+        <relationshipName>Coupons</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Coupon</label>
     <listViews>
         <fullName>All</fullName>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
     <nameField>
-        <displayFormat>Q-{00000}</displayFormat>
-        <label>Question Number</label>
+        <displayFormat>C-{0000}</displayFormat>
+        <label>Coupon Number</label>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Questions</pluralLabel>
-    <searchLayouts>
-        <customTabListAdditionalFields>Text__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Survey__c</customTabListAdditionalFields>
-    </searchLayouts>
-    <sharingModel>ControlledByParent</sharingModel>
+    <pluralLabel>Coupons</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

@@ -1,6 +1,6 @@
-public with sharing class DashboardController extends CustomController{
+global with sharing class DashboardAdminController extends CustomController{
     
-    public DashboardController(){
+    public DashboardAdminController(){
         super();
         String pageName = Util.getCurrentPageName();
         if (!Util.checkPermissions(pageName, role.Name)){
@@ -8,9 +8,9 @@ public with sharing class DashboardController extends CustomController{
         }
     }
     
-    public String code {get;set;}
+    global String code {get;set;}
     
-    public PageReference goToSurvey() {
+    global PageReference goToSurvey() {
         
         List<SurveyAnswer__c> surveyAnswer = [SELECT Code__c
         FROM SurveyAnswer__c 
@@ -29,12 +29,5 @@ public with sharing class DashboardController extends CustomController{
             showMessage = true;
         }
         return new PageReference( '/apex/Dashboard');
-    }
-    
-    public PageReference logout(){
-   		CookieManager.logout();
-   		PageReference login = Page.CustomLogin;
-        login.setRedirect(true);
-        return login;
-   	}      
+    }   
 }

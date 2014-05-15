@@ -1,4 +1,4 @@
-<apex:page docType="html-5.0" controller="DashboardController"
+<apex:page docType="html-5.0" controller="DashboardAdminController"
     showHeader="false" sidebar="false" standardStylesheets="false">
     
     <style>
@@ -6,12 +6,6 @@
             padding-left: 70px;
             padding-right: 70px;
         }
-        
-        logout {
-			text-align: right;
-			float: right;
-			margin-top: -30px;
-		}
     </style>
     
     <apex:includeScript value="{!URLFOR($Resource.Jquery, 'Jquery/Jquery.js')}"/> 
@@ -49,17 +43,14 @@
         <apex:form styleClass="form-horizontal">
             <fieldset>
                 <div id="legend">
-                    <legend>Survey4Discount - Dashboard - Welcome {!user.First_Name__c} {!user.Last_Name__c}!
-                    	<div class="logout">
-                    		 <apex:commandLink action="{!logout}" id="logout">Logout</apex:commandLink>
-                    	</div>
-                    </legend>
+                    <legend>Survey4Discount - Dashboard for Admins - Welcome {!user.First_Name__c} {!user.Last_Name__c}!</legend>
                 </div>
 
                 <div
                     style="width: 80%; margin-left: 10%; border-radius: 15px; background: ghostwhite; border-color: green; border-width: thin; border-style: solid;">
                     <div style="width: 80%; margin-left: 10%;">
-                       
+                        
+
                     </div>
                     <table
                         style="width: 90%; border-width: thin; border-style: solid; margin-left: 5%; margin-bottom: 3%;">
