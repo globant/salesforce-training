@@ -1,14 +1,20 @@
 public with sharing class DashboardController extends CustomController{
     
+    public String code {get;set;}
+    
+    public List<Coupon__c> lastCoupons{get;set;}
+    
+    
     public DashboardController(){
         super();
         String pageName = Util.getCurrentPageName();
         if (!Util.checkPermissions(pageName, role.Name)){
             Util.goToError();
         }
+        
+        lastCoupons = [SELECT Name,SurveyAnswer__r.Survey__r.Name, Available__c, Discount__c FROM Coupon__c];
     }
     
-    public String code {get;set;}
     
     public PageReference goToSurvey() {
         
