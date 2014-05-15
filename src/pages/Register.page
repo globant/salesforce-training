@@ -18,12 +18,12 @@
             background: ghostwhite; 
             border-color: green;
             border-width: thin;
-            border-style: solid;"
+            border-style: solid;
         }
         
         .col-lg-2 {
-        	text-align: left !important;
-			width: 50%;
+            text-align: left !important;
+            width: 50%;
         }
         
     </style>
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div style="text-align: right; padding: 5px; margin-right: 10%;">
-                    <apex:commandButton action="{!save}" styleClass="btn btn-success" value="Login" style="background-color: green;" onclick="return comparePasswords('{!customUser.Password__c}, {!confirmPassword}')"/>
+                    <apex:commandButton action="{!save}" styleClass="btn btn-success" value="Register" style="background-color: green;" onclick="return comparePasswords('{!customUser.Password__c}, {!confirmPassword}')"/>
                 </div> 
              </fieldset>
             </apex:form>

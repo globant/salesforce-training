@@ -54,6 +54,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>ProfileController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SurveyController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -545,6 +549,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>OrgCustomizerV4</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>Profile</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
