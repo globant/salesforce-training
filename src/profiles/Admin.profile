@@ -50,6 +50,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MenuBarController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>OrgCustomizerController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -491,6 +495,10 @@
         <object>Survey__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <pageAccesses>
+        <apexPage>AssignSurvey</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
     <pageAccesses>
         <apexPage>CompleteSurvey</apexPage>
         <enabled>true</enabled>

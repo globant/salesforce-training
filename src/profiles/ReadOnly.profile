@@ -50,6 +50,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>MenuBarController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>OrgCustomizerController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -392,6 +396,10 @@
     <layoutAssignments>
         <layout>User-User Layout</layout>
     </layoutAssignments>
+    <pageAccesses>
+        <apexPage>AssignSurvey</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
     <pageAccesses>
         <apexPage>CompleteSurvey</apexPage>
         <enabled>false</enabled>

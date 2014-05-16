@@ -44,7 +44,7 @@ global with sharing class CustomLoginController {
                         dashboard.setRedirect(true);
                         return dashboard;  
                 }else if (user.Role__r.Name == 'ShopAdmin'){
-                        PageReference dashboardAdmin = Page.DashboardAdmin;
+                        PageReference dashboardAdmin = Page.Home;
                         dashboardAdmin.setRedirect(true);
                         return dashboardAdmin; 
                 }
