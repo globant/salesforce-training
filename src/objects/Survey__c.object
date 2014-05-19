@@ -71,6 +71,18 @@
         <type>Percent</type>
     </fields>
     <fields>
+        <fullName>Shop__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Shop</label>
+        <referenceTo>Shop__c</referenceTo>
+        <relationshipLabel>Surveys</relationshipLabel>
+        <relationshipName>Surveys</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Title__c</fullName>
         <externalId>false</externalId>
         <label>Title</label>
@@ -81,9 +93,15 @@
         <unique>false</unique>
     </fields>
     <label>Survey</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
+        <displayFormat>S-{00000}</displayFormat>
         <label>Survey Number</label>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Surveys</pluralLabel>
     <searchLayouts/>

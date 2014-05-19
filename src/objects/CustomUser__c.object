@@ -103,6 +103,18 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>Session_Time__c</fullName>
+        <defaultValue>10</defaultValue>
+        <externalId>false</externalId>
+        <label>Session Time</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Username__c</fullName>
         <externalId>false</externalId>
         <label>Username</label>
@@ -119,10 +131,17 @@
         <label>All</label>
     </listViews>
     <nameField>
-        <label>CustomUser Name</label>
-        <type>Text</type>
+        <displayFormat>U-{00000}</displayFormat>
+        <label>User Number</label>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>CustomUsers</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>First_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Last_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Username__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Email__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Role__c</customTabListAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

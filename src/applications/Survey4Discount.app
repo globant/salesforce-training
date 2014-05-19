@@ -7,4 +7,10 @@
     <tab>Subcategory__c</tab>
     <tab>standard-Document</tab>
     <tab>CustomUser__c</tab>
+    <tab>CustomRole__c</tab>
+    <tab>Survey__c</tab>
+    <tab>Question__c</tab>
+    <tab>Option__c</tab>
+    <tab>SurveyAnswer__c</tab>
+    <tab>Answer__c</tab>
 </CustomApplication>

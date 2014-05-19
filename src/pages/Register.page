@@ -1,74 +1,103 @@
-<apex:page controller="CustomUserController" showHeader="false" sidebar="false">
+<apex:page controller="CustomUserController" showHeader="false" sidebar="false" docType="html-5.0" standardStylesheets="false">
 
-<apex:stylesheet value="{!URLFOR($Resource.bootstrap, 'dist/css/bootstrap.min.css')}"/>
-<apex:includeScript value="{!URLFOR($Resource.bootstrap, 'dist/js/bootstrap.min.js')}"/>
-
-<script type="text/javascript">
-    
-    function comparePasswords(password1, password2)
-    {
-        var originalPassword = document.getElementById(password1).value;
-        var confirmedPassword = document.getElementById(password2).value;
-
-        if(originalPassword != confirmedPassword ){
-            alert('Passwords must match');
-            return false;
+    <style>
+        body {
+            padding-left: 70px;
+            padding-right: 70px;
         }
-       
-        return true;
-    }
-</script>
+        
+        .inputFieldDiv {
+            width: 80%;
+            margin-left: 10%;
+        }
+        
+        .formDiv {
+            width:30%; 
+            margin-left:30%; 
+            border-radius: 15px; 
+            background: ghostwhite; 
+            border-color: green;
+            border-width: thin;
+            border-style: solid;
+        }
+        
+        .col-lg-2 {
+            text-align: left !important;
+            width: 50%;
+        }
+        
+    </style>
+    
+    <apex:stylesheet value="{!URLFOR($Resource.bootstrap, 'dist/css/bootstrap.min.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Alertify, 'Alertify/css/alertify.bootstrap.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Alertify, 'Alertify/css/alertify.core.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Alertify, 'Alertify/css/alertify.default.css')}"/>
 
-
-<apex:form >
-
-     <div id="legend">
-          <legend>Survey 4 discount - Register User</legend>
+    <div>
+        <div id="legend">
+            <legend>Survey 4 discount - Register User</legend>
         </div>
+    
+        <div class="formDiv">
+            <apex:form styleClass="form-horizontal">
+             <fieldset>
+                <div class="inputFieldDiv">      
+                    <apex:outputLabel value="First Name" styleClass="col-lg-2 control-label" for="firstname"/>
+                    <div>
+                        <apex:inputText value="{!customUser.First_Name__c}" id="firstname" styleClass="form-control" />
+                    </div>
+                </div> 
+                <div class="inputFieldDiv">      
+                    <apex:outputLabel value="Last Name" styleClass="col-lg-2 control-label" for="lastname"/>
+                    <div>
+                        <apex:inputText value="{!customUser.Last_Name__c}" id="lastname" styleClass="form-control" />
+                    </div>
+                </div>
+                <div class="inputFieldDiv">      
+                    <apex:outputLabel value="Username" styleClass="col-lg-2 control-label" for="username"/>
+                    <div>
+                        <apex:inputText value="{!customUser.Username__c}" id="username" styleClass="form-control" />
+                    </div>
+                </div>
+                <div class="inputFieldDiv">      
+                    <apex:outputLabel value="E-mail" styleClass="col-lg-2 control-label" for="email"/>
+                    <div>
+                        <apex:inputText value="{!customUser.Email__c}" id="email" styleClass="form-control" />
+                    </div>
+                </div>
+                <div class="inputFieldDiv">      
+                    <apex:outputLabel value="Password" styleClass="col-lg-2 control-label" for="password"/>
+                    <div>
+                        <apex:inputSecret value="{!customUser.Password__c}" id="password" styleClass="form-control" />
+                    </div>
+                </div>
+                <div class="inputFieldDiv">      
+                    <apex:outputLabel value="Confirm Password" styleClass="col-lg-2 control-label" for="cpassword"/>
+                    <div>
+                        <apex:inputSecret value="{!confirmPassword}" id="cpassword" styleClass="form-control" />
+                    </div>
+                </div>
+                <div style="text-align: right; padding: 5px; margin-right: 10%;">
+                    <apex:commandButton action="{!save}" styleClass="btn btn-success" value="Register" style="background-color: green;" onclick="return comparePasswords('{!customUser.Password__c}, {!confirmPassword}')"/>
+                </div> 
+             </fieldset>
+            </apex:form>
+        </div>
+    </div>
 
-
-
-    <apex:pageBlock id="thePageBlock">
-        <apex:pageBlockSection >
-            <apex:pageBlockSectionItem >
-                <apex:outputLabel styleClass="col-lg-2 control-label">First Name</apex:outputLabel>
-                <apex:inputField value="{!customUser.First_Name__c}" styleClass="form-control"/>
-            </apex:pageBlockSectionItem>
-        </apex:pageBlockSection>
-        <apex:pageBlockSection >
-            <apex:pageBlockSectionItem >
-                <apex:outputLabel styleClass="col-lg-2 control-label">Last Name</apex:outputLabel>
-                <apex:inputField value="{!customUser.Last_Name__c}" styleClass="form-control"/>
-            </apex:pageBlockSectionItem>
-        </apex:pageBlockSection>
-        <apex:pageBlockSection >
-            <apex:pageBlockSectionItem >
-                <apex:outputLabel styleClass="col-lg-2 control-label">User</apex:outputLabel>
-                <apex:inputField value="{!customUser.Username__c}" styleClass="form-control"/>
-            </apex:pageBlockSectionItem>
-        </apex:pageBlockSection>
-        <apex:pageBlockSection >
-            <apex:pageBlockSectionItem >
-                <apex:outputLabel styleClass="col-lg-2 control-label">Email</apex:outputLabel>
-                <apex:inputField value="{!customUser.Email__c}" styleClass="form-control"/>
-            </apex:pageBlockSectionItem>
-        </apex:pageBlockSection>
-        <apex:pageBlockSection id="thePageBlockSectionPassword" >
-            <apex:pageBlockSectionItem id="thePageBlockSectionItemPassword" >
-                <apex:outputLabel styleClass="col-lg-2 control-label">Password</apex:outputLabel>
-                <apex:inputSecret id="originalPassword" value="{!customUser.Password__c}"  styleClass="form-control"/>
-            </apex:pageBlockSectionItem>
-        </apex:pageBlockSection>
-        <apex:pageBlockSection id="thePageBlockSectionConfirmPassword">
-            <apex:pageBlockSectionItem id="thePageBlockSectionItemConfirmPassword">
-                <apex:outputLabel styleClass="col-lg-2 control-label">Confirm</apex:outputLabel>
-                <apex:inputSecret id="confirmPassword" styleClass="form-control"/>
-            </apex:pageBlockSectionItem>
-        </apex:pageBlockSection>
-        <apex:commandButton styleClass="btn btn-success" action="{!save}" value="Save" onclick="return comparePasswords('{!$Component.thePageBlock.thePageBlockSectionPassword.thePageBlockSectionItemPassword.originalPassword}','{!$Component.thePageBlock.thePageBlockSectionConfirmPassword.thePageBlockSectionItemConfirmPassword.confirmPassword}')"/>
-        <apex:pageMessages ></apex:pageMessages>        
-    </apex:pageBlock>
-
-
-</apex:form>
+    <apex:includeScript value="{!URLFOR($Resource.Jquery, 'Jquery/Jquery.js')}"/> 
+    <apex:includeScript value="{!URLFOR($Resource.bootstrap, 'dist/js/bootstrap.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.Alertify, 'Alertify/js/alertify.js')}"/> 
+    <script type="text/javascript">
+        
+        function comparePasswords(password1, password2)
+        {
+            //if(password1 != password2 ){
+            //    alert('Passwords must match');
+            //    return false;
+            //}
+           
+            return true;
+        }
+    </script>
 </apex:page>

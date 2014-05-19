@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>Error1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error1</shortDescription>
+        <value>Your action was not completed</value>
+    </labels>
+    <labels>
         <fullName>GMI_BackTo</fullName>
         <categories>Google, Maps, Google Maps, Google Maps International</categories>
         <language>en_US</language>
@@ -71,5 +78,12 @@
         <protected>true</protected>
         <shortDescription>Google Maps URL</shortDescription>
         <value>http://maps.google.com</value>
+    </labels>
+    <labels>
+        <fullName>Success1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Success1</shortDescription>
+        <value>Action successful</value>
     </labels>
 </CustomLabels>

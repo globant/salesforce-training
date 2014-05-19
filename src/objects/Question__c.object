@@ -96,11 +96,21 @@
         <type>Picklist</type>
     </fields>
     <label>Question</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
+        <displayFormat>Q-{00000}</displayFormat>
         <label>Question Number</label>
-        <type>Text</type>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Questions</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>Text__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Survey__c</customTabListAdditionalFields>
+    </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

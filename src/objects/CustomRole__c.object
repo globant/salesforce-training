@@ -57,7 +57,7 @@
         <label>All</label>
     </listViews>
     <nameField>
-        <label>CustomRole Name</label>
+        <label>Role Name</label>
         <type>Text</type>
     </nameField>
     <pluralLabel>CustomRoles</pluralLabel>

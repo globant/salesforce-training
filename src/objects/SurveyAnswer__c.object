@@ -51,6 +51,17 @@
     <enableHistory>false</enableHistory>
     <enableReports>false</enableReports>
     <fields>
+        <fullName>Code__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>Code</label>
+        <length>12</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
         <fullName>Completed__c</fullName>
         <defaultValue>false</defaultValue>
         <externalId>false</externalId>
@@ -101,9 +112,15 @@
         <type>Lookup</type>
     </fields>
     <label>SurveyAnswer</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
     <nameField>
-        <label>SurveyAnswer Number</label>
-        <type>Text</type>
+        <displayFormat>SA-{00000}</displayFormat>
+        <label>Survey Answer Number</label>
+        <type>AutoNumber</type>
     </nameField>
     <pluralLabel>SurveyAnswers</pluralLabel>
     <searchLayouts/>
