@@ -34,12 +34,12 @@ public class CustomUserController {
                 return login;
         }else{
                 if (existCustomerRole()){
-                String encodedPassword = EncodingUtil.convertToHex(Crypto.generateDigest('MD5', Blob.valueOf(customUser.Password__c)));
+               		String encodedPassword = EncodingUtil.convertToHex(Crypto.generateDigest('MD5', Blob.valueOf(customUser.Password__c)));
                         customUser.Password__c = encodedPassword ;
                         Insert customUser;
-                        PageReference dashboard = Page.Dashboard;
-                        dashboard.setRedirect(true);
-                        return dashboard;
+                        PageReference login = Page.CustomLogin;
+                		login.setRedirect(true);
+                		return login;
                 }
                
                 //if not exist customer role 

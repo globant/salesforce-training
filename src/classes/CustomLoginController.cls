@@ -32,19 +32,20 @@ global with sharing class CustomLoginController {
     
     global PageReference login() {
         String md5Coded = EncodingUtil.convertToHex(Crypto.generateDigest('MD5', Blob.valueOf(password)));
-        List<CustomUser__c> userList = [SELECT Name, Password__c, Role__r.Id, Role__r.Name
+        List<CustomUser__c> userList = [SELECT Name, Password__c, Role__r.Id, Role__r.Name, Session_Time__c
                                                 FROM CustomUser__c 
                                                 WHERE Username__c = :username and Password__c = :md5Coded];
         
+    	
         if (userList.size()> 0){
                 CustomUser__c user = userList.get(0);
-                CookieManager.createCookie(user.Id);
+                CookieManager.createCookie(user.Id, Integer.valueOf(user.Session_Time__c));
                 if (user.Role__r.Name == 'Customer'){
                         PageReference dashboard = Page.Dashboard;
                         dashboard.setRedirect(true);
-                        return dashboard;  
+                        return dashboard;
                 }else if (user.Role__r.Name == 'ShopAdmin'){
-                        PageReference dashboardAdmin = Page.DashboardAdmin;
+                        PageReference dashboardAdmin = Page.Home;
                         dashboardAdmin.setRedirect(true);
                         return dashboardAdmin; 
                 }

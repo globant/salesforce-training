@@ -39,6 +39,8 @@
 <div>
     <apex:form styleClass="form-horizontal">
     <apex:outputLabel value="{!Message}" style="display:none" />
+    
+   
    <div value="{!Message}" id="alertMessage"></div>
      <fieldset>
      <div id="legend">
