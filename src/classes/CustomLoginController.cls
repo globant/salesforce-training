@@ -51,10 +51,13 @@ global with sharing class CustomLoginController {
                 }
         }
         
-        //PageReference login = Page.CustomLogin;
-        //login.setRedirect(true);
-        //return login;  
-        return null;  
+        PageReference login = Page.CustomLogin;
+        login.setRedirect(true);
+        login.getParameters().put('mid', '2');
+        return login; 
+        //Message = System.Label.Error1;
+        //showErrorMessage = true; 
+        //return null;  
                 
     }
     

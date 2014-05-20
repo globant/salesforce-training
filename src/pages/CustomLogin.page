@@ -185,6 +185,7 @@ body {
            	<div class="inner cover">
             <h1 class="cover-heading">Survey4Discount</h1>
             <apex:form >
+            	
 	            <p>    
 		          <apex:outputLabel value="Username" styleClass="col-lg-2 control-label" for="username"/>
 		          <apex:inputText value="{!username}" id="username" styleClass="form-control" />
@@ -200,6 +201,8 @@ body {
 	                <apex:outputLink value="/apex/Register" id="theLink">Don't have an account? </apex:outputLink> | 
 	                <apex:outputLink value="/apex/Register" id="forgotpassword">Forgot your password?</apex:outputLink>
 	            </p>
+	            
+	            <div value="{!Message}" id="alertMessage"></div>
             </apex:form>
           </div>
 
