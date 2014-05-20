@@ -239,8 +239,11 @@
         <members>Campaign</members>
         <members>CampaignMember</members>
         <members>Case</members>
+        <members>Category__c</members>
         <members>Contact</members>
         <members>Contract</members>
+        <members>CustomRole__c</members>
+        <members>CustomUserStub__c</members>
         <members>CustomUser__c</members>
         <members>Event</members>
         <members>Idea</members>
@@ -257,6 +260,7 @@
         <members>Site</members>
         <members>SocialPersona</members>
         <members>Solution</members>
+        <members>Subcategory__c</members>
         <members>SurveyAnswer__c</members>
         <members>Survey__c</members>
         <members>Task</members>

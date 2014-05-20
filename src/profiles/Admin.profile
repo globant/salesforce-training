@@ -6,6 +6,10 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>AssingSurveyController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ChatterAssassin</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -46,6 +50,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>Dashboard</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>DashboardAdminController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -55,6 +63,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>EditCouponController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>LoginController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>LoginUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -156,6 +172,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>CustomUserStub__c.Password__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>CustomUser__c.Email__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -168,6 +189,11 @@
         <editable>false</editable>
         <field>CustomUser__c.Last_Name__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CustomUser__c.Name__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -202,6 +228,21 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Option__c.Text__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PageMessage__c.Message__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PageMessage__c.PageName__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PageMessage__c.Success__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -354,6 +395,9 @@
         <layout>CustomRole__c-CustomRole Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>CustomUserStub__c-CustomUserStub Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>CustomUser__c-CustomUser Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -376,6 +420,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Option__c-Option Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PageMessage__c-PageMessage Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Pricebook2-Price Book Layout</layout>
@@ -458,6 +505,15 @@
         <allowEdit>true</allowEdit>
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
+        <object>CustomUserStub__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
         <object>CustomUser__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
@@ -468,6 +524,15 @@
         <allowRead>true</allowRead>
         <modifyAllRecords>true</modifyAllRecords>
         <object>Option__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>PageMessage__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
     <objectPermissions>
@@ -648,6 +713,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>CustomUserStub__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>CustomUser__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -657,6 +726,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Option__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>PageMessage__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>

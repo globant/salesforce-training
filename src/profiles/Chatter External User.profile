@@ -6,6 +6,10 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>AssingSurveyController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ChatterAssassin</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -46,6 +50,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>Dashboard</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>DashboardAdminController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -55,6 +63,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>EditCouponController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>LoginController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>LoginUtils</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -156,6 +172,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>CustomUserStub__c.Password__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>CustomUser__c.Email__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -167,6 +188,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>CustomUser__c.Last_Name__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>CustomUser__c.Name__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -202,6 +228,21 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Option__c.Text__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PageMessage__c.Message__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PageMessage__c.PageName__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PageMessage__c.Success__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -354,6 +395,9 @@
         <layout>CustomRole__c-CustomRole Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>CustomUserStub__c-CustomUserStub Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>CustomUser__c-CustomUser Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -376,6 +420,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Option__c-Option Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>PageMessage__c-PageMessage Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Pricebook2-Price Book Layout</layout>
