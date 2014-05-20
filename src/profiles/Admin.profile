@@ -425,6 +425,9 @@
         <layout>SocialPersona-Social Persona Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>SocialPost-Social Post Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Solution-Solution Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -552,10 +555,6 @@
     </objectPermissions>
     <pageAccesses>
         <apexPage>AssignSurvey</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>Comerce_Profile</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
