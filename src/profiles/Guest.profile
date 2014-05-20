@@ -6,7 +6,15 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>AssingSurveyController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ChatterAssassin</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CommerceProfileController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -438,9 +446,6 @@
         <layout>SocialPersona-Social Persona Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>SocialPost-Social Post Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Solution-Solution Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -460,6 +465,10 @@
     </layoutAssignments>
     <pageAccesses>
         <apexPage>AssignSurvey</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>CommerceProfile</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
