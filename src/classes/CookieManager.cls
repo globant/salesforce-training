@@ -3,6 +3,9 @@ public with sharing class CookieManager {
 	public static void createCookie(ID userId, Integer sessiontime){
 		
 		Cookie session =  ApexPages.currentPage().getCookies().get('sessionID');
+		if (sessiontime == null){
+			sessiontime = 60;
+		}
 		session = new Cookie('sessionID',userId,null,sessiontime*60,false);
         ApexPages.currentPage().setCookies(new Cookie[]{session});
 	}
