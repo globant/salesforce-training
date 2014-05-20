@@ -4,7 +4,7 @@ public with sharing class AssingSurveyController {
 	  public CustomUser__c customUser {get; set;}  
       public Boolean showErrorMessage{get;set;}
       public Boolean showMessage{get;set;}
-      public String Message{get;set;}  
+      public String Message{get;set;}   
      
 		public AssingSurveyController()
 		{

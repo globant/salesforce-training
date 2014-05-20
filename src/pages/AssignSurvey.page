@@ -1,11 +1,13 @@
-<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStylesheets="false">
+<apex:page docType="html-5.0" controller="AssingSurveyController" showHeader="false" sidebar="false" standardStylesheets="false">
     <apex:includeScript value="{!URLFOR($Resource.Jquery, 'Jquery/Jquery.js')}"/> 
     <apex:stylesheet value="{!URLFOR($Resource.bootstrap, 'dist/css/bootstrap.min.css')}"/>
     <apex:stylesheet value="{!URLFOR($Resource.style, 'style/style.css')}"/>
     <apex:includeScript value="{!URLFOR($Resource.bootstrap, 'dist/js/bootstrap.min.js')}"/>
     
     <c:menubar />
-    
+  <apex:form >
+    <apex:outputLabel value="{!Message}" style="display:none" /> 
+    <div value="{!Message}" id="alertMessage"></div>
     <div class="container-fluid">
       <div class="row">
         <c:leftmenu />
@@ -13,13 +15,39 @@
           <h1 class="page-header">Assign Survey</h1>
 
           <div class="row placeholders">
-            
+          <div>
+          
+          <div > 
+              <p style="text-align: initial;">
+                  <strong>User: </strong><apex:inputField value="{!surveyA.CustomUser__c}" id="selectedUser"/>                          
+              </p>
+          </div>  
+          
+          <div>
+              <p style="text-align: initial;">
+                  <strong>Survey: </strong><apex:inputField value="{!surveyA.Survey__c}" id="selectedSurvey"/>                          
+              </p>
+          </div> 
+          <div>
+              <p style="text-align: initial;">
+                  <strong>Code: </strong><apex:inputField value="{!surveyA.Code__c}" id="code"/>                          
+              </p>
           </div>
-
+          <div>
+          <p style="text-align: initial;">
+                  <apex:commandButton action="{!AddSurveyAnswer}" value="Submit" id="submitButton" styleClass="btn btn-lg btn-success"/>                       
+              </p>
+          </div> 
+         
+          </div>            
+          </div>
+<apex:inputHidden id="alertMessage" value="{!Message}"></apex:inputHidden>
         </div>
       </div>
+       
     </div>
-    
+   		
+   </apex:form>
     <script> 
         j$ = jQuery.noConflict();
         j$(document).ready(function() {
@@ -27,7 +55,23 @@
             j$('#assignSurvey').parent().addClass('active');
         });
     </script>
-
- 
-	
+    <apex:outputPanel rendered="{!showMessage}">
+	   <apex:outputPanel rendered="{!showErrorMessage}">
+	   <script>
+	   $(function() {
+	   var message = $("#alertMessage").attr('value');
+	    alertify.error(message); 
+	    }); 
+	   </script>
+	   </apex:outputPanel>
+	   
+	   <apex:outputPanel rendered="{!NOT(showErrorMessage)}">
+	   <script>
+	   $(function() {
+	   		var message = $("#alertMessage").attr('value'); 
+	     	alertify.success(message);  
+	   }); 
+	   </script>
+	   </apex:outputPanel>
+	</apex:outputPanel>
 </apex:page>
