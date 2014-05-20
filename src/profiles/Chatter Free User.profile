@@ -232,21 +232,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>PageMessage__c.Message__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>PageMessage__c.PageName__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>PageMessage__c.Success__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Question__c.Survey__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -420,9 +405,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Option__c-Option Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>PageMessage__c-PageMessage Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Pricebook2-Price Book Layout</layout>

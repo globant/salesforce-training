@@ -232,21 +232,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
-        <field>PageMessage__c.Message__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>PageMessage__c.PageName__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>PageMessage__c.Success__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
         <field>Question__c.Survey__c</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -422,9 +407,6 @@
         <layout>Option__c-Option Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>PageMessage__c-PageMessage Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Pricebook2-Price Book Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -592,19 +574,11 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
-        <tab>CustomUserStub__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
         <tab>CustomUser__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Option__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>PageMessage__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
