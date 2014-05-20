@@ -10,6 +10,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CommerceProfileController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CompleteSurveyController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -344,6 +348,9 @@
         <layout>Contract-Contract Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Coupon__c-Coupon Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>CustomRole__c-CustomRole Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -411,6 +418,10 @@
     </layoutAssignments>
     <pageAccesses>
         <apexPage>AssignSurvey</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>CommerceProfile</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -507,10 +518,6 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>chatterCharades</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>customLogin2</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
