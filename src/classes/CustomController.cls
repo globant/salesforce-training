@@ -11,7 +11,7 @@ global abstract with sharing class CustomController {
   	{
   		Id userId = CookieManager.getLoggedUser();
   		if (userId != null){
-  			user = [SELECT Name, Username__c, First_Name__c, Last_Name__c, Role__r.Id, Email__c, Password__c, Role__r.Name
+  			user = [SELECT Name, Username__c, First_Name__c, Last_Name__c, Role__r.Id, Email__c, Password__c, Role__r.Name, Session_Time__c
             		FROM CustomUser__c 
             		WHERE Id = :userId LIMIT 100];
             		

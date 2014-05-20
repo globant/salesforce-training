@@ -7,8 +7,8 @@
             
       </ul>
       <ul class="nav nav-sidebar">
-          <li><a href="/apex/ViewCoupons">View coupons</a></li>
-          <li><a href="/apex/EditCoupon">Edit coupon</a></li>
+          <li><a id="viewCoupon" href="/apex/ViewCoupons">View coupons</a></li>
+          <li><a id="editCoupon" href="/apex/EditCoupon">Edit coupon</a></li>
       </ul>
       <ul class="nav nav-sidebar">
           <li><a href="/apex/Reports">Reports</a></li>

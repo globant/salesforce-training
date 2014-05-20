@@ -50,6 +50,10 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>EditCouponController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>MenuBarController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -71,6 +75,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>Util</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>ViewCoupons</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -165,6 +173,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>CustomUser__c.Role__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CustomUser__c.Session_Time__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -524,6 +537,10 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>EditCoupon</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>Error</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
@@ -576,6 +593,10 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>ViewCoupons</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>Voucher</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
@@ -585,6 +606,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>chatterCharades</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>customLogin2</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>

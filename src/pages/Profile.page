@@ -49,6 +49,12 @@
                         <apex:inputText value="{!user.Email__c}" id="email" styleClass="form-control" />
                     </div>
                 </div>
+                <div class="inputFieldDiv">      
+                    <apex:outputLabel value="Session Time" styleClass="col-lg-2 control-label" for="time"/>
+                    <div>
+                        <apex:inputText value="{!user.Session_Time__c}" id="time" styleClass="form-control" />
+                    </div>
+                </div>
                 <!-- div class="inputFieldDiv">      
                     <apex:outputLabel value="Password" styleClass="col-lg-2 control-label" for="password"/>
                     <div>
