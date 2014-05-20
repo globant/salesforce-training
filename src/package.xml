@@ -29,12 +29,244 @@
         <name>CustomTab</name>
     </types>
     <types>
+        <members>AdoptionDashboardsAppExchange</members>
+        <members>AdoptionDashboardsAppExchange/x1AdoptionUsage</members>
+        <members>AdoptionDashboardsAppExchange/x2AdoptionDataQuality</members>
+        <members>AdoptionDashboardsAppExchange/x3AdoptionBusinessPerformance</members>
+        <members>AppexchangeServiceSupportDashboards</members>
+        <members>AppexchangeServiceSupportDashboards/AppExchangeSalesforceServiceSupportCustomerInformation</members>
+        <members>AppexchangeServiceSupportDashboards/AppExchangeSalesforceServiceSupportExecutiveOverview</members>
+        <members>AppexchangeServiceSupportDashboards/AppExchangeSalesforceServiceSupportKPIs</members>
+        <members>AppexchangeServiceSupportDashboards/AppExchangeSalesforceServiceSupportRepAgentPerformance</members>
+        <members>CampaignDashboard</members>
+        <members>CampaignDashboard/CampaignMetricsDashboard</members>
+        <members>CompanyDashboards</members>
+        <members>CompanyDashboards/AdoptionDashboard</members>
+        <members>CompanyDashboards/CompanyPerformanceDashboard</members>
+        <members>SalesDashboards</members>
+        <members>SalesDashboards/SalesKPIDashboard</members>
+        <members>Sales_history_advanced_dashboard</members>
+        <members>Sales_history_advanced_dashboard/Sales_history_advanced_dashboard</members>
+        <name>Dashboard</name>
+    </types>
+    <types>
         <members>*</members>
         <name>Layout</name>
     </types>
     <types>
+        <members>Admin</members>
+        <members>Authenticated Website</members>
+        <members>Chatter External User</members>
+        <members>Chatter Free User</members>
+        <members>Chatter Moderator User</members>
+        <members>Chatter Only User</members>
+        <members>Content Only User</members>
+        <members>ContractManager</members>
+        <members>Customer Community Login User</members>
+        <members>Customer Community User</members>
+        <members>Customer Portal Manager Custom</members>
+        <members>Customer Portal Manager Standard</members>
+        <members>Force%2Ecom - App Subscription User</members>
+        <members>Guest</members>
+        <members>Guest License User</members>
+        <members>High Volume Customer Portal User</members>
+        <members>Knowledge Only User</members>
+        <members>MarketingProfile</members>
+        <members>Partner Community Login User</members>
+        <members>Partner Community User</members>
+        <members>ReadOnly</members>
+        <members>Siteforce Only User</members>
+        <members>SolutionManager</members>
+        <members>Standard</members>
+        <members>StandardAul</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>AppExchangeServiceSupportDB</members>
+        <members>AppExchangeServiceSupportDB/APXSSSCustAvgcaseageperaccount</members>
+        <members>AppExchangeServiceSupportDB/APXSSSCustEscalatedcasesMTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSCustEscalatedcasesYTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSCustHIGHprioritycasesMTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSCustHIGHprioritycasesYTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSCustNewcasesAccountChannelYTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSCustNewcasesAccountWeekYTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSCustNewcasesbyAccountMTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSCustOpenHIGHprioritycases</members>
+        <members>AppExchangeServiceSupportDB/APXSSSCustSumofclosedcases</members>
+        <members>AppExchangeServiceSupportDB/APXSSSCustSumofopencases</members>
+        <members>AppExchangeServiceSupportDB/APXSSSCustTotTimebyAccountYTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSKPIAverageDurationperStage</members>
+        <members>AppExchangeServiceSupportDB/APXSSSKPICasesclosedbySSP</members>
+        <members>AppExchangeServiceSupportDB/APXSSSKPICasesclosedin24hrs</members>
+        <members>AppExchangeServiceSupportDB/APXSSSKPICasescreatedbyTypeYTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSKPIMonthlyTrendCasesbyReason</members>
+        <members>AppExchangeServiceSupportDB/APXSSSKPIMonthlyTrendCasesbyType</members>
+        <members>AppExchangeServiceSupportDB/APXSSSKPIOpenCasesbyPriority</members>
+        <members>AppExchangeServiceSupportDB/APXSSSKPIOpenCasesbyQueue</members>
+        <members>AppExchangeServiceSupportDB/APXSSSKPIOpenCasesbyReason</members>
+        <members>AppExchangeServiceSupportDB/APXSSSKPIOpenCasesbyStage</members>
+        <members>AppExchangeServiceSupportDB/APXSSSKPIOpenedCasesbyChannelMTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSKPIOpenedCasesbyChannelYTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSKPISolutionStatus</members>
+        <members>AppExchangeServiceSupportDB/APXSSSKPIWeeklyTrendingCasesFQ</members>
+        <members>AppExchangeServiceSupportDB/APXSSSRepAgentCaseLoadbyCaseType</members>
+        <members>AppExchangeServiceSupportDB/APXSSSRepAgeofOpenCases</members>
+        <members>AppExchangeServiceSupportDB/APXSSSRepAverageDurationperRep</members>
+        <members>AppExchangeServiceSupportDB/APXSSSRepAvgResolutionTimebyRepMTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSRepClosedCaseRepStatusMTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSRepClosedCaseRepStatusYTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSRepOpenCasesRepChannelMTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSRepOpenCasesRepChannelYTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSRepOpenCasesRepList</members>
+        <members>AppExchangeServiceSupportDB/APXSSSRepOpenCasesRepbyPriority</members>
+        <members>AppExchangeServiceSupportDB/APXSSSRepOpenCasesbyAgentbyStatus</members>
+        <members>AppExchangeServiceSupportDB/APXSSSRepTimeforclosedperRepMTD</members>
+        <members>AppExchangeServiceSupportDB/APXSSSRepTimeforclosedperRepYTD</members>
+        <members>CampaignDashboards</members>
+        <members>CampaignDashboards/Allcampaignleadsthismonth</members>
+        <members>CampaignDashboards/CampaignROIbytype</members>
+        <members>CampaignDashboards/Campaignleadsbyindustry</members>
+        <members>CampaignDashboards/Campaignleadsgeneratedpermonth</members>
+        <members>CampaignDashboards/Campaignresponsesbytype</members>
+        <members>CampaignDashboards/Convertedleadsvaluethisyear</members>
+        <members>CampaignDashboards/Leadsbyleadsource</members>
+        <members>CampaignDashboards/Leadscreatedpercalendaryear</members>
+        <members>CampaignDashboards/PipelinegeneratedbycampaignsthisFY</members>
+        <members>CampaignDashboards/Top5campaignsbyrevenue</members>
+        <members>CampaignDashboards/Toptencaompaignopportunities</members>
+        <members>CampaignDashboards/Winbycampaign</members>
+        <members>CampaignDashboards/leadconversionratiobyuser</members>
+        <members>CampaignDashboards/leadsconvertedintoopportspermonth</members>
+        <members>DashboardReportsAdoption</members>
+        <members>DashboardReportsAdoption/DataQualityAccountsmissingRating</members>
+        <members>DashboardReportsAdoption/DataQualityAccountswithKeyFields</members>
+        <members>DashboardReportsAdoption/DataQualityCloseDateinthePast</members>
+        <members>DashboardReportsAdoption/DataQualityConditionalonType</members>
+        <members>DashboardReportsAdoption/DataQualityLeadConversion</members>
+        <members>DashboardReportsAdoption/DataQualityOpportunitiesNoAccount</members>
+        <members>DashboardReportsAdoption/DataQualityStagesOpptyEntered</members>
+        <members>DashboardReportsAdoption/PerformanceActivityTypebyRep</members>
+        <members>DashboardReportsAdoption/PerformanceMonthlyTrendStacked</members>
+        <members>DashboardReportsAdoption/PerformanceOpenLeads</members>
+        <members>DashboardReportsAdoption/PerformanceOpenLeadsNotContacted</members>
+        <members>DashboardReportsAdoption/PerformanceOpportunityTypeLost</members>
+        <members>DashboardReportsAdoption/PerformanceOpportunityTypeWon</members>
+        <members>DashboardReportsAdoption/PerformancePipelinebyRep</members>
+        <members>DashboardReportsAdoption/PerformanceWinRate</members>
+        <members>DashboardReportsAdoption/TotalAccounts</members>
+        <members>DashboardReportsAdoption/UsageAccountsCreated</members>
+        <members>DashboardReportsAdoption/UsageAccountsLastModified</members>
+        <members>DashboardReportsAdoption/UsageActivitiesCompleted</members>
+        <members>DashboardReportsAdoption/UsageContactsCreated</members>
+        <members>DashboardReportsAdoption/UsageLoginLeaderBoard</members>
+        <members>DashboardReportsAdoption/UsageLoginbyRolebyMonth</members>
+        <members>DashboardReportsAdoption/UsageNeglectedOpportunities</members>
+        <members>DashboardReportsAdoption/UsageOpenTasksbyAssignedRole</members>
+        <members>DashboardReportsAdoption/UsageOpptyCreated</members>
+        <members>DashboardReportsAdoption/UsageTotalActiveUsers</members>
+        <members>DashboardReportsAdoption/UsageUsersLoggedIn</members>
+        <members>DashboardReportsAdoption/UsageWallofShame</members>
+        <members>SalesKPIDashboard</members>
+        <members>SalesKPIDashboard/ClosedSalesQTD</members>
+        <members>SalesKPIDashboard/ClosedSalesYTD</members>
+        <members>SalesKPIDashboard/ClosedSalesbyCountry</members>
+        <members>SalesKPIDashboard/ClosedSalesbyMonthandIndustry</members>
+        <members>SalesKPIDashboard/LeadSources</members>
+        <members>SalesKPIDashboard/NeglectedOpportunities</members>
+        <members>SalesKPIDashboard/NewBusinessPipeline</members>
+        <members>SalesKPIDashboard/NewPartnerOpportunities</members>
+        <members>SalesKPIDashboard/Openvsworkingleads</members>
+        <members>SalesKPIDashboard/OppsbyReps</members>
+        <members>SalesKPIDashboard/SalesByRep</members>
+        <members>SalesKPIDashboard/Splitexistingvsnewcustomer</members>
+        <members>SalesKPIDashboard/Thisvslastyearclosedbusiness</members>
+        <members>SalesKPIDashboard/Topopenopportunities</members>
+        <members>SalesKPIDashboard/WinLossRatio</members>
+        <members>SalesKPIDashboard/WinLossRatioonelinereport</members>
+        <members>Sales_history_advanced_reports</members>
+        <members>Sales_history_advanced_reports/Sales_history_Daily_sales_history</members>
+        <members>Sales_history_advanced_reports/Sales_history_Monthly_sales_summary</members>
+        <members>Sales_history_advanced_reports/Sales_history_history_of_the_growth</members>
+        <members>Sales_history_advanced_reports/Sales_history_monthly_comparison</members>
+        <members>Sales_history_advanced_reports/Sales_history_win_rate</members>
+        <members>Sales_history_advanced_reports/Sales_history_won_opps_vs_value</members>
+        <members>unfiled$public/SampleReportActiveUsers</members>
+        <members>unfiled$public/SampleReportCasesStatusbyRep</members>
+        <members>unfiled$public/SampleReportClosedSales</members>
+        <members>unfiled$public/SampleReportCompletedActivities</members>
+        <members>unfiled$public/SampleReportCustomReportsbyUser</members>
+        <members>unfiled$public/SampleReportDocumentLibrary</members>
+        <members>unfiled$public/SampleReportLastModifiedBy</members>
+        <members>unfiled$public/SampleReportLeadsbyLeadSource</members>
+        <members>unfiled$public/SampleReportLoginLeaderboard</members>
+        <members>unfiled$public/SampleReportLoginWallofShame</members>
+        <members>unfiled$public/SampleReportMonthtoDateTrending</members>
+        <members>unfiled$public/SampleReportOpenCasesByPriority</members>
+        <members>unfiled$public/SampleReportOpenDeals</members>
+        <members>unfiled$public/SampleReportPipelineByCloseMonth</members>
+        <members>unfiled$public/SampleReportPipelineHistory</members>
+        <members>unfiled$public/SampleReportSalesLeaderboard</members>
+        <members>unfiled$public/SampleReportSalesPipelinebyStage</members>
+        <members>unfiled$public/SampleReportSolutionsAdded</members>
+        <members>unfiled$public/SampleReportTopAccounts</members>
+        <members>unfiled$public/SampleReportUsersLoggedIn</members>
+        <members>unfiled$public/SampleReportofAccounts</members>
+        <members>unfiled$public/SampleReportofCases</members>
+        <members>unfiled$public/SampleReportofContacts</members>
+        <members>unfiled$public/SampleReportofDocuments</members>
+        <members>unfiled$public/SampleReportofLeads</members>
+        <members>unfiled$public/SampleReportofOpenTasks</members>
+        <members>unfiled$public/SampleReportofOpportunities</members>
+        <members>unfiled$public/SampleReportofReports</members>
+        <members>unfiled$public/SampleReportofSolutions</members>
+        <members>unfiled$public/SampleReportofTasksandActivities</members>
+        <members>unfiled$public/SampleReportsLeadsbyStatus</members>
+        <name>Report</name>
+    </types>
+    <types>
+        <members>Customer</members>
+        <members>Shopadmin</members>
+        <name>Role</name>
+    </types>
+    <types>
         <members>*</members>
         <name>StaticResource</name>
+    </types>
+    <types>
+        <members>Account</members>
+        <members>Answer__c</members>
+        <members>Asset</members>
+        <members>Campaign</members>
+        <members>CampaignMember</members>
+        <members>Case</members>
+        <members>Category__c</members>
+        <members>Contact</members>
+        <members>Contract</members>
+        <members>CustomRole__c</members>
+        <members>CustomUserStub__c</members>
+        <members>CustomUser__c</members>
+        <members>Event</members>
+        <members>Idea</members>
+        <members>Lead</members>
+        <members>Opportunity</members>
+        <members>OpportunityLineItem</members>
+        <members>Option__c</members>
+        <members>Organization</members>
+        <members>Product2</members>
+        <members>Question__c</members>
+        <members>Quote</members>
+        <members>QuoteLineItem</members>
+        <members>Shop__c</members>
+        <members>Site</members>
+        <members>SocialPersona</members>
+        <members>Solution</members>
+        <members>Subcategory__c</members>
+        <members>SurveyAnswer__c</members>
+        <members>Survey__c</members>
+        <members>Task</members>
+        <members>User</members>
+        <members>UserLicense</members>
+        <name>Workflow</name>
     </types>
     <version>29.0</version>
 </Package>
