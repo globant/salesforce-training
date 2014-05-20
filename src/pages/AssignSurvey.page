@@ -24,11 +24,10 @@
           <div>
               <p style="text-align: initial;">
                   <strong>Survey: </strong><apex:inputField value="{!surveyA.Survey__c}" id="selectedSurvey"/>                          
-              </p>
-          
-              <p style="text-align: initial;">
+              </p>         
+             
                   <strong>Code: </strong><apex:inputField value="{!surveyA.Code__c}" id="code"  style="text-align: initial;"/>                          
-              </p>
+             
           </div>
           <div>
           <p style="text-align: initial;">
