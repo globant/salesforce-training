@@ -87,6 +87,32 @@
         <type>Percent</type>
     </fields>
     <fields>
+        <fullName>ReasonForCoupon__c</fullName>
+        <externalId>false</externalId>
+        <label>Reason for coupon</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Compra voluminosa</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Producto del día</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cliente frecuente</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Número de ticket afortunado</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
         <fullName>SurveyAnswer__c</fullName>
         <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
