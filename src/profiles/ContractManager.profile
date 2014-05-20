@@ -50,10 +50,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>Dashboard</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>DashboardAdminController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -63,14 +59,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>EditCouponController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LoginController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LoginUtils</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -87,6 +75,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SurveyController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestCustomUserController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -163,6 +155,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Coupon__c.Discount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Coupon__c.ReasonForCoupon__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -450,6 +447,10 @@
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>Comerce_Profile</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>CommerceProfile</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -534,6 +535,10 @@
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>User</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>ViewCoupons</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -571,10 +576,6 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>CustomRole__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>CustomUserStub__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>

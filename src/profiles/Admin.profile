@@ -50,10 +50,6 @@
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>Dashboard</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>DashboardAdminController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
@@ -63,14 +59,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>EditCouponController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LoginController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LoginUtils</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -87,6 +75,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SurveyController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestCustomUserController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -163,6 +155,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Coupon__c.Discount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Coupon__c.ReasonForCoupon__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -558,6 +555,10 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>Comerce_Profile</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>CommerceProfile</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
@@ -642,6 +643,10 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>User</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>ViewCoupons</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
@@ -683,10 +688,6 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>CustomRole__c</tab>
-        <visibility>DefaultOn</visibility>
-    </tabVisibilities>
-    <tabVisibilities>
-        <tab>CustomUserStub__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
