@@ -244,6 +244,7 @@
         <members>Contract</members>
         <members>CustomRole__c</members>
         <members>CustomUser__c</members>
+        <members>CustomUserStub__c</members>
         <members>Event</members>
         <members>Idea</members>
         <members>Lead</members>
@@ -263,8 +264,8 @@
         <members>SurveyAnswer__c</members>
         <members>Survey__c</members>
         <members>Task</members>
-        <members>User</members>
         <members>UserLicense</members>
+        <members>User</members>
         <name>Workflow</name>
     </types>
     <version>29.0</version>

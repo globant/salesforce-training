@@ -6,6 +6,10 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
+        <apexClass>AssingSurveyController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ChatterAssassin</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -46,6 +50,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>Dashboard</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>DashboardAdminController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -55,6 +63,14 @@
     </classAccesses>
     <classAccesses>
         <apexClass>EditCouponController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>LoginController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>LoginUtils</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -71,10 +87,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SurveyController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>TestCustomUserController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -155,12 +167,12 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Coupon__c.ReasonForCoupon__c</field>
+        <field>Coupon__c.SurveyAnswer__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Coupon__c.SurveyAnswer__c</field>
+        <field>CustomUserStub__c.Password__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -177,6 +189,11 @@
         <editable>false</editable>
         <field>CustomUser__c.Last_Name__c</field>
         <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>CustomUser__c.Name__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
@@ -211,6 +228,21 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Option__c.Text__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PageMessage__c.Message__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>PageMessage__c.PageName__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>PageMessage__c.Success__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -363,6 +395,9 @@
         <layout>CustomRole__c-CustomRole Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>CustomUserStub__c-CustomUserStub Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>CustomUser__c-CustomUser Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -387,6 +422,9 @@
         <layout>Option__c-Option Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>PageMessage__c-PageMessage Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Pricebook2-Price Book Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -408,9 +446,6 @@
         <layout>SocialPersona-Social Persona Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>SocialPost-Social Post Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
         <layout>Solution-Solution Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -430,10 +465,6 @@
     </layoutAssignments>
     <pageAccesses>
         <apexPage>AssignSurvey</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>Comerce_Profile</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -521,10 +552,6 @@
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
-        <apexPage>User</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>ViewCoupons</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -565,11 +592,19 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>CustomUserStub__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>CustomUser__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
         <tab>Option__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>PageMessage__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
