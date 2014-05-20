@@ -83,8 +83,8 @@
         <fullName>Name__c</fullName>
         <externalId>false</externalId>
         <label>Name</label>
-        <length>16</length>
-        <required>false</required>
+        <length>40</length>
+        <required>true</required>
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
