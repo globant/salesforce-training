@@ -4,9 +4,10 @@ global with sharing class CustomLoginController {
     global Boolean showErrorMessage{get;set;}
     global Boolean showMessage{get;set;}
     global String Message{get;set;}  
+    
     global CustomLoginController () 
     {
-       /* String label = ApexPages.currentPage().getParameters().get('mid');
+       	String label = ApexPages.currentPage().getParameters().get('mid');
         if(label != null)
         {
             if(label == '1')
@@ -21,9 +22,8 @@ global with sharing class CustomLoginController {
             
             showMessage = true; 
         }else{
-        
-        showMessage = false; 
-        }*/
+        	showMessage = false; 
+        }
     }
     
     global PageReference forwardToCustomAuthPage() {
@@ -53,7 +53,11 @@ global with sharing class CustomLoginController {
         
         PageReference login = Page.CustomLogin;
         login.setRedirect(true);
-        return login;    
+        login.getParameters().put('mid', '2');
+        return login; 
+        //Message = System.Label.Error1;
+        //showErrorMessage = true; 
+        //return null;  
                 
     }
     
