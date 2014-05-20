@@ -159,6 +159,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Coupon__c.Discounted_amount__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Coupon__c.ReasonForCoupon__c</field>
         <readable>true</readable>
     </fieldPermissions>
