@@ -6,10 +6,6 @@
         <visible>false</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>AssingSurveyController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>ChatterAssassin</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -50,10 +46,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>Dashboard</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>DashboardAdminController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -63,14 +55,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>EditCouponController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LoginController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>LoginUtils</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -228,21 +212,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Option__c.Text__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>PageMessage__c.Message__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>PageMessage__c.PageName__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>PageMessage__c.Success__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -420,9 +389,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>Option__c-Option Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>PageMessage__c-PageMessage Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Pricebook2-Price Book Layout</layout>
