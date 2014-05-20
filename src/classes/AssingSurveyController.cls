@@ -5,11 +5,11 @@ public with sharing class AssingSurveyController {
       public Boolean showErrorMessage{get;set;}
       public Boolean showMessage{get;set;}
       public String Message{get;set;}  
-    
+     
 		public AssingSurveyController()
 		{
 			String label = ApexPages.currentPage().getParameters().get('mid');
-        if(label != null)
+        if(label != null) 
         {
             if(label == '1')
             {
