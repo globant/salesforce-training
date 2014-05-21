@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
-    <applicationVisibilities>
-        <application>Survey4Discount</application>
-        <default>false</default>
-        <visible>true</visible>
-    </applicationVisibilities>
     <classAccesses>
         <apexClass>AssingSurveyController</apexClass>
         <enabled>true</enabled>
@@ -75,10 +70,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SurveyController</apexClass>
-        <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>TestCustomUserController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
     <classAccesses>
@@ -155,11 +146,6 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Coupon__c.Discount__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
-        <field>Coupon__c.Discounted_amount__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -563,10 +549,6 @@
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
-        <apexPage>Comerce_Profile</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>CommerceProfile</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
@@ -648,10 +630,6 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>Surveys</apexPage>
-        <enabled>true</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>User</apexPage>
         <enabled>true</enabled>
     </pageAccesses>
     <pageAccesses>
