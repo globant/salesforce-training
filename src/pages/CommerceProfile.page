@@ -38,6 +38,7 @@ showHeader="false" sidebar="false" standardStylesheets="false">
                 <apex:outputField value="{!currentShop.Name}"/>
               
                  <analytics:reportChart ReportId="00OL0000000OcYY" showRefreshButton="false"  hideonerror="true" size="small" cacheResults="false" filter="{column:'Shop__c.Name', operator:'equals', value:'{!currentShop.Name}'}" />
+                 <analytics:reportChart ReportId="00OL0000000Ocg3" showRefreshButton="false"  hideonerror="true" size="small" cacheResults="false" filter="{column:'Shop__c.Name', operator:'equals', value:'{!currentShop.Name}'}" />
             </div>
         </fieldset>
     </div>
