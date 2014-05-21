@@ -152,6 +152,8 @@
         <customTabListAdditionalFields>Username__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Email__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Role__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>First_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Last_Name__c</lookupDialogsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

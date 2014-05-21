@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
-    <applicationVisibilities>
-        <application>Survey4Discount</application>
-        <default>false</default>
-        <visible>false</visible>
-    </applicationVisibilities>
     <classAccesses>
         <apexClass>AssingSurveyController</apexClass>
         <enabled>false</enabled>
@@ -75,10 +70,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SurveyController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>TestCustomUserController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -155,11 +146,6 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Coupon__c.Discount__c</field>
-        <readable>false</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>false</editable>
-        <field>Coupon__c.Discounted_amount__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -430,6 +416,9 @@
         <layout>SocialPersona-Social Persona Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>SocialPost-Social Post Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Solution-Solution Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -449,10 +438,6 @@
     </layoutAssignments>
     <pageAccesses>
         <apexPage>AssignSurvey</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>Comerce_Profile</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
@@ -537,10 +522,6 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>Surveys</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
-        <apexPage>User</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>

@@ -1,14 +1,14 @@
 public with sharing class AssingSurveyController {
-	 
-	  public SurveyAnswer__c surveyA {get; set;}  
-	  public CustomUser__c customUser {get; set;}  
+     
+      public SurveyAnswer__c surveyA {get; set;}  
+      public CustomUser__c customUser {get; set;}  
       public Boolean showErrorMessage{get;set;}
       public Boolean showMessage{get;set;}
       public String Message{get;set;}   
      
-		public AssingSurveyController()
-		{
-			String label = ApexPages.currentPage().getParameters().get('mid');
+        public AssingSurveyController()
+        {
+            String label = ApexPages.currentPage().getParameters().get('mid');
         if(label != null) 
         {
             if(label == '1')
@@ -23,14 +23,14 @@ public with sharing class AssingSurveyController {
             
             showMessage = true; 
         }else{
-        	showMessage = false; 
+            showMessage = false; 
         }
         
-			surveyA = new SurveyAnswer__c();
-			customUser = new CustomUser__c();
-		}
-		
-	public PageReference AddSurveyAnswer()
+            surveyA = new SurveyAnswer__c();
+            customUser = new CustomUser__c();
+        }
+        
+    public PageReference AddSurveyAnswer()
     {     
         Insert surveyA;     
         ApexPages.currentPage().getParameters().put('mid', '2');

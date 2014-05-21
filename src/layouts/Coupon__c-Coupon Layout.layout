@@ -15,10 +15,6 @@
                 <behavior>Edit</behavior>
                 <field>ReasonForCoupon__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Discounted_amount__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
