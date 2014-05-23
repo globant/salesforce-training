@@ -8,7 +8,11 @@ public class CommerceProfileController{
    
     }
     public PageReference showCommerce(){
-         currentShop = [SELECT Name, Site__c, Logo_Url__c FROM Shop__c WHERE Id = :shopIdChosen]; 
+         SetCurrentShop();
          return null;
+    }
+    
+    public void SetCurrentShop(){
+    currentShop = [SELECT Name, Site__c, Logo_Url__c FROM Shop__c WHERE Id = :shopIdChosen]; 
     }
 }

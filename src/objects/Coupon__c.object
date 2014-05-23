@@ -87,6 +87,16 @@
         <type>Percent</type>
     </fields>
     <fields>
+        <fullName>Discounted_amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Discounted amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
         <fullName>ReasonForCoupon__c</fullName>
         <externalId>false</externalId>
         <label>Reason for coupon</label>
