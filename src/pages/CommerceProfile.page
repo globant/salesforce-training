@@ -36,8 +36,17 @@ showHeader="false" sidebar="false" standardStylesheets="false">
                     </div>
                 </apex:form>
                 <apex:outputField value="{!currentShop.Name}"/>
-              
+                 <table>
+                 <tr>
+                 <td>
                  <analytics:reportChart ReportId="00OL0000000OcYY" showRefreshButton="false"  hideonerror="true" size="small" cacheResults="false" filter="{column:'Shop__c.Name', operator:'equals', value:'{!currentShop.Name}'}" />
+
+                 </td>
+                 <td>
+                 <analytics:reportChart ReportId="00OL0000000Ocg3" showRefreshButton="false"  hideonerror="true" size="small" cacheResults="false" filter="{column:'Shop__c.Name', operator:'equals', value:'{!currentShop.Name}'}" />
+                 </td>
+                 </tr>
+                 </table>
             </div>
         </fieldset>
     </div>

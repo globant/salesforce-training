@@ -13,6 +13,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>CommerceProfileControllerTest</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>CompleteSurveyController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -70,6 +74,10 @@
     </classAccesses>
     <classAccesses>
         <apexClass>SurveyController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>TestCustomUserController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -146,6 +154,11 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Coupon__c.Discount__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Coupon__c.Discounted_amount__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -441,6 +454,10 @@
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
+        <apexPage>Comerce_Profile</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
         <apexPage>CommerceProfile</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -522,6 +539,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>Surveys</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>User</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
