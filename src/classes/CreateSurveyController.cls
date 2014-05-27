@@ -36,13 +36,10 @@ public with sharing class CreateSurveyController extends CustomController {
                 FROM Shop__c 
                 WHERE Custom_User_Owner__c = :user.Id];
                 if(userShop.size() > 0)
-                     {
-                                 shop = userShop.get(0);
-                     }
+                {
+	                shop = userShop.get(0);
                 }
-        
-       
-         
+    	}
     }
     
     public PageReference AddQuestion()
@@ -57,6 +54,9 @@ public with sharing class CreateSurveyController extends CustomController {
             newQuestion.QuestionOptions.Add(op);
         }
         QuestionsInSurvey.Add(newQuestion);
+        currentQuestionText = '';
+        currentQuestionType = 'Text';
+        OptionsListAux = new List<Option>();
         return null;
     }
     
@@ -65,6 +65,7 @@ public with sharing class CreateSurveyController extends CustomController {
         Option newOption = new Option();
         newOption.Text = currentOptionText;
         OptionsListAux.add(newOption);
+        currentOptionText = '';
         return null;
     }
     
@@ -81,13 +82,16 @@ public with sharing class CreateSurveyController extends CustomController {
         Insert newQuestion;
              for(Option op: q.QuestionOptions){      
               Option__c newOption = new Option__c();
-              newOption.Text__c = q.Text;
+              newOption.Text__c = op.Text;
               newOption.Question__c = newQuestion.Id; 
               Insert newOption;
             }
         }
         
-        return null;
+        Pagereference home = Page.Home;
+        home.getParameters().put('surveyId',survey.Id);
+        home.setRedirect(true);
+        return home;
                 
     }
  class Question {
@@ -95,8 +99,6 @@ public with sharing class CreateSurveyController extends CustomController {
     public Integer QuestionNumber {get; set;}
     public List<Option> QuestionOptions {get; set;}
     public String Type {get; set;}
-        
-     // myInnerClass code here
    }
    
    class Option {

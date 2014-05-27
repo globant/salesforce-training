@@ -52,6 +52,7 @@
     		  </apex:form>
     
     		<!-- Modal -->
+    		<apex:outputPanel id="modalPanel">
     		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       			<div class="modal-dialog">
         			<div class="modal-content">
@@ -84,13 +85,14 @@
           					<div class="modal-footer">
             					<div data-dismiss="modal">
                 					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                					<apex:commandButton action="{!AddQuestion}" reRender="questions" styleClass="btn btn-primary"/>
+                					<apex:commandButton action="{!AddQuestion}" reRender="questions,modalPanel" styleClass="btn btn-primary"/>
             					</div>
           					</div>
           				</apex:form>
         			</div>
       			</div>
     		</div>
+    		</apex:outputPanel>
     	</div>
     </div>
  </div>

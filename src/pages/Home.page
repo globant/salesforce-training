@@ -1,4 +1,4 @@
-<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStylesheets="false">
+<apex:page docType="html-5.0" showHeader="false" sidebar="false" standardStylesheets="false" controller="HomeController">
     <apex:includeScript value="{!URLFOR($Resource.Jquery, 'Jquery/Jquery.js')}"/> 
     <apex:stylesheet value="{!URLFOR($Resource.bootstrap, 'dist/css/bootstrap.min.css')}"/>
     <apex:stylesheet value="{!URLFOR($Resource.style, 'style/style.css')}"/>
@@ -49,7 +49,7 @@
                 <tr>
                   <td>1,001</td>
                   <td>Lorem</td>
-                  <td>ipsum</td>
+                  <td></td>
                 </tr>
               </tbody>
             </table>
@@ -57,4 +57,7 @@
         </div>
       </div>
     </div>
+    
+    <c:permissions />
+    
 </apex:page>

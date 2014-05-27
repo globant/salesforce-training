@@ -2,6 +2,9 @@ public class CustomUserController {
         
         public CustomUser__c customUser {get; set;}
         public String confirmPassword {get; set;}
+        public String Message {get; set;}
+        public Boolean showErrorMessage{get;set;}
+    	public Boolean showMessage{get;set;}
         
         public CustomUserController(){
                 customUser = new CustomUser__c();
@@ -36,7 +39,7 @@ public class CustomUserController {
                 if (existCustomerRole()){
                     String encodedPassword = EncodingUtil.convertToHex(Crypto.generateDigest('MD5', Blob.valueOf(customUser.Password__c)));
                         customUser.Password__c = encodedPassword ;
-                        customUser.Name__c = customUser.First_Name__c;
+                        customUser.Name__c = customUser.First_Name__c + ' ' + customUser.Last_Name__c;
                         Insert customUser;
                         PageReference login = Page.CustomLogin;
                         login.setRedirect(true);

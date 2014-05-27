@@ -45,15 +45,15 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>DashboardAdminController</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>DashboardController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>EditCouponController</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>HomeController</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -465,10 +465,6 @@
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>
-        <apexPage>DashboardAdmin</apexPage>
-        <enabled>false</enabled>
-    </pageAccesses>
-    <pageAccesses>
         <apexPage>EditCoupon</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
@@ -514,6 +510,10 @@
     </pageAccesses>
     <pageAccesses>
         <apexPage>Register</apexPage>
+        <enabled>false</enabled>
+    </pageAccesses>
+    <pageAccesses>
+        <apexPage>Register2</apexPage>
         <enabled>false</enabled>
     </pageAccesses>
     <pageAccesses>

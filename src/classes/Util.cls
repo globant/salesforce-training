@@ -1,13 +1,13 @@
 public with sharing class Util {
 	
-	public static  List<String> shopAdminPermissions = new List<String> { 'DashboardAdmin', 'two' };
-	public static  List<String> customerPermissions = new List<String> { 'Dashboard', 'two' };
+	public static  List<String> shopAdminPermissions = new List<String> { 'home', 'createsurvey', 'assignsurvey' };
+	public static  List<String> customerPermissions = new List<String> { 'dashboard'};
 	
 	public static Boolean checkPermissions(String page, String role){
 				
-		if (role == 'ShopAdmin' && contains(shopAdminPermissions, role)){//if user is shopAdmin
+		if (role == 'ShopAdmin' && contains(shopAdminPermissions, page)){//if user is shopAdmin
 			return true;
-		}else if (role == 'Customer' && contains(customerPermissions, role)){ //if user is customer
+		}else if (role == 'Customer' && contains(customerPermissions, page)){ //if user is customer
 			return true;
 		}	
 		return false;
@@ -15,7 +15,7 @@ public with sharing class Util {
 	
 	private static Boolean contains(List<String> theList, String theString){
 		for (String s : theList){
-			if (s == theString){
+			if (s.toLowerCase() == theString.toLowerCase()){
 				return true;
 			}
 		}
@@ -25,12 +25,13 @@ public with sharing class Util {
 	public static String getCurrentPageName(){
 		String strurl = ApexPages.currentPage().getUrl();
 		strurl = strurl.split('apex/')[1];
+		strurl = strurl.split('\\?')[0];
 		return strurl;
 	}
 	
 	public static PageReference goToError(){
 		Pagereference goToErrorPage = Page.Error;
         goToErrorPage.setRedirect(true);
-        return goToErrorPage; 
+        return goToErrorPage;
 	}
 }
