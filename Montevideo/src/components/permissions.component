@@ -1,0 +1,17 @@
+<apex:component >
+    <apex:outputPanel id="CheckPanel">
+        <apex:form >
+            <apex:actionFunction name="AactionFunctionCheckPermissions" action="{!getCheckPermissions}" reRender="CheckPanel" />
+        </apex:form>
+    </apex:outputPanel>
+
+    <script>
+        function jsCheckPermissions(){
+            AactionFunctionCheckPermissions() ;
+        }
+    
+        $(function(){
+            jsCheckPermissions();
+        });
+    </script>
+</apex:component>

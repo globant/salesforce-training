@@ -1,0 +1,53 @@
+<apex:page docType="html-5.0" controller="CommerceProfileController"
+showHeader="false" sidebar="false" standardStylesheets="false">
+    <apex:stylesheet value="{!URLFOR($Resource.bootstrap, 'dist/css/bootstrap.min.css')}" />
+    <apex:includeScript value="{!URLFOR($Resource.bootstrap, 'dist/js/bootstrap.min.js')}" />
+    <div>
+        <fieldset>
+            <div id="legend">
+                <legend>Survey 4 discount - Commerce Profile</legend>
+                <apex:form >
+                    <div style="margin: 10px;">
+                        <div style="margin-top:4px; margin-bottom:10px;">
+                            <b>Associated Shops</b>
+                        </div>
+                        <table class="table table-bordered table-condensed">
+                            <thead style="background-color:lightgray;">
+                                <tr>
+                                    <th style="text-align:center;">Logo</th>
+                                    <th style="text-align:center;">Shop</th>
+                                    <th style="text-align:center;">Site</th>
+                                </tr>    
+                            </thead>
+                            <tbody>
+                                <apex:repeat value="{!associatedShops}" var="shop">
+                                <tr>
+                                    <td><apex:image url="{!shop.Logo_Url__c}" width="50" height="50"/></td>   
+                                    <td>
+                                    <apex:commandLink value="{!shop.Name}" action="{!showCommerce}">
+                                     <apex:param name="shopIdParam" value="{!shop.id}" assignTo="{!shopIdChosen}"/>
+                                    </apex:commandLink>
+                                    </td> 
+                                    <td><apex:outputField value="{!shop.Site__c}"/></td>
+                                </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table>
+                    </div>
+                </apex:form>
+                <apex:outputField value="{!currentShop.Name}"/>
+                 <table>
+                 <tr>
+                 <td>
+                 <analytics:reportChart ReportId="00OL0000000OcYY" showRefreshButton="false"  hideonerror="true" size="small" cacheResults="false" filter="{column:'Shop__c.Name', operator:'equals', value:'{!currentShop.Name}'}" />
+
+                 </td>
+                 <td>
+                 <analytics:reportChart ReportId="00OL0000000Ocg3" showRefreshButton="false"  hideonerror="true" size="small" cacheResults="false" filter="{column:'Shop__c.Name', operator:'equals', value:'{!currentShop.Name}'}" />
+                 </td>
+                 </tr>
+                 </table>
+            </div>
+        </fieldset>
+    </div>
+</apex:page>

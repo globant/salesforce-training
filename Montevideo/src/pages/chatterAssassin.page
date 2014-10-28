@@ -1,0 +1,36 @@
+<apex:page controller="ChatterAssassin" sidebar="false">
+	<apex:sectionHeader title="Honeybadger Industries" subtitle="Chatter Assassin 3"/>
+	<apex:form >
+	<apex:outputPanel id="woot">
+	<apex:pageblock >
+		<apex:pageblockbuttons location="both">
+			<apex:commandbutton value="Delete Checked" action="{!deleteEm}" rerender="woot"/>
+		</apex:pageblockbuttons>
+		<apex:pageblocktable value="{!targets}" var="p">
+			<apex:column >
+				<apex:commandLink value="X" action="{!p.deleteMe}" rerender="woot"/><br/><br/>
+				<apex:inputCheckbox value="{!p.checked}"/>
+			</apex:column>
+			<apex:column headerValue="Post">
+				<apex:outputField value="{!p.fi.createdByID}"/> --> <apex:outputField value="{!p.fi.parentid}"/><br/>
+				<apex:outputField value="{!p.fi.body}" rendered="{!p.ftcBody == null}"/>
+				<apex:outputText value="{!p.ftcBody}" rendered="{!p.ftcBody != null}"/><br/>
+				<apex:pageBlock rendered="{!p.hasComments}">
+					<apex:pageblocktable value="{!p.commentList}" var="c">
+						<apex:column >
+							<apex:commandLink value="X" action="{!c.deleteMe}" rerender="woot"/><br/>
+							<apex:inputCheckbox value="{!c.checked}"/>  
+						</apex:column>
+						<apex:column >
+							<apex:outputField value="{!c.fc.createdByID}"/><br/>
+							<apex:outputField value="{!c.fc.commentBody}"/>
+						</apex:column>
+					</apex:pageblocktable>
+				</apex:pageBlock> 
+			</apex:column>
+		</apex:pageblocktable>
+	</apex:pageblock>
+	</apex:outputPanel>	
+
+	</apex:form>
+</apex:page>

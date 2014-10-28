@@ -1,0 +1,17 @@
+<apex:component >
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+          <li class="active"><a href="/apex/Home">Main</a></li>
+          <li><a id="createSurvey" href="/apex/CreateSurvey">Create survey</a></li>
+          <li><a id="assignSurvey" href="/apex/AssignSurvey">Assign survey</a></li>
+            
+      </ul>
+      <ul class="nav nav-sidebar">
+          <li><a id="viewCoupon" href="/apex/ViewCoupons">View coupons</a></li>
+          <li><a id="editCoupon" href="/apex/EditCoupon">Edit coupon</a></li>
+      </ul>
+      <ul class="nav nav-sidebar">
+          <li><a href="/apex/Reports">Reports</a></li>
+      </ul>
+    </div>
+</apex:component>
