@@ -1,0 +1,71 @@
+<apex:page showHeader="false" controller="ComerceController" standardStylesheets="false">
+	<script type="text/javascript" src="{!$Resource.jQuery2_1_1}"></script> 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+        $(function() {
+            if (!navigator.cookieEnabled){
+                alert("Unabled cookies");
+                return;
+            }                
+
+            var session = $.cookie('apex__session');
+            if(session == undefined){
+                //window.location.href = "/apex/login";
+            }
+        }); 
+    </script>
+    <div class="container">    
+        <div id="loginbox" style="margin-top:50px;" class="mainbox">  
+            <div style="margin-bottom: 30px">
+                <apex:image id="logoImage" value="{!$Resource.logoImage}" width="200" height="46"/>
+            </div>
+         </div>
+               <apex:form id="ShopForm" >
+                    <div class="panel-heading"><h1>Shops</h1></div>       
+                    <apex:pageBlock title="Shops">  
+                         <apex:pageBlockTable value="{!Shops}" var="shop" styleClass="table table-striped">
+                            <apex:column headerValue="">
+                                <apex:image url="{!shop.Logo__c}"/>                
+                            </apex:column>
+                            <apex:column headerValue="IdShop">
+                                <apex:commandLink title="Shop info" action="{!showShop}" value="{!shop.Name}" reRender="appliedDiscounts">           
+                                    <apex:param name="ShopId" value="{!shop.Id}"/>
+                                    <apex:param name="userId" value="$.cookie('apex__session')"/>
+                                </apex:commandLink>                  
+                            </apex:column>
+                            <apex:column headerValue="Description">
+                                <apex:outputText value="{!shop.Description__c}"/>
+                            </apex:column>
+                            <apex:column headerValue="Web Site">
+                                <apex:outputLink value="{!shop.URL__c}" target="_blank">{!shop.URL__c}</apex:outputLink>                
+                            </apex:column>
+                         </apex:pageBlockTable>   
+                    </apex:pageBlock>
+
+                </apex:form>
+    		</div>
+	<apex:form id="ShopForma">
+		 
+		<apex:pageBlock title="Applied Discounts" id="appliedDiscounts">  
+			<apex:chart name="AVGCouponPercent" data="{!AVGCoupon}" width="900" height="500"
+                colorSet="#156F9E,#FF9123,#6BAE4A,#424242,#A4A4A4">
+            <apex:axis type="Numeric" position="left" grid="true" title="Discount rate ($)"
+                    fields="val"/>
+            <apex:axis type="Category" position="bottom" grid="false" title="Weeks ago"
+                    fields="lvl"/>
+            <apex:barSeries orientation="vertical" axis="left" xField="lvl" yField="val"
+                    colorsProgressWithinSeries="true"/>
+        	</apex:chart>
+		</apex:pageBlock>
+        <apex:pageBlock title="Discounts Motives" id="discountsMotives">  
+			<apex:chart name="discountMotives" data="{!discountMotives}" width="900" height="500"
+                colorSet="#156F9E,#FF9123,#6BAE4A,#424242,#A4A4A4">
+                <apex:pieSeries dataField="data" labelField="name"/>
+        		<apex:legend position="right"/>
+        	</apex:chart>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

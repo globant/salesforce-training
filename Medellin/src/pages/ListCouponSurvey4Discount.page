@@ -1,0 +1,46 @@
+<apex:page controller="ListCouponController" showHeader="false" standardStylesheets="false">  
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Coupons</title>
+	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	<div class="container">
+		<div id="surveyBox" style="margin-top:80px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+			<div style="margin-bottom:20px"><apex:image id="logoImage" value="{!$Resource.logoImage}" width="200" height="46"/></div>
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<div class="panel-title">Coupons</div>
+				</div>
+				<apex:form id="ListCouponForm" style="margin: 20px;">
+					<br /><br />
+					<apex:outputText value="Select items to show: "/>
+					<apex:selectList size="1" value="{!selectOption}">
+						<apex:selectOptions value="{!selectOptions}"/>
+						<apex:actionSupport action="{!updateList}" event="onchange" reRender="coupon_list"/>
+					</apex:selectList><br /><br />
+					<apex:pageBlock id="coupon_list">
+						<apex:pageBlockTable value="{!surveyAnswers}" var="item" styleClass="table table-bordered table-responsive">
+							<apex:column headerValue="Coupon">
+								<apex:outputText value="{!item.coupon__c}"/>
+							</apex:column>
+							<apex:column headerValue="Survey">
+								<apex:outputText value="{!item.survey__c}"/>
+							</apex:column>
+							<apex:column headerValue="Status">
+								<apex:outputText value="{!item.status__c}"/>
+							</apex:column>
+							<apex:column headerValue="Discount">
+								<apex:outputText value="{!item.discount__c}"/>
+							</apex:column>
+							<apex:column headerValue="Date">
+								<apex:outputText value="{!item.date__c}"/>
+							</apex:column>
+						</apex:pageBlockTable>
+					</apex:pageBlock>
+					
+				</apex:form>
+			</div>
+		</div>
+	</div>
+</apex:page>

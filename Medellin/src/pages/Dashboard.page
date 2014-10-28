@@ -1,0 +1,56 @@
+<apex:page showHeader="false" controller="LoginController" >
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Dashboard</title>    
+    <script type="text/javascript" src="{!$Resource.jQuery2_1_1}"></script>
+    <!--
+    <link href="{!$Resource.bootstrap_3_2}" rel="stylesheet"/>
+    <script type="text/javascript" src="{!$Resource.bootstrap_3_2_js}"></script>
+    <script type="text/javascript" src="{!$Resource.jQueryCookie}"></script>-->
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+    <script type="text/javascript">
+        
+        $(function() {
+            if (!navigator.cookieEnabled){
+                alert("Unabled cookies");
+                return;
+            }                
+    
+            var session = $.cookie('apex__session');
+            if(session == undefined){
+                window.location.href = "/apex/login";
+            }
+        }); 
+        
+        $(document).ready(function() {
+            $('#btn-logout').click(function(e){
+                
+                e.preventDefault();
+                if($.removeCookie('apex__session', { path: '/' })) {               
+                  window.location.href = "https://c.cs10.visual.force.com/apex/login";  
+                }
+
+            });
+        });
+                           
+    </script>
+
+
+  
+  <div class="container"> 
+      <div style="margin-top:30px;" class="mainbox">
+            <div style="margin-bottom:20px"><apex:image id="logoImage" value="{!$Resource.logoImage}" width="200" height="46"/></div>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Dashboard</div>
+                    <div><a id="btn-logout" href="#">Log out</a></div>
+                </div>
+                <iframe height="600px" id="theIframe" name="theIframe" src="https://c.cs10.visual.force.com/apex/ListCouponSurvey4Discount" width="100%"></iframe>
+            </div>           
+      </div>
+      </div>      
+
+
+</apex:page>

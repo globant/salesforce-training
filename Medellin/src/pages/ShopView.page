@@ -1,0 +1,47 @@
+<apex:page id="ShopView" controller="ShopViewController" showHeader="false" extensions="ShopViewController">
+    <div><apex:image id="logoImage" value="{!$Resource.logoImage}" width="200" height="46"/></div>
+
+    <apex:form id="ShopForm">
+        <apex:messages id="msg" styleClass="errorMsg" layout="table" style="margin-top:1em;"/>
+
+        <apex:pageBlock title="Shops Available">
+
+                <apex:pageBlockButtons >
+                    <apex:commandButton action="{!NewShop}" value="New Shop" id="submit"/>
+                    <apex:commandButton action="{!GoDash}" value="Go Dashboard" id="Dashboard"/>
+                </apex:pageBlockButtons>
+
+            <apex:pageBlockTable value="{!Shops}" var="pitem">
+                <apex:column headerValue="">
+                    <apex:commandLink title="Edit this Shop" action="{!EditShop}" value="Edit">
+                    	<apex:param name="ShopId" value="{!pitem.id}"/>
+               		</apex:commandLink> |
+                    <apex:commandLink title="Delete this Shop" action="{!DeleteShop}" value="Del">
+                        <apex:param name="ShopId" value="{!pitem.id}"/>
+               		</apex:commandLink>
+                </apex:column>
+                <apex:column headerValue="IdShop">
+                    <apex:outputText value="{!pitem.id}"/>
+                </apex:column>
+                <apex:column headerValue="Name">
+                    <apex:outputText value="{!pitem.Name}"/>
+                </apex:column>
+                <apex:column headerValue="Description">
+                    <apex:outputText value="{!pitem.Description__c}"/>
+                </apex:column>
+                <apex:column headerValue="Sector">
+                    <apex:outputText value="{!pitem.Sector__c}"/>
+                </apex:column>
+                <apex:column headerValue="Sub Category">
+                    <apex:outputText value="{!pitem.Sub_Category__c}"/>
+                </apex:column>
+                <apex:column headerValue="Quantity Employee">
+                    <apex:outputText value="{!pitem.Employee_Count_Number__c}"/>
+                </apex:column>
+                <apex:column headerValue="Web Site">
+                    <apex:outputText value="{!pitem.URL__c}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

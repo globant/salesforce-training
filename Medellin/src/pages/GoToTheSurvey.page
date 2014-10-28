@@ -1,0 +1,18 @@
+<apex:page showHeader="false" controller="GoToTheSurveyController">
+ <div><apex:image id="logoImage" value="{!$Resource.logoImage}" width="200" height="46"/></div>
+ <apex:form id="goToTheSurvey">
+        <apex:messages id="msg" styleClass="errorMsg" layout="table" style="margin-top:1em;"/>
+        <apex:pageBlock title="Complete a Survey">
+            <p>Complete a Survey.</p>
+            <apex:panelGrid columns="2" style="margin-top:1em;">
+                <apex:outputLabel value="Code" for="code"/>
+                <apex:inputText required="true" id="code" value="{!code}"/>
+                <apex:commandButton action="{!goToTheSurvey}" value="Go To The Survey !" id="submit"/>
+            </apex:panelGrid>
+        </apex:pageBlock>
+    </apex:form>
+    
+    <apex:pageBlock title="Check your favorite shops">    
+        <input type="button" value="Let´s shop" class="btn" onclick='window.top.location.href="/apex/ComercePage"'/>          
+    </apex:pageBlock>
+</apex:page>
