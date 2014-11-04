@@ -1,0 +1,225 @@
+<!--
+//Copyright (c) 2009, Mark Sivill, Sales Engineering, Salesforce.com Inc.
+//All rights reserved.
+//
+//Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+//Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. 
+//Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+//Neither the name of the salesforce.com nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission. 
+//THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+//INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+//DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+//SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; 
+//LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+//CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
+//EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+//
+// History
+//
+// Version	Date			Author			Comments
+// 1.0		04-03-2009		Mark Sivill		Initial version
+//
+//
+// Overview
+//
+// Set up instructions
+//
+-->
+
+<apex:page >
+
+<apex:sectionHeader title="Salesforce International Mapping using Google Maps" subtitle=""></apex:sectionHeader>
+
+<apex:pageBlock title="Setup Instructions">
+
+<apex:pageBlockSection title="Languages" columns="1">
+
+<p>
+If you need to display languages other than English then the following steps need to be followed
+</p>
+
+<ol>
+	<li>Setup "Translation Workbench", if it is not enabled contact salesforce support to get it setup</li>
+	<li>Activate the languages you need. Navigate to Setup->Administration Setup->Translation Workbench->Translation Workbench Setup</li>
+</ol>
+
+<p>
+If no other languages other than English are required then this step can be ignored.
+</p>
+
+
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Google Maps API Key" columns="1">
+
+<p>
+Get Google Maps API key from <a href="http://code.google.com/apis/maps/signup.html">sign up</a> page. Examples of website URL
+</p>
+<ul> 
+<li>https://c.eu0.visual.force.com</li>
+<li>https://na1.salesforce.com</li>
+</ul>
+
+<p>
+If this has not been configured correctly then you will get an error message on the screen telling you what URL to use when Google Maps attempts to start
+</p>
+
+<p>
+Update the GoogleMapsInternational Visualforce component with Google Map API key.
+</p>
+<ul> 
+<li>Navigate to Setup->App Setup->Develop->Components->GoogleMapsInternational</li>
+<li>Change text CHANGE_ME (in first attribute tag) to the Google Map API key that has just been generated.
+</li>
+</ul>
+
+<p>
+This application has been configured to use the Google Maps API for illustrative purposes only. Your use of Salesforce International Mapping using Google Maps may require the Google Maps for Enterprise API.
+</p>
+
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Salesforce" columns="1">
+
+<p>
+Optionally add map to Account page
+</p>
+<ol>
+<li>Edit Account Page Layout</li>
+<li>Add new section call Map, ensure it has one column, optionally have "Display Section header On" for "Detail Page"</li>
+<li>Add GoogleMapsInternationalEmbeddedAccount to new Map section </li>
+</ol>
+
+<p>
+Optionally add map button to Account page
+</p>
+<ol>
+<li>Edit Account Page Layout</li>
+<li>Add button "Show Map" to layout</li>
+</ol>
+
+<p>
+Optionally add link button to Account page
+</p>
+<ol>
+<li>Edit Account Page Layout</li>
+<li>Add link "Show Map" to layout</li>
+</ol>
+
+<p>
+Optionally add map to Contact page
+</p>
+ <ol>
+ <li>Edit Contact Page Layout</li>
+ <li>Add new section call Map, ensure it has one column, optionally have "Display Section header On" for "Detail Page"</li>
+ <li>Add GoogleMapsInternationalEmbeddedContact to new Map section</li>
+ </ol>
+
+<p>
+Optionally add map button to Contact page
+</p>
+<ol>
+<li>Edit Contact Page Layout</li>
+<li>Add button "Show Map" to layout</li>
+</ol>
+
+<p>
+Optionally add link button to Contact page
+</p>
+<ol>
+<li>Edit Contact Page Layout</li>
+<li>Add link "Show Map" to layout</li>
+</ol>
+
+<p>
+The map section that has just been created is not localised to different languages if this is required make changes in Setup->Administration Setup->Translation Workbench->Translation Layout Sections. Another option is to hide the word "map" by turning "Display Section header On" off for "Detail Page"
+</p>
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+<apex:pageBlock title="Optional Configuration">
+
+<apex:pageBlockSection title="Optionally override Google Maps search locale" columns="1">
+
+<p>
+Google Maps uses locale to help determine where a location is. For example if you search for <strong>Twickenham</strong> on <strong>maps.google.com</strong> or <strong>maps.google.co.uk</strong> you will get different answers depending on which web site you used.
+</p>
+<p>
+The web site used can be changed in Salesforce International Mapping to help locate addresses correctly.
+</p>
+
+<p>
+There are two ways to change this
+</p>
+
+<ul>
+	<li>Locale is dependent on the language used and can be changed using custom labels. Setup->App Setup->Create->Custom Labels->GMI_googleMapURL</li>
+	<li>Permanently set Locale in the Visualforce pages Setup->App Setup->Develop->Pages (GoogleMapsInternationalAccount, GoogleMapsInternationalContact, GoogleMapsInternationalEmbeddedAccount, GoogleMapsInternationalEmbeddedContact) by using googleMapURL parameter in GoogleMapsInternational component for example <strong>googleMapURL="http://maps.google.com"</strong></li>
+</ul>
+
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Other configurations" columns="1">
+
+<p>
+In addition to changing the locale for Google Maps on the Visualforce page the following parameters can also set
+</p>
+
+<ul>
+    <li>height - Google map height in pixels</li>
+    <li>width - Google map width in pixels</li>
+    <li>iconColour - Colour of icon marker in map for example #236FBD and #8A9EBE (colours for account)and #56458C (colours for contact)</li>
+    <li>backgroundColour - Background Colour around the Google Map for example set to #FFFFFF to change from default salesforce background colour</li>
+    <li>address - Address to search for in Google maps, including the country in the address helps accuraccy</li>
+</ul>
+
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+<apex:pageBlock title="Running Salesforce International Mapping">
+
+<apex:pageBlockSection title="Internet Explorer" columns="1">
+
+<p>
+In Internet Explorer if you get the following ‘Do you want to display nonsecure items’ message when running Salesforce International Mapping then do the following
+</p>
+<ol>
+ <li>In IE go to Tools->Internet Options->Security </li>
+ <li>Select the ‘Security’ tab</li>
+ <li>Click the ‘Custom Level’ button</li>
+ <li>In the ’Miscellaneous’ section change “Display mixed content” to Enable</li>
+</ol>
+<p>
+Google also offers <a href="http://www.google.com/enterprise/maps/">Google Maps API Premier</a> which can deliver the maps over HTTPS. Using this service will also stop the message in Internet Explorer happening.
+</p>
+
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Address not found issues" columns="1">
+
+<p>
+If Google Maps is unable to find an address please check the address against the local authority, then change the address in salesforce accordingly.
+</p>
+<p>
+For example
+</p>
+ <ul>
+ <li><a href="http://www.ups.com/">UPS</a> (United States of America)</li>
+ <li><a href="http://www.royalmail.com/">Royal Mail</a> (United Kingdom)</li>
+ <li><a href="http://www.laposte.fr/">La Poste</a> (France)</li>
+ <li><a href="http://www.tntpost.nl/">TNT Post</a> (Netherlands)</li>
+ </ul>
+
+<p>
+The address being passed to Google Maps can be found by clicking on the map icon marker.
+</p>
+
+
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+
+</apex:page>

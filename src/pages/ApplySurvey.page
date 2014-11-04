@@ -1,0 +1,80 @@
+<apex:page showHeader="false"  controller="ApplySurveyController" standardStylesheets="false">
+<!-- Begin Default Content REMOVE THIS -->
+<script type="text/javascript" src="{!$Resource.jQuery2_1_1}"></script>
+<!--
+<link href="{!$Resource.bootstrap_3_2}" rel="stylesheet"/>
+<script type="text/javascript" src="{!$Resource.bootstrap_3_2_js}"></script>
+<script type="text/javascript" src="{!$Resource.jQueryCookie}"></script>-->
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+<script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<style>
+    label{
+        font-weight: normal !important;
+    }
+</style>
+
+<div class="container">    
+    <div id="surveyBox" style="margin-top:80px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">    
+
+    <div style="margin-bottom:20px">
+          <apex:image id="logoImage" value="{!$Resource.logoImage}" width="200" height="46"/>
+    </div>
+
+    <div class="panel panel-info" >
+
+        <div class="panel-heading">
+                    <div class="panel-title">Questions Available <br/>
+                    </div>
+                    <!--
+                    <apex:outputText value="{!dni}"/>
+                    -->
+
+        </div>    
+
+        <apex:form id="ApplySurveyForm" styleClass="form-horizontal" >     
+
+            <div id="signupalert" style="display:none" class="alert alert-danger"> 
+                <apex:messages id="msg" styleClass="errorMsg" layout="table" style="margin-top:1em;"/>
+            </div>
+            <apex:pageBlock mode="inlineEdit">  
+            <br/>
+                <apex:pageBlockButtons style="aling:'center'" location="bottom"   >
+                   <div style="margin-top:10px" class="form-group">
+                        <div class="col-sm-12 controls">
+                            <apex:commandButton alt="Save Survey" action="{!SaveSurvey}" value="Save Survey" id="submit" styleClass="btn btn-success"/>&nbsp;&nbsp;&nbsp;
+                            <apex:commandButton alt="Reset All Question" action="{!Reset}" value="Reset All Survey Answer " id="reset" styleClass="btn btn-success"/>&nbsp;&nbsp;&nbsp;
+                            <apex:commandButton alt="Reset All Question" action="{!goToDashBoard}" value="Back Dashboard" id="back" styleClass="btn btn-success"/>
+                        </div>
+                    </div>                     
+                </apex:pageBlockButtons> 
+
+                <!-- The real world-->
+                <apex:pageBlockTable styleClass="table table-bordered table-responsive" value="{!wrapperQuestions}" var="wrapperClass" columns="2">
+                    <apex:column width="50%" headerValue="Question" >
+                    <apex:panelGrid >
+                          <apex:outputText value="{!wrapperClass.question.Name}" />                     
+                    </apex:panelGrid>
+                    </apex:column>
+                    <apex:column width="50%"  headerValue="Answer">                
+                        <apex:panelGrid rendered="{!wrapperClass.question.Type__c=='Text'}">
+                            <apex:inputText styleClass="form-control" value="{!wrapperClass.ansText}"></apex:inputText>
+                        </apex:panelGrid>
+                        <apex:panelGrid rendered="{!wrapperClass.question.Type__c=='Multiple'}">
+                            <apex:selectCheckboxes layout="PageDirection"  value="{!wrapperClass.ansOptions}">
+                                <apex:selectOptions value="{!wrapperClass.optionAnswersAsSelectOption}" />
+                            </apex:selectCheckboxes>
+                        </apex:panelGrid>
+                        <apex:panelGrid rendered="{!wrapperClass.question.Type__c=='Unique'}">
+                            <apex:selectRadio layout="PageDirection" value="{!wrapperClass.ansUnique}" >
+                                <apex:selectOptions value="{!wrapperClass.optionAnswersAsSelectOption}"/>
+                            </apex:selectRadio>
+                        </apex:panelGrid>
+                    </apex:column>
+                </apex:pageBlockTable>        
+     
+            </apex:pageBlock>    
+        </apex:form>
+    </div>
+    </div>
+</div>
+</apex:page>

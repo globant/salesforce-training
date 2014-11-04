@@ -1,0 +1,19 @@
+{
+    "username": "jose.sepulveda@69demo.com.develop", 
+    "environment": "sandbox", 
+    "project_name": "salesforce-training", 
+    "workspace": "/Users/noah/doc/java/sublime/mavensmate", 
+    "org_url": "", 
+    "namespace": "", 
+    "id": "0TMG2VBHSUXMUR2LP2NLBOM1X32A4PJ9", 
+    "metadata_container": "1dcJ0000000DE6nIAG", 
+    "subscription": [
+        "ApexClass", 
+        "ApexComponent", 
+        "ApexPage", 
+        "ApexTrigger", 
+        "StaticResource", 
+        "CustomObject", 
+        "Profile"
+    ]
+}

@@ -1,0 +1,73 @@
+<apex:page id="ShopNew" controller="ShopNewController" showHeader="true">
+
+    <apex:form id="ShopForm">
+
+        <apex:messages id="msg" styleClass="errorMsg" layout="table" style="margin-top:1em;"/>
+
+        <apex:pageBlock title="Create a New Shop">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!registerShop}" value="Create" id="submit"/>
+                <apex:commandButton action="{!Cancel}" immediate="true" value="Cancel" id="Cancel"/>
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection columns="1">
+
+            <!--<apex:panelGrid columns="2" style="margin-top:1em;">-->
+                <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="Name" for="name"/>
+                   <apex:inputText required="true" id="name" value="{!Name}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Description" for="Description"/>
+                    <apex:inputText required="true" id="description" value="{!description}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Employee Count Number" for="Employee_Count_Number"/>
+                    <apex:inputText required="false" id="Employee_Count_Number" value="{!Employee_Count_Number}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="URL" for="url"/>
+                    <apex:inputText required="true" id="url" value="{!url}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                       <!-- <apex:image id="LogoShop" value="{!Logo}" width="200" height="200"/>//-->
+                    <apex:outputLabel value="Logo" for="Logo"/>
+                    <apex:inputFile value="{!Logo}" filename="{!Logo}"/>
+                </apex:pageBlockSectionItem>
+           <!-- </apex:panelGrid>-->
+
+            </apex:pageBlockSection>
+            <apex:actionRegion renderRegionOnly="false">
+                <apex:pageBlockSection id="Sector_SubSector">
+
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Sector" for="SectorOptions"/>
+                        <apex:selectList value="{!Sector}" multiselect="false" size="1" onchange="UpdateSubCategory(this.value)">
+                            <apex:selectOptions value="{!SectorOptions}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Sub Category" for="Sub_CategoryOptions"/>
+                        <apex:selectList value="{!Sub_Category}" multiselect="false" size="1" onchange="UpdateSector(this.value)">
+                            <apex:selectOptions value="{!Sub_CategoryOptions}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+
+                    <apex:pageBlockSectionItem >
+                        <apex:actionFunction action="{!UpdateSubCategory}" name="UpdateSubCategory" reRender="Sector_SubSector">
+                            <apex:param name="UpdateSubCategory" value=""/>
+                        </apex:actionFunction>
+                    </apex:pageBlockSectionItem>
+
+                    <apex:pageBlockSectionItem >
+                        <apex:actionFunction action="{!UpdateSector}" name="UpdateSector" reRender="Sector_SubSector">
+                            <apex:param name="UpdateSector" value=""/>
+                        </apex:actionFunction>
+                    </apex:pageBlockSectionItem>
+
+                </apex:pageBlockSection>
+            </apex:actionRegion>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

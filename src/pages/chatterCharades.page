@@ -1,0 +1,93 @@
+<apex:page controller="chatterCharades" standardStylesheets="true" showheader="false" sidebar="false">
+<div width="100%">
+<apex:form >
+<apex:outputPanel id="tabname">
+<apex:tabPanel selectedTab="{!IF(validObj, 'obj', 'user')}" style="width:190px;" value="{!tabPicked}">
+    
+    <apex:tab label="{!objName}" name="obj" rendered="{!validObj}"> 
+        Select user:<br/>
+        <apex:selectList value="{!poster}" size="1">
+            <apex:selectOptions value="{!userList}"/>
+        </apex:selectList>  
+        <br/>
+        Post contents:<br/>
+        <apex:inputTextArea style="width:150px;" value="{!Body}" rows="3"/> 
+        <br/><br/><br/>
+        <apex:commandlink styleclass="btn" value="Post!" action="{!submitPost}" target="_top"/><br/><br/>
+    </apex:tab> 
+    <apex:tab label="User" name="user">
+        Select user:<br/>
+        <apex:selectList value="{!poster}" size="1">
+            <apex:selectOptions value="{!userList}"/>
+        </apex:selectList>   
+        <br/> 
+        Post contents:<br/>
+        <apex:inputTextArea style="width:150px;" value="{!Body}" rows="3"/> 
+        <br/>
+        Select Target Profile:<br/>
+        <apex:selectList value="{!target}" size="1">
+            <apex:selectOptions value="{!UserList}"/>
+        </apex:selectList><br/><br/>
+        <apex:commandLink styleClass="btn" value="Post!" action="{!submitPost}" target="_top"/><br/><br/>
+    </apex:tab>
+    <apex:tab label="Group" name="group">
+    Select user:<br/>
+        <apex:selectList value="{!poster}" size="1">
+            <apex:selectOptions value="{!userList}"/>
+        </apex:selectList>  
+        <br/>  
+        Post contents:<br/>
+        <apex:inputTextArea style="width:150px;" value="{!Body}" rows="3"/> 
+        <br/>
+        Select Target Group:<br/>
+        <apex:selectList value="{!target}" size="1">
+            <apex:selectOptions value="{!groupList}"/>
+        </apex:selectList><br/><br/>
+        <apex:commandLink styleClass="btn" value="Post!" action="{!submitPost}" target="_top"/><br/><br/>       
+    </apex:tab>
+</apex:tabPanel>
+</apex:outputPanel>
+<apex:tabPanel selectedTab="link" style="width:190px;" value="{!tabPicked2}">
+    
+    <apex:tab label="Link" name="link">
+        Enter Link Title:<br/>
+        <apex:inputText value="{!linkTitle}"/><br/>
+        Enter Link URL:<br/>
+        <apex:inputText value="{!linkURL}"/><br/><br/>
+        <apex:commandLink styleClass="btn" value="Post with Link!" action="{!complexPost}" target="_top"/><br/><br/>
+    </apex:tab>
+    <apex:tab label="Content" name="content">
+        Enter Filename: <br/>
+        <apex:inputText value="{!filename}"/><br/>
+        Select File: <br/>
+        <apex:inputFile value="{!file}" style="width:130px;"/><br/><br/>
+        <apex:commandLink styleClass="btn" value="Post with Content" action="{!complexPost}" target="_top"/><br/><br/>
+    </apex:tab>
+    <!-- <apex:tab label="Comment" name="comment"> 
+        <apex:actionSupport event="onclick" rerender="cPanel"/>
+        Select Post to Comment On:
+        <apex:outputPanel id="cPanel">
+            <apex:selectList value="{!op}" size="1">
+                <apex:selectOptions value="{!postList}"/>
+            </apex:selectList>
+        </apex:outputPanel>
+        <br/><br/>
+    </apex:tab>-->
+</apex:tabPanel> 
+
+
+
+</apex:form>
+</div>
+
+
+<style type="text/css">
+    #datePicker, .datePicker{
+        display:none !IMPORTANT;
+    }
+    body{
+        background:#CFEEF8;
+    }
+
+</style>
+</apex:page>

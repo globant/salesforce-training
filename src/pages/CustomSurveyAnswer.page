@@ -1,0 +1,3 @@
+<apex:page showChat="false" >
+    <apex:enhancedList type="SurveyAnswer__c" listId="00BJ0000000xyP6" height="600" customizable="true" rowsPerPage="10"/>
+</apex:page>

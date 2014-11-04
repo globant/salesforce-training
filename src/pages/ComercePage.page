@@ -1,0 +1,44 @@
+<apex:page showHeader="false" controller="ComerceController" standardStylesheets="true">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+        
+        var userID = "";
+
+        $(function() {
+            if (!navigator.cookieEnabled){
+                alert("Unabled cookies");
+                return;
+            }                
+
+            userID = $.cookie('apex__session');
+            if(userID == undefined){
+                window.location.href = "/apex/login";
+            }
+         }); 
+    </script>
+    <apex:form id="ShopForm" style="margin:30px">        
+        <div style="width: 510px; float:left; margin-right:30px;">
+            <apex:pageBlock title="Applied Discounts" rendered="{!renderAVG}">  
+                <apex:chart name="AVGCouponPercent" data="{!AVGCoupon}" width="500" height="300"
+                    colorSet="#156F9E,#FF9123,#6BAE4A,#424242,#A4A4A4">
+                <apex:axis type="Numeric" position="left" grid="true" title="Discount rate ($)"
+                        fields="val"/>
+                <apex:axis type="Category" position="bottom" grid="false" title="Weeks ago"
+                        fields="lvl"/>
+                <apex:barSeries orientation="vertical" axis="left" xField="lvl" yField="val"
+                        colorsProgressWithinSeries="true"/>
+                </apex:chart>                   
+            </apex:pageBlock>
+        </div>    
+       <div style="width: 510px; float:left;">
+            <apex:pageBlock title="Discount Motives" rendered="{!renderMotives}"> 
+                <apex:chart name="discountMotives" data="{!discountMotives}" width="500" height="300"
+                    colorSet="#156F9E,#FF9123,#6BAE4A,#424242,#A4A4A4">
+                    <apex:pieSeries dataField="val" labelField="lvl"/>
+                    <apex:legend position="right"/>
+                </apex:chart>
+            </apex:pageBlock>
+        </div>         
+    </apex:form>
+</apex:page>

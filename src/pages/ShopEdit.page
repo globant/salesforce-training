@@ -1,0 +1,76 @@
+﻿<apex:page id="ShopEdit" controller="ShopEditController" showHeader="true">
+    <apex:form id="ShopForm">
+
+
+        <apex:messages id="msg" styleClass="errorMsg" layout="table" style="margin-top:1em;"/>
+
+        <apex:pageBlock title="Edit Shop {!Shop.Name}" mode="edit">
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!UpdateShop}" value="Save"   id="submit"/>
+                <apex:commandButton action="{!Cancel}" immediate="true" value="Cancel" id="Cancel"/>
+            </apex:pageBlockButtons>
+
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                   <apex:outputLabel value="Name" for="name"/>
+                   <apex:inputField required="true" id="name" value="{!Shop.Name}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Description" for="Description"/>
+                    <apex:inputField required="false" id="description" value="{!Shop.Description__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Employee Count Number" for="Employee_Count_Number"/>
+                    <apex:inputField required="false" id="Employee_Count_Number" value="{!Shop.Employee_Count_Number__c}"/>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="URL" for="url"/>
+                    <apex:inputField required="true" id="url" value="{!Shop.URL__c}"/>
+                </apex:pageBlockSectionItem>
+
+            </apex:pageBlockSection>
+            <apex:actionRegion renderRegionOnly="false">
+                <apex:pageBlockSection id="Sector_SubSector">
+
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Sector" for="SectorOptions"/>
+                        <apex:selectList value="{!Shop.Sector__c}" multiselect="false" size="1" onchange="UpdateSector(this.value)">
+                            <apex:selectOptions value="{!SectorOptions}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Sub Category" for="Sub_CategoryOptions"/>
+                        <apex:selectList value="{!Shop.Sub_Category__c}" multiselect="false" size="1" onchange="UpdateSubCategory(this.value)">
+                            <apex:selectOptions value="{!Sub_CategoryOptions}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+
+                    <apex:pageBlockSectionItem >
+                        <apex:actionFunction action="{!UpdateSubCategory}" name="UpdateSubCategory" reRender="Sector_SubSector">
+                            <apex:param name="UpdateSubCategory" value=""/>
+                        </apex:actionFunction>
+                    </apex:pageBlockSectionItem>
+
+                    <apex:pageBlockSectionItem >
+                        <apex:actionFunction action="{!UpdateSector}" name="UpdateSector" reRender="Sector_SubSector">
+                            <apex:param name="UpdateSector" value=""/>
+                        </apex:actionFunction>
+                    </apex:pageBlockSectionItem>
+
+                </apex:pageBlockSection>
+            </apex:actionRegion>
+
+            <apex:pageBlockSection id="Image" columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Logo" for="Logo"/>
+                    <apex:inputFile value="{!attachmentBody}" filename="{!attachmentName}" title="Logo" alt="Logo"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+            <center>
+               <apex:image id="LogoShop" url="{!Logo}" width="15%" height="15%" alt="{!Name}" title="{!Name}" rendered="{!Logo!=null}"/>
+            </center>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,58 @@
+<apex:page showHeader="false" controller="GoToTheSurveyController" standardStylesheets="false">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Complete a Survey.</title>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script>
+     $(document).ready(function() {            
+            $('[id$=code]').attr("placeholder","code");    
+            <apex:outputText rendered="{!shouldRedirect}">
+                window.top.location.href = '{!redirectUrl}';
+            </apex:outputText>                   
+        });                
+        
+    </script>
+    <div class="container">
+        <div style="margin-top:20px;" class="mainbox">           
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Complete a Survey</div>
+                </div>
+                <div class="panel-body" >
+                    <apex:form id="goToTheSurvey">
+                        <apex:messages id="msg" styleClass="errorMsg" layout="table" style="margin-top:1em;"/>
+                        <apex:pageBlock >
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <apex:inputText required="true" id="code" value="{!code}" styleClass="form-control"/>                            
+                                </div>
+                                <div style="margin-top:10px" class="form-group">
+                                    <div class="col-sm-12 controls">
+                                        <apex:commandButton action="{!goToTheSurvey}" value="Go To The Survey !" id="submit" styleClass="btn btn-success" />
+                                    </div>
+                                </div>
+                        </apex:pageBlock>
+                    </apex:form>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top:20px;" class="mainbox">           
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Check your favorite shops</div>
+                </div>    
+                <apex:pageBlock title=""> 
+                    <div class="panel-body" >
+                        <div class="form-group">
+                            <div class="col-sm-12 controls">   
+                                <input type="button" value="Let´s shop" class="btn btn-success" onclick='window.top.location.href="/apex/ComerceListPage"'/>
+                            </div>
+                        </div>   
+                    </div>                        
+                </apex:pageBlock>
+            </div>
+       </div>
+    </div>
+</apex:page>

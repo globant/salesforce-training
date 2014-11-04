@@ -1,0 +1,65 @@
+<apex:page showHeader="false" controller="ComerceListController" standardStylesheets="false">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Comerce</title>
+    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript">
+        var userID = "";
+
+        $(function() {
+            if (!navigator.cookieEnabled){
+                alert("Unabled cookies");
+                return;
+            }                
+
+            userID = $.cookie('apex__session');
+            if(userID == undefined){
+                window.location.href = "/apex/login";
+            }
+
+            <apex:outputText rendered="{!shouldRedirect}">
+                 $('iframe').attr('height','400');
+                 $('iframe').attr('src','{!redirectUrl}');
+                 $('iframe').fadeIn();                
+            </apex:outputText>
+         }); 
+    </script>
+    <div class="container">
+        <div style="margin-top:20px;" class="mainbox">
+            <div style="margin-bottom:20px"><apex:image id="logoImage" value="{!$Resource.logoImage}" width="200" height="46"/></div>         
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <div class="panel-title">Shops</div>
+                </div>
+                <apex:form id="ShopForm" style="margin:20px">               
+                    <apex:pageBlock >  
+                         <apex:pageBlockTable value="{!Shops}" var="shop" styleClass="table table-bordered table-responsive">
+                            <apex:column headerValue="Shop">
+                                <center><apex:image url="{!shop.Logo__c}" width="90px" height="50px"/></center>
+                            </apex:column>
+                            <apex:column headerValue="IdShop">
+                                <apex:commandLink title="Shop info" value="{!shop.Name}" action="{!goToStatistics}">
+                                    <apex:param name="shopId" value="{!shop.Id}"/>                        
+                                </apex:commandLink>                  
+                            </apex:column>
+                            <apex:column headerValue="Description">
+                                <apex:outputText value="{!shop.Description__c}"/>
+                            </apex:column>
+                            <apex:column headerValue="Web Site">
+                                <apex:outputLink value="{!shop.URL__c}" target="_blank">{!shop.URL__c}</apex:outputLink>           
+                            </apex:column>
+                         </apex:pageBlockTable>   
+                    </apex:pageBlock>                     
+                </apex:form>
+                <iframe height="100px" id="comercePage" name="comercePage" frameBorder="0" src="" width="100%" style="margin:0 auto;"></iframe>            
+                <div style="margin-top:10px" class="form-group">
+                    <div class="col-sm-12 controls">
+                        <input type="button" value="Back to login" class="btn btn-success" onclick='window.top.location.href="/apex/Login"'/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</apex:page>
