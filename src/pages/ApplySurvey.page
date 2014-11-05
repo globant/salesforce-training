@@ -11,7 +11,7 @@
     label{
         font-weight: normal !important;
     }
-</style>
+</style> 
 
 <div class="container">    
     <div id="surveyBox" style="margin-top:80px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">    
