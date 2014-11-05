@@ -127,7 +127,7 @@ public class ApplySurveyController {
 			questionNumber++;
 
 			if(!wrapperClass.isAnswered()){
-				ApexPages.Message msg = new ApexPages.Message(ApexPages.Severity.ERROR, 'The Question '+questionNumber+' has not anwered.');
+				ApexPages.Message msg = new ApexPages.Message(ApexPages.Severity.ERROR, 'The Question '+questionNumber+' has not answered.');
         		ApexPages.addMessage(msg);
         		hasErrors=true;	
         		continue;
@@ -161,6 +161,14 @@ public class ApplySurveyController {
 			ApexPages.addMessage(msg);
 			return null;
 		}
+
+		try{
+			surveyAnswer.State__c = 'Complete';
+			update surveyAnswer;
+		} catch(Exception e){
+			System.debug('Error in update');
+		}
+		
 
 		PageReference referencePage = Page.Dashboard;
         referencePage.setRedirect(true);
