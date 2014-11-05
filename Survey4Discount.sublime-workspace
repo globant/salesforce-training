@@ -67,7 +67,47 @@
 			"file": "src/classes/OrderOptionAnswerTest.cls",
 			"settings":
 			{
-				"buffer_size": 1895,
+				"buffer_size": 576,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/classes/OrderOptionAnswerTest.cls-meta.xml",
+			"settings":
+			{
+				"buffer_size": 174,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/classes/ShopEditControllerTest.cls",
+			"settings":
+			{
+				"buffer_size": 3400,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/classes/ShopNewControllerTest.cls",
+			"settings":
+			{
+				"buffer_size": 3636,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/classes/ShopNewControllerTest.cls-meta.xml",
+			"settings":
+			{
+				"buffer_size": 174,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/classes/ShopEditControllerTest.cls-meta.xml",
+			"settings":
+			{
+				"buffer_size": 174,
 				"line_ending": "Windows"
 			}
 		},
@@ -83,9 +123,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 265.0,
+		"height": 58.0,
 		"selected_items":
 		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
 			[
 				"list",
 				"MavensMate: List Fields For Object..."
@@ -109,10 +153,6 @@
 			[
 				"set",
 				"Set Syntax: Apex"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			]
 		],
 		"width": 480.0
@@ -143,6 +183,7 @@
 	],
 	"file_history":
 	[
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/Ejecutar... - Acceso directo.lnk",
 		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/classes/ShopEditControllerTest.cls",
 		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/classes/ShopEditController.cls",
 		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/classes/ShopNewController.cls",
@@ -161,7 +202,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 		]
@@ -204,7 +245,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -213,15 +254,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1895,
+						"buffer_size": 576,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1556,
-								1556
+								576,
+								576
 							]
 						],
 						"settings":
@@ -229,14 +270,156 @@
 							"syntax": "Packages/MavensMate/sublime/lang/Apex.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 344.0,
+						"translation.y": 218.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/classes/OrderOptionAnswerTest.cls-meta.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 174,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
+					"file": "src/classes/ShopEditControllerTest.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3400,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/classes/ShopNewControllerTest.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/classes/ShopNewControllerTest.cls-meta.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 174,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/classes/ShopEditControllerTest.cls-meta.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 174,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "src/triggers/OrderOptionAnswer.trigger",
 					"semi_transient": false,
 					"settings":
@@ -262,7 +445,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
