@@ -18,6 +18,7 @@ global with sharing class CouponWebService {
 	    		return 'This coupon has been used yet.';
 	    	} else {
 	    		coupon.status__c = 'Used';
+	    		coupon.date_of_use__c = system.TODAY();
 	    		try {
 	    			update coupon;
 	    			return 'Thanks for using this coupon';
