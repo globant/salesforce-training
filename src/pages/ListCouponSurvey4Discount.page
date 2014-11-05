@@ -42,14 +42,19 @@
                             <apex:column headerValue="Survey">
                                 <apex:outputText value="{!item.survey__c}"/>
                             </apex:column>
-                            <apex:column headerValue="Status">
+                            <apex:column headerValue="Survey Status">
+                                <apex:outputText value="{!item.status_survey__c}"/>
+                            </apex:column>
+                            <apex:column headerValue="Coupon Status">
                                 <apex:outputText value="{!item.status__c}"/>
                             </apex:column>
                             <apex:column headerValue="Discount">
-                                <apex:outputText value="{!item.discount__c}"/>
+                                <apex:outputText value="{!item.discount__c}%"/>
                             </apex:column>
-                            <apex:column headerValue="Date">
-                                <apex:outputText value="{!item.date__c}"/>
+                            <apex:column headerValue="Date of use">
+                                <apex:outputText value="{0,date, MMMM d,  yyyy}">
+                                    <apex:param value="{!item.date__c}"/>
+                                </apex:outputText>
                             </apex:column>
                         </apex:pageBlockTable>
                     </apex:pageBlock>

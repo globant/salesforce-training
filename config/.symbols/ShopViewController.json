@@ -1,0 +1,199 @@
+{
+    "properties": [
+        {
+            "modifiers": [], 
+            "name": "Shops", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 3
+            }, 
+            "type": "LIST"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [
+        {
+            "modifiers": [], 
+            "name": "ShopViewController", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 5
+            }, 
+            "type": null
+        }, 
+        {
+            "modifiers": [], 
+            "name": "ShopViewController", 
+            "parameters": [
+                {
+                    "type": "StandardController", 
+                    "name": "controller"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 8
+            }, 
+            "type": null
+        }
+    ], 
+    "namespace": null, 
+    "name": "ShopViewController", 
+    "tableDeclaration": {
+        "type": "ShopViewController", 
+        "modifiers": [], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 1
+        }, 
+        "name": "ShopViewController"
+    }, 
+    "key": "01pJ00000006ptoIAA", 
+    "variables": [
+        {
+            "type": "StandardController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 60, 
+                "line": 8
+            }, 
+            "name": "controller"
+        }, 
+        {
+            "type": "Document", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 18, 
+                "line": 9
+            }, 
+            "name": "d"
+        }, 
+        {
+            "type": "PageReference", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 22
+            }, 
+            "name": "NewShop"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 30
+            }, 
+            "name": "ShopID"
+        }, 
+        {
+            "type": "PageReference", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 32
+            }, 
+            "name": "EditShop"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 45
+            }, 
+            "name": "ShopID"
+        }, 
+        {
+            "type": "PageReference", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 23, 
+                "line": 47
+            }, 
+            "name": "ShopView"
+        }, 
+        {
+            "type": "Shop__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 52
+            }, 
+            "name": "Shop"
+        }
+    ], 
+    "id": "01pJ00000006ptoIAA", 
+    "methods": [
+        {
+            "modifiers": [], 
+            "name": "getShops", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 13
+            }, 
+            "returnType": "LIST", 
+            "type": null
+        }, 
+        {
+            "modifiers": [], 
+            "name": "NewShop", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 20
+            }, 
+            "returnType": "PageReference", 
+            "type": null
+        }, 
+        {
+            "modifiers": [], 
+            "name": "EditShop", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 28
+            }, 
+            "returnType": "PageReference", 
+            "type": null
+        }, 
+        {
+            "modifiers": [], 
+            "name": "DeleteShop", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 43
+            }, 
+            "returnType": "PageReference", 
+            "type": null
+        }
+    ]
+}

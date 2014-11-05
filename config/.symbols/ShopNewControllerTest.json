@@ -1,0 +1,302 @@
+{
+    "properties": [], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "ShopNewControllerTest", 
+    "tableDeclaration": {
+        "type": "ShopNewControllerTest", 
+        "modifiers": [
+            "TEST"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 36, 
+            "line": 1
+        }, 
+        "name": "ShopNewControllerTest"
+    }, 
+    "key": "01pJ00000006rDkIAI", 
+    "variables": [
+        {
+            "type": "ShopNewController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 9
+            }, 
+            "name": "ShopController"
+        }, 
+        {
+            "type": "Shop__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 10
+            }, 
+            "name": "TestResult"
+        }, 
+        {
+            "type": "ShopNewController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 22
+            }, 
+            "name": "ShopController"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 27
+            }, 
+            "name": "TestResult"
+        }, 
+        {
+            "type": "ShopNewController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 43
+            }, 
+            "name": "ShopController"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 51
+            }, 
+            "name": "Sector"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 52
+            }, 
+            "name": "TestResult"
+        }, 
+        {
+            "type": "ShopNewController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 68
+            }, 
+            "name": "ShopController"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 76
+            }, 
+            "name": "Sector"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 77
+            }, 
+            "name": "TestResult"
+        }, 
+        {
+            "type": "ShopNewController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 92
+            }, 
+            "name": "ShopController"
+        }, 
+        {
+            "type": "LIST", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 93
+            }, 
+            "name": "TestResult"
+        }, 
+        {
+            "type": "ShopNewController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 21, 
+                "line": 105
+            }, 
+            "name": "Shop"
+        }, 
+        {
+            "type": "ShopNewController", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 51, 
+                "line": 118
+            }, 
+            "name": "ShopController"
+        }, 
+        {
+            "type": "Shop__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 120
+            }, 
+            "name": "TempShop"
+        }, 
+        {
+            "type": "Shop__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 11, 
+                "line": 121
+            }, 
+            "name": "TestResult"
+        }
+    ], 
+    "id": "01pJ00000006rDkIAI", 
+    "methods": [
+        {
+            "modifiers": [
+                "TEST", 
+                "STATIC"
+            ], 
+            "name": "testCreateNewShopObject", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 3
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "TEST", 
+                "STATIC"
+            ], 
+            "name": "TestGetSectorOptions", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 17
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "TEST", 
+                "STATIC"
+            ], 
+            "name": "TestGetSubCategoryOptionsWithout_SelectedSector", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 38
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "TEST", 
+                "STATIC"
+            ], 
+            "name": "TestGetSubCategoryOptionsWith_SelectedSector", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 63
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "TEST", 
+                "STATIC"
+            ], 
+            "name": "GetAllRegisteredShops", 
+            "parameters": [], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 29, 
+                "line": 88
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "STATIC"
+            ], 
+            "name": "SetupShop", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 35, 
+                "line": 103
+            }, 
+            "returnType": "ShopNewController", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "STATIC"
+            ], 
+            "name": "GetShop", 
+            "parameters": [
+                {
+                    "type": "ShopNewController", 
+                    "name": "ShopController"
+                }
+            ], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 25, 
+                "line": 118
+            }, 
+            "returnType": "Shop__c", 
+            "type": null
+        }
+    ]
+}

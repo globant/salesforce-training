@@ -1,0 +1,223 @@
+{
+    "properties": [
+        {
+            "modifiers": [
+                "STATIC"
+            ], 
+            "name": "Usuario", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 28, 
+                "line": 3
+            }, 
+            "type": "User__c"
+        }, 
+        {
+            "modifiers": [
+                "STATIC"
+            ], 
+            "name": "Sesion", 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 35, 
+                "line": 4
+            }, 
+            "type": "SessionData__c"
+        }, 
+        {
+            "modifiers": [
+                "STATIC"
+            ], 
+            "name": "DNIc", 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 6
+            }, 
+            "type": "String"
+        }
+    ], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [
+        {
+            "modifiers": [], 
+            "name": "User", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "UserEmail"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 13
+            }, 
+            "type": null
+        }
+    ], 
+    "namespace": null, 
+    "name": "User", 
+    "tableDeclaration": {
+        "type": "User", 
+        "modifiers": [], 
+        "references": [], 
+        "location": {
+            "column": 14, 
+            "line": 1
+        }, 
+        "name": "User"
+    }, 
+    "key": "01pJ00000006qjzIAA", 
+    "variables": [
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 24, 
+                "line": 13
+            }, 
+            "name": "UserEmail"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 42, 
+                "line": 17
+            }, 
+            "name": "SessionID"
+        }, 
+        {
+            "type": "Boolean", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 17, 
+                "line": 20
+            }, 
+            "name": "result"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 40, 
+                "line": 35
+            }, 
+            "name": "UserEmail"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 12, 
+                "line": 37
+            }, 
+            "name": "SessionID"
+        }, 
+        {
+            "type": "SaveResult", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 37, 
+                "line": 49
+            }, 
+            "name": "DBresult"
+        }, 
+        {
+            "type": "Id", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 40, 
+                "line": 62
+            }, 
+            "name": "SessionID"
+        }, 
+        {
+            "type": "String", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 16, 
+                "line": 64
+            }, 
+            "name": "result"
+        }
+    ], 
+    "id": "01pJ00000006qjzIAA", 
+    "methods": [
+        {
+            "modifiers": [
+                "STATIC"
+            ], 
+            "name": "DropSession", 
+            "parameters": [
+                {
+                    "type": "Id", 
+                    "name": "SessionID"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 27, 
+                "line": 17
+            }, 
+            "returnType": "Boolean", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "STATIC"
+            ], 
+            "name": "getSession", 
+            "parameters": [
+                {
+                    "type": "String", 
+                    "name": "UserEmail"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 35
+            }, 
+            "returnType": "Id", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "STATIC"
+            ], 
+            "name": "getSession", 
+            "parameters": [
+                {
+                    "type": "Id", 
+                    "name": "SessionID"
+                }
+            ], 
+            "visibility": "PUBLIC", 
+            "references": [], 
+            "location": {
+                "column": 26, 
+                "line": 62
+            }, 
+            "returnType": "String", 
+            "type": null
+        }
+    ]
+}

@@ -38,5 +38,4 @@
             </apex:pageBlockTable>
         </apex:pageBlock>
     </apex:form>
-        <apex:enhancedList type="SurveyAnswer__c" height="300" rowsPerPage="10" Listid="00BJ0000000xyP6"  customizable="true"/>
 </apex:page>

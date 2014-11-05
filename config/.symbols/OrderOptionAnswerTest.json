@@ -1,0 +1,144 @@
+{
+    "properties": [], 
+    "externalReferences": [], 
+    "innerClasses": [], 
+    "interfaces": [], 
+    "constructors": [], 
+    "namespace": null, 
+    "name": "OrderOptionAnswerTest", 
+    "tableDeclaration": {
+        "type": "OrderOptionAnswerTest", 
+        "modifiers": [
+            "TEST"
+        ], 
+        "references": [], 
+        "location": {
+            "column": 28, 
+            "line": 2
+        }, 
+        "name": "OrderOptionAnswerTest"
+    }, 
+    "key": "01pJ00000006rGFIAY", 
+    "variables": [
+        {
+            "type": "Question__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 15, 
+                "line": 6
+            }, 
+            "name": "Question"
+        }, 
+        {
+            "type": "OptionAnswer__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 13
+            }, 
+            "name": "OptAnswer1"
+        }, 
+        {
+            "type": "OptionAnswer__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 19
+            }, 
+            "name": "OptAnswer2"
+        }, 
+        {
+            "type": "OptionAnswer__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 25
+            }, 
+            "name": "OptAnswer3"
+        }, 
+        {
+            "type": "OptionAnswer__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 37
+            }, 
+            "name": "Answer"
+        }, 
+        {
+            "type": "OptionAnswer__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 40
+            }, 
+            "name": "OptAnswer4"
+        }, 
+        {
+            "type": "OptionAnswer__c", 
+            "modifiers": [], 
+            "references": [], 
+            "location": {
+                "column": 19, 
+                "line": 56
+            }, 
+            "name": "Answer"
+        }
+    ], 
+    "id": "01pJ00000006rGFIAY", 
+    "methods": [
+        {
+            "modifiers": [
+                "STATIC"
+            ], 
+            "name": "CreateFullQuestion", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 33, 
+                "line": 4
+            }, 
+            "returnType": "OptionAnswer__c", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "TEST", 
+                "STATIC"
+            ], 
+            "name": "testEditOrderWhenAfterInsertTriggered", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 34
+            }, 
+            "returnType": "void", 
+            "type": null
+        }, 
+        {
+            "modifiers": [
+                "TEST", 
+                "STATIC"
+            ], 
+            "name": "testEditOrderWhenAfterDeleteTriggered", 
+            "parameters": [], 
+            "visibility": "PRIVATE", 
+            "references": [], 
+            "location": {
+                "column": 22, 
+                "line": 53
+            }, 
+            "returnType": "void", 
+            "type": null
+        }
+    ]
+}

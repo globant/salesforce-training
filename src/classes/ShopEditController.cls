@@ -30,19 +30,18 @@ public class ShopEditController {
 
     public ShopEditController (){
         // this matrix should be loaded dynamically from the framework!
-        DependencyMatrix.put('Agroindustria', new List<String>{'Producción Lechera','Producción Avicola'});
-        DependencyMatrix.put('Alimento'     , new List<String>{'Producción Lechera','Producción Avicola'});
-        DependencyMatrix.put('Contrucción'  , new List<String>{'Aereo','Marítimo'});
-        DependencyMatrix.put('Manufactura'  , new List<String>{'Celular','Tablet'});
-        DependencyMatrix.put('Tecnología'   , new List<String>{'Celular','Tablet'});
-
+        DependencyMatrix.put('Agroindustria', new List<String>{'Produccion Lechera','Produccion Avicola'});
+        DependencyMatrix.put('Alimento'     , new List<String>{'Produccion Lechera'});
+        DependencyMatrix.put('Contrucción'  , new List<String>{'Aereo','Maritimo'});
+        DependencyMatrix.put('Manufactura'  , new List<String>{'Celular','Tablet','Smartphone'});
+        DependencyMatrix.put('Tecnología'   , new List<String>{'Celular','Tablet','Smartphone'});
     }
-
+/*
     public ShopEditController (ApexPages.StandardController controller) {
 
         Document d = (Document) controller.getRecord();
         d.folderid = UserInfo.getUserId(); //this puts it in My Personal Documents
-    }
+    }*/
 
     public List<SelectOption> getSectorOptions() {
 
@@ -62,16 +61,20 @@ public class ShopEditController {
 
        List<SelectOption> SubSectorOptions = new List<SelectOption>();
 
-       for (String Key: DependencyMatrix.keySet())
-       {
-            if(Key == Sector)
-            {
-                for(String nombre: DependencyMatrix.get(Key))
+        if(Sector != '' && Sector != null)
+        {
+           for (String Key: DependencyMatrix.keySet())
+           {
+                if(Key == Sector)
                 {
-                    SubSectorOptions.add(new SelectOption(nombre, nombre));
+                    for(String nombre: DependencyMatrix.get(Key))
+                    {
+                        SubSectorOptions.add(new SelectOption(nombre, nombre));
+                    }
                 }
-            }
-       }
+           }
+        }
+        else SubSectorOptions.add(new SelectOption('-1', 'Select a Sector'));
 
         return SubSectorOptions;
     }
@@ -101,9 +104,9 @@ public class ShopEditController {
 /*
         Shop.id                       = Sid;
         Shop.Name                     = Name;
-        Shop.Description__c           = Description;
         Shop.Employee_Count_Number__c = Employee_Count_Number;
         Shop.URL__c                   = URL;*/
+        Shop.Description__c           = Description;
         Shop.Logo__c                  = Logo;
 
         update Shop;

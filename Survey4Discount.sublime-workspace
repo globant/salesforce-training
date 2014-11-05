@@ -1,0 +1,353 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Q",
+				"Question"
+			],
+			[
+				"Question",
+				"Question__c	[Sobject Name]"
+			],
+			[
+				"desc",
+				"Description__c"
+			],
+			[
+				"upda",
+				"PUBLIC UpdateShop() 	PageReference"
+			],
+			[
+				"Shop",
+				"ShopEditController	[Custom Apex Class]"
+			],
+			[
+				"si",
+				"PUBLIC size() 	Integer"
+			],
+			[
+				"valu",
+				"PUBLIC valueOf(Integer i) 	String"
+			],
+			[
+				"Test",
+				"TestResult"
+			],
+			[
+				"get",
+				"PUBLIC getShops() 	LIST"
+			],
+			[
+				"is",
+				"isTest"
+			],
+			[
+				"s",
+				"ShopView	[Visualforce Page]"
+			],
+			[
+				"assert",
+				"assertNotEquals()"
+			],
+			[
+				"vlueof",
+				"PUBLIC valueOf(Decimal d) 	String"
+			],
+			[
+				"Sess",
+				"SessionData__c	[Sobject Name]"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/classes/OrderOptionAnswerTest.cls",
+			"settings":
+			{
+				"buffer_size": 1895,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/triggers/OrderOptionAnswer.trigger",
+			"settings":
+			{
+				"buffer_size": 873,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 265.0,
+		"selected_items":
+		[
+			[
+				"list",
+				"MavensMate: List Fields For Object..."
+			],
+			[
+				"mm new ",
+				"MavensMate: New Apex Class"
+			],
+			[
+				"mm new apex",
+				"MavensMate: New Apex Class"
+			],
+			[
+				"mm lis",
+				"MavensMate: List Fields For Object..."
+			],
+			[
+				"list field",
+				"MavensMate: List Fields For Object..."
+			],
+			[
+				"set",
+				"Set Syntax: Apex"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 480.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount",
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src",
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/classes",
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/triggers"
+	],
+	"file_history":
+	[
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/classes/ShopEditControllerTest.cls",
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/classes/ShopEditController.cls",
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/classes/ShopNewController.cls",
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/classes/ShopNewControllerTest.cls",
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/pages/ShopEdit.page",
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/pages/ShopNew.page",
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/pages/ShopView.page",
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/triggers/OrderOptionAnswer.trigger",
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/classes/ShopViewController.cls",
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/pages/ApplySurvey.page",
+		"/C/Program Files/Sublime Text 3/workspace/Survey4Discount/src/classes/User.cls"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"LastAnswer",
+			"OptAnswer1",
+			"\n		OptionAnswer__c OptAnswer1 = new OptionAnswer__c();\n		OptAnswer1.Order__c    = null;\n		OptAnswer1.Question__c = null;\n		OptAnswer1.name        = '';",
+			"OptAnswer",
+			"Trigger",
+			"Before",
+			"temp",
+			"Sub_Category",
+			"sectorparam",
+			"SectorParam",
+			"');\n",
+			"TestResult",
+			"Shop",
+			"Answer",
+			"result",
+			"SessionID"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/classes/OrderOptionAnswerTest.cls",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1895,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1556,
+								1556
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 344.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/triggers/OrderOptionAnswer.trigger",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 873,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								579,
+								579
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/MavensMate/sublime/lang/Apex.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.MavensMate-OutputPanel":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "Survey4Discount.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 299.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
