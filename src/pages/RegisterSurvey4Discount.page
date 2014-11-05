@@ -19,7 +19,9 @@
     <div class="container">    
         <div style="margin-top:80px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
             <div style="margin-bottom:20px"><apex:image id="logoImage" value="{!$Resource.logoImage}" width="200" height="46"/></div>
-            <apex:messages id="msg" styleClass="errorMsg" layout="table" style="margin-top:1em;"/>
+            <div class="bg-danger" style="margin-top: 2px; margin-bottom: 4px;">
+                <apex:messages id="msg" styleClass="errorMsg" layout="table" style="margin-top:1em;"/>
+            </div>
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <div class="panel-title">Sign Up</div>
@@ -27,30 +29,30 @@
                 </div>
                 <div class="panel-body" >
                     <apex:form id="registerForm">
-                        <apex:pageBlock >                  
+                        <apex:pageBlock >         
                             <div class="input-group" style="margin-bottom: 25px">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <apex:inputText required="true" id="email" styleClass="form-control" value="{!email}"/>
+                                <apex:inputText required="true" id="email" styleClass="form-control" value="{!email}" label="email"/>
                             </div>
                             <div class="input-group" style="margin-bottom: 25px">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <apex:inputText required="true" id="firstName" styleClass="form-control" value="{!firstName}"/>
+                                <apex:inputText required="true" id="firstName" styleClass="form-control" value="{!firstName}" label="first Name"/>
                             </div>
                             <div class="input-group" style="margin-bottom: 25px">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <apex:inputText required="true" id="lastName" styleClass="form-control" value="{!lastName}"/>
+                                <apex:inputText required="true" id="lastName" styleClass="form-control" value="{!lastName}" label="last Name"/>
                             </div>
                             <div class="input-group" style="margin-bottom: 25px">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
-                                <apex:inputText required="true" id="dni" styleClass="form-control" value="{!dni}"/>
+                                <apex:inputText required="true" id="dni" styleClass="form-control" value="{!dni}" label="dni"/>
                             </div>                                
                             <div class="input-group" style="margin-bottom: 25px">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <apex:inputSecret required="true" id="password" styleClass="form-control" value="{!password}"/>
+                                <apex:inputSecret required="true" id="password" styleClass="form-control" value="{!password}" label="password"/>
                             </div>                                    
                             <div class="input-group" style="margin-bottom: 25px">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                <apex:inputSecret required="true" id="confirmPassword" styleClass="form-control" value="{!confirmPassword}"/>
+                                <apex:inputSecret required="true" id="confirmPassword" styleClass="form-control" value="{!confirmPassword}" label="password confirmation"/>
                             </div>
                             <div class="form-group" style="margin-bottom: 25px">             
                                 <div class="col-md-offset-3 col-md-9">
@@ -58,7 +60,7 @@
                                     <input type="button" value="Back to login" class="btn btn-success" onclick='window.top.location.href="/apex/Login"'/>                                       
                                 </div>
                             </div>
-                        </apex:pageBlock>                                                                              
+                        </apex:pageBlock>                                                                                
                     </apex:form>
                 </div>
             </div>
