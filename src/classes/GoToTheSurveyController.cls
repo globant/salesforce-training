@@ -1,6 +1,7 @@
 public class GoToTheSurveyController {
 	
 	public GoToTheSurveyController(){
+
 	}
 	
 	public String code{get;set;}

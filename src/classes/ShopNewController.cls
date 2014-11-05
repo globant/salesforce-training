@@ -22,11 +22,11 @@ public class ShopNewController  {
         DependencyMatrix.put('Tecnología'   , new List<String>{'Celular','Tablet','Smartphone'});
 
     }
-
+/*
     public ShopNewController(ApexPages.StandardController controller) {
         Document d = (Document) controller.getRecord();
         d.folderid = UserInfo.getUserId(); //this puts it in My Personal Documents
-    }
+    }*/
 
     public List<SelectOption> getSectorOptions() {
 
@@ -46,11 +46,11 @@ public class ShopNewController  {
 
         List<SelectOption> SubSectorOptions = new List<SelectOption>();
 
-        if(SubSCategoryParam!='' && SubSCategoryParam != null)
+        if(Sector != '' && Sector != null)
         {
            for (String Key: DependencyMatrix.keySet())
            {
-                if(Key == SubSCategoryParam)
+                if(Key == Sector)//Sub_Category
                 {
                     for(String nombre: DependencyMatrix.get(Key))
                     {
@@ -78,7 +78,6 @@ public class ShopNewController  {
 
     public PageReference registerShop() {
 
-
         Shop.Name                     = Name;
         Shop.Logo__c                  = Logo;
         Shop.Description__c           = Description;
@@ -95,10 +94,6 @@ public class ShopNewController  {
         return ShopView;
     }
 
-    public PageReference save(){
-        return registerShop();
-    }
-
     public PageReference Cancel(){
 
         PageReference ShopView = Page.ShopView;
@@ -107,18 +102,15 @@ public class ShopNewController  {
         return ShopView;
     }
 
-    public String SubSCategoryParam {get;set;}
-    public String SectorParam       {get;set;}
-
     public PageReference UpdateSubCategory(){
 
-        SubSCategoryParam = Apexpages.currentPage().getParameters().get('UpdateSubCategory');
+        Sub_Category = Apexpages.currentPage().getParameters().get('UpdateSubCategory');
         return null;
     }
 
     public PageReference UpdateSector(){
 
-        SectorParam       = Apexpages.currentPage().getParameters().get('UpdateSector');
+        Sector       = Apexpages.currentPage().getParameters().get('UpdateSector');
         return null;
     }
 

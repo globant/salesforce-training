@@ -42,14 +42,14 @@
 
                     <apex:pageBlockSectionItem >
                         <apex:outputLabel value="Sector" for="SectorOptions"/>
-                        <apex:selectList value="{!Sector}" multiselect="false" size="1" onchange="UpdateSubCategory(this.value)">
+                        <apex:selectList value="{!Sector}" multiselect="false" size="1" onchange="UpdateSector(this.value)">
                             <apex:selectOptions value="{!SectorOptions}"/>
                         </apex:selectList>
                     </apex:pageBlockSectionItem>
 
                     <apex:pageBlockSectionItem >
                         <apex:outputLabel value="Sub Category" for="Sub_CategoryOptions"/>
-                        <apex:selectList value="{!Sub_Category}" multiselect="false" size="1" onchange="UpdateSector(this.value)">
+                        <apex:selectList value="{!Sub_Category}" multiselect="false" size="1" onchange="UpdateSubCategory(this.value)">
                             <apex:selectOptions value="{!Sub_CategoryOptions}"/>
                         </apex:selectList>
                     </apex:pageBlockSectionItem>

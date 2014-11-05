@@ -20,7 +20,7 @@
             }
 
             <apex:outputText rendered="{!shouldRedirect}">
-                 $('iframe').attr('height','400');
+                 $('iframe').attr('height','420');
                  $('iframe').attr('src','{!redirectUrl}');
                  $('iframe').fadeIn();                
             </apex:outputText>
@@ -54,11 +54,11 @@
                     </apex:pageBlock>                     
                 </apex:form>
                 <iframe height="100px" id="comercePage" name="comercePage" frameBorder="0" src="" width="100%" style="margin:0 auto;"></iframe>            
-                <div style="margin-top:10px" class="form-group">
-                    <div class="col-sm-12 controls">
-                        <input type="button" value="Back to login" class="btn btn-success" onclick='window.top.location.href="/apex/Login"'/>
+                <div class="form-group">
+                    <div class="col-sm-12 controls">   
+                        <input type="button" value="Back to dashboard" class="btn btn-success" onclick='window.top.location.href="/apex/Dashboard"'/>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
     </div>
