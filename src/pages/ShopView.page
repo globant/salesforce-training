@@ -16,7 +16,7 @@
                     <apex:commandLink title="Delete this Shop" action="{!DeleteShop}" value="Del" onclick="if(confirm('Sure you want delete {!pitem.Name} Shop?')) return true; else return false;">
                         <apex:param name="ShopId" value="{!pitem.id}"/>
                		</apex:commandLink>
-                </apex:column>
+                </apex:column> 
                 <apex:column headerValue="Name">
                     <apex:outputText value="{!pitem.Name}"/>
                 </apex:column>
