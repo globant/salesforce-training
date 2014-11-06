@@ -98,7 +98,7 @@ private class GoToTheSurveyControllerTest {
 	}
 
 	@isTest
-	public static void isTheSurveyComplete(){
+	public static void testIsTheSurveyComplete(){
 		// Setup
 		System.test.startTest();
 
@@ -121,4 +121,28 @@ private class GoToTheSurveyControllerTest {
 
 
 	}
+
+	@isTest
+	public static void testIsTheSurveyNotComplete(){
+		// Setup
+		System.test.startTest();
+
+		Coupon__c coupon = SetupGoToTheSurveyCoupon();
+		Shop__c shop = SetupGoToTheSurveyShop();
+		Survey__c survey = SetupGoToTheSurveySurvey(shop);
+		User__c user = SetupGoToTheSurveyUser();
+		SurveyAnswer__c surveyAnswer  = SetupGoToTheSurveySurveyAnswer(coupon, user, survey);
+		surveyAnswer.State__c = 'Incomplete';
+
+		GoToTheSurveyController goToTheSurvey = new GoToTheSurveyController();
+
+		goToTheSurvey.coupon = coupon;
+
+		boolean isTheSurveyComplete = goToTheSurvey.isTheSurveyComplete();
+
+
+		system.assertEquals(false,isTheSurveyComplete);
+		System.test.stopTest();
+	}
+
 }
