@@ -1,0 +1,66 @@
+<apex:page id="Shop" controller="ShopController" showHeader="false">
+    <div><apex:image id="logoImage" value="{!$Resource.logoImage}" width="200" height="46"/></div>
+ 
+    
+    <apex:form id="ShopForm">
+        <apex:messages id="msg" styleClass="errorMsg" layout="table" style="margin-top:1em;"/>
+        <apex:pageBlock title="Shops Available">        
+    
+        <apex:pageBlockTable value="{!Shops}" var="pitem">
+            <apex:column headerValue="IdShop">
+                <apex:outputText value="{!pitem.id}"/>
+            </apex:column>
+            <apex:column headerValue="Name">
+                <apex:outputText value="{!pitem.Name__c}"/>
+            </apex:column>
+            <apex:column headerValue="Description">
+                <apex:outputText value="{!pitem.Description__c}"/>
+            </apex:column>
+        </apex:pageBlockTable>   
+            
+            <apex:panelGrid columns="2" style="margin-top:1em;">
+                <apex:outputLabel value="Name" for="name"/>
+                    <apex:inputText required="true" id="name" value="{!name}"/>
+                <apex:outputLabel value="Description" for="Description"/>
+                    <apex:inputText required="false" id="description" value="{!description}"/>
+                <apex:outputLabel value="Employee Count Number" for="Employee_Count_Number"/>
+                    <apex:inputText required="false" id="Employee_Count_Number" value="{!Employee_Count_Number}"/>
+                <apex:outputLabel value="URL" for="url"/>
+                    <apex:inputText required="true" id="url" value="{!url}"/>
+
+
+                    
+                                      
+
+                <apex:outputLabel value="Logo" for="Logo"/>
+                    <apex:inputFile value="{!Logo}" filename="{!Logo}"/>
+                   <!-- <apex:image id="LogoShop" value="{!Logo}" width="200" height="200"/>//-->
+
+
+
+                <apex:commandButton action="{!registerShop}" value="Create" id="submit"/>
+            </apex:panelGrid>
+        </apex:pageBlock>
+    </apex:form>   
+    
+    <apex:form >
+    
+
+                <apex:outputpanel id="Sector_SubSector">
+                    <apex:outputLabel value="Sector - {!passedParam1}" for="SectorOptions"/>
+                    <apex:selectList value="{!Sector}" multiselect="false" size="1" onchange="UpdateSubCategory(this.value)">
+                        <apex:selectOptions value="{!SectorOptions}"/>
+                    </apex:selectList>
+
+                    <apex:outputLabel value="Sub Category" for="Sub_CategoryOptions"/>
+                    <apex:selectList value="{!Sub_Category}" multiselect="false" size="1">
+                        <apex:selectOptions value="{!Sub_CategoryOptions}"/>
+                    </apex:selectList>
+
+                        <apex:actionFunction action="{!UpdateSubCategory}" name="UpdateSubCategory" reRender="Sector_SubSector">
+                            <apex:param name="Selected" value=""/>
+                        </apex:actionFunction>                                    
+                    
+                </apex:outputpanel>     
+    </apex:form>
+</apex:page>

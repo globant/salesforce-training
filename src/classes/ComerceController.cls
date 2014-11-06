@@ -5,23 +5,7 @@ public with sharing class ComerceController {
     public Boolean renderMotives {get;set;}
     
     public ComerceController() {
-        
-        User__c userObject = null;
-        
-        if(ApexPages.currentPage().getCookies().get('session') != null){                        
-            ID idSession = ID.valueOf(ApexPages.currentPage().getCookies().get('session').getValue());
-            userObject = User.getUserObject(idSession);
-            if(userObject != null){
-                ID userId = userObject.Id;
-        //ID userId = [SELECT u.id FROM User__c  u WHERE u.DNI__c = 15962144 ].get(0).id;       
-        shops = [SELECT s.Id,s.Logo__c,s.Name,s.Description__c,s.URL__c FROM Shop__c s WHERE    
-                    s.Id in ( SELECT us.Shop__c FROM UserShopJunt__c us WHERE us.User__c = :userId)];    
-                    
-       showShop();           
-            }
-        }
-
-        
+        showShop();
     }
 
     /*

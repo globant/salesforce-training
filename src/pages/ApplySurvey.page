@@ -33,9 +33,7 @@
 
         <apex:form id="ApplySurveyForm" styleClass="form-horizontal" >     
 
-            <div id="signupalert" style="display:none" class="alert alert-danger"> 
-                <apex:messages id="msg" styleClass="errorMsg" layout="table" style="margin-top:1em;"/>
-            </div>
+            <apex:messages id="msg" styleClass="errorMsg" layout="table" style="margin-top:1em;"/>
             <apex:pageBlock mode="inlineEdit">  
             <br/>
                 <apex:pageBlockButtons style="aling:'center'" location="bottom"   >

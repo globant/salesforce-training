@@ -20,7 +20,7 @@ public class RegisterController {
         List<User__c> userTemp = [SELECT u.Email__c 
                             FROM User__c u 
                             WHERE u.DNI__c = :user.DNI__c];        
-        if(userTemp != null && userTemp.size()>0){
+        if(userTemp != null && userTemp.size()>0 && userTemp.size()<2){
             return false;
         }
         return true;
@@ -28,13 +28,27 @@ public class RegisterController {
     
     public PageReference registerUser() {        
         if (!isValidPassword()) {
-           ApexPages.Message msg = new ApexPages.Message(ApexPages.Severity.ERROR, Label.site.passwords_dont_match);
+           ApexPages.Message msg = new ApexPages.Message(ApexPages.Severity.ERROR, 'Password do not match');
            ApexPages.addMessage(msg);
             return null;
         }
         
         if(password.length() < 6){
             ApexPages.Message msg = new ApexPages.Message(ApexPages.Severity.ERROR,'Password should have at least 6 characters');
+            ApexPages.addMessage(msg);
+            return null;
+        }
+
+         String dniString = '';
+
+        try{
+           dniString = String.valueOf(dni);
+        }catch(Exception e){
+            ApexPages.Message msg = new ApexPages.Message(ApexPages.Severity.ERROR,'The value should be a long number');
+        }
+
+        if(dniString.length() > 10){
+             ApexPages.Message msg = new ApexPages.Message(ApexPages.Severity.ERROR,'DNI should not have more than 10 characters');
             ApexPages.addMessage(msg);
             return null;
         }
