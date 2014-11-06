@@ -17,7 +17,7 @@ private with sharing class OrderOptionAnswerTest {
 		Survey.Description__c = 'Survey Description';
 		Database.insert(Survey);
 
-		Question__c Question = new Question__c();
+		Question__c Question = new Question__c(); 
 		Question.name           = 'Question';
 		Question.Type__c        = 'Unique';
 		Question.Survey__c      = Survey.id;

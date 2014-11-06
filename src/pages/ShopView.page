@@ -2,7 +2,7 @@
     <apex:form id="ShopForm">
         <apex:messages id="msg" styleClass="errorMsg" layout="table" style="margin-top:1em;"/>
 
-        <apex:pageBlock title="Shops Available">
+        <apex:pageBlock title="Shops Available ">
 
                 <apex:pageBlockButtons >
                     <apex:commandButton action="{!NewShop}" value="New Shop" id="submit"/>
