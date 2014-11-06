@@ -3,10 +3,24 @@ private with sharing class OrderOptionAnswerTest {
 
 	private static OptionAnswer__c CreateFullQuestion()
 	{
+		Shop__c Shop = new Shop__c();
+		Shop.name                     = 'Shop Name';
+		Shop.URL__c                   = 'URL Shop';
+		Shop.Description__c           = 'Shop Description';
+		Shop.Employee_Count_Number__c = 10;
+		Database.insert(Shop);
+
+		Survey__c Survey = new Survey__c();
+		Survey.name           = 'SurveyName';
+		Survey.Shop__c        = Shop.id;
+		Survey.Title__c       = 'Survey Title';
+		Survey.Description__c = 'Survey Description';
+		Database.insert(Survey);
+
 		Question__c Question = new Question__c();
 		Question.name           = 'Question';
 		Question.Type__c        = 'Unique';
-		Question.Survey__c      = null;
+		Question.Survey__c      = Survey.id;
 		Question.Description__c = 'Description for the Question.';
 		Database.insert(Question);
 
@@ -43,11 +57,19 @@ private with sharing class OrderOptionAnswerTest {
 		OptAnswer4.Question__c = Answer.Question__c;
 		Database.insert(OptAnswer4);
 
+		boolean inOrder = True;
+		Integer Step = 0;
+		List<OptionAnswer__c> Answers = [SELECT Order__c FROM OptionAnswer__c WHERE Question__c = :Answer.Question__c ORDER BY Order__c];
+
+		for(OptionAnswer__c Result : Answers)
+		{
+			inOrder &= Result.Order__c == ++Step;
+		}
+
 		System.test.stopTest();
 
 		//Verify
-		system.debug('OptAnswer4.Order__c:'+OptAnswer4.Order__c);
-		system.assertEquals(OptAnswer4.Order__c, 4, 'Trigger Must edit field order when after edit is triggered.');
+		system.assertEquals(inOrder, True, 'Trigger Must edit field "order__c" when after insert is triggered, the field must be in order ascending.');
 	}
 	
 	@isTest static void testEditOrderWhenAfterDeleteTriggered() {
@@ -57,11 +79,19 @@ private with sharing class OrderOptionAnswerTest {
 		
 		//Execute
 		Database.delete(Answer);
+		boolean inOrder = True;
+		Integer Step = 0;
+		List<OptionAnswer__c> Answers = [SELECT Order__c FROM OptionAnswer__c WHERE Question__c = :Answer.Question__c ORDER BY Order__c];
+
+		for(OptionAnswer__c Result : Answers)
+		{
+			inOrder &= Result.Order__c == ++Step;
+		}
 
 		System.test.stopTest();
 
 		//Verify
-		system.assertEquals(true, true, 'Trigger Must edit field order when after delete is triggered.');
+		system.assertEquals(inOrder, true, 'Trigger Must edit field "order__c" when after delete is triggered, the field must be in order ascending');
 	}
 	
 }
